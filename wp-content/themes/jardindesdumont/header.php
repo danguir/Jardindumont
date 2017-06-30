@@ -31,38 +31,60 @@
 			<!-- header -->
 			<header class="header clear" role="banner">
 
-					<logo>
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					</logo>
 
+					<div id="vertical-bar" class="vertical-bar">
 
-					<div class="container">
-							<div class="menu-wrap">
-					<!-- nav -->
-					<nav class="nav" role="navigation">
+						<button class="menu-button" id="open-button">
+							<img src="<?php echo get_template_directory_uri();?>/img/burger.png" class="burger"/>
+						</button>
 
-						<?php html5blank_nav(); ?>
-						<div class="social">
-							<ul class="list-inline">
-									<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/insta.png" alt="Instagram"/></a></li>
-									<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="Facebook"/></a></li>
-									<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="Twitter"></a></li>
-									<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/pint.png" alt="Pintrest"></a></li>
-									<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/youtube.png" alt="Youtube"></a></li>
-							</ul>
+						<div class="logo">
+							<a href="<?php echo home_url(); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
+							</a>
 						</div>
-					</nav>
 
-					<button class="close-button" id="close-button">Close Menu</button>
-				</div>
-				<button class="menu-button" id="open-button">Open Menu
-					<img src="<?php echo get_template_directory_uri();?>/img/burger.png" class="burger"/>
-				</button>
-			</div><!-- /container -->
+        	<ul class="list-inline" >
+            <li>
+                <a href="">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/user.png" alt="user" class="user-icon">                    <p>
+                        <span class="caret"></span>
+                    </p>
+                </a>
+        		</li>
+		        <li>
+                <a href="">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/cart.png" alt="cart" class="cart-icon">                    <p>
+	            </a>
+		        </li>
+        </ul>
+    </div>
+
+		<!--img src='<?php //echo get_template_directory_uri(); ?>/img/fille.png' class='gallerythumbnail'-->
+
+		<div class="container">
+		<div class="menu-wrap">
+		<!-- nav -->
+		<nav class="nav" role="navigation">
+			<?php html5blank_nav(); ?>
+			<div class="social">
+				<ul class="list-inline">
+						<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/insta.png" alt="Instagram"/></a></li>
+						<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="Facebook"/></a></li>
+						<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="Twitter"></a></li>
+						<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/pint.png" alt="Pintrest"></a></li>
+						<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/youtube.png" alt="Youtube"></a></li>
+				</ul>
+			</div>
+		</nav>
+		<button class="close-button" id="close-button"></button>
+	</div>
+
+</div><!-- /container -->
+
+
+
+
 
 
 						</nav>
