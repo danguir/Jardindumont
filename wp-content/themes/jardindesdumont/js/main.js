@@ -8,14 +8,14 @@
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
-(function() {
+/*(function() {
 
 	var bodyEl = document.body,
 		content = document.querySelector( '.content-wrap' ),
 		openbtn = document.getElementById( 'open-button' ),
 		closebtn = document.getElementById( 'close-button' ),
 		isOpen = false;
-		console.log(openbtn);
+		//console.log(openbtn);
 	function init() {
 		initEvents();
 	}
@@ -49,3 +49,40 @@
 	init();
 
 })();
+*/
+
+/*$(document).ready(function() {
+    $('.gallerythumbnail').on('click', function() {
+        var img = $('<img />', {src    : this.src,
+                                'class': 'fullImage'
+                  });
+        $('.showimagediv').html(img).show();
+    });
+});*/
+
+
+jQuery('.elementor-tab-title').click(function(){
+	var tabId = jQuery(this).data('tab');
+	//alert(jQuery(this).data('tab'));
+	//jQuery('.image-tab-'+tabId).find('img').hide();
+
+	jQuery('.image-tab-1').find('img').hide();
+	//jQuery('.showimagemaman').show()
+	jQuery('.image-tab-1').addClass('showimagemaman');
+
+
+});
+
+ /*MAKE YOUR NAVIGATION APPEAR ON SCROLL
+
+(function($) {
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 200) {
+                $('#vertical-bar').fadeIn(500);
+            } else {
+                $('#vertical-bar').fadeOut(500);
+            }
+        });
+    });
+})(jQuery);*/
