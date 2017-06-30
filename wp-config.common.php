@@ -5,7 +5,7 @@
 /** Nom de la base de données de WordPress. */
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define('DB_NAME', 'jardindumont');
+define('DB_NAME', 'jardindesdumont');
 
 /** Adresse de l’hébergement MySQL. */
 define('DB_HOST', 'localhost');
