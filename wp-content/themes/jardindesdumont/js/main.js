@@ -15,7 +15,7 @@
 		openbtn = document.getElementById('open-button'),
 		closebtn = document.getElementById('close-button'),
 		isOpen = false;
-		console.log(openbtn);
+		//console.log(openbtn);
 	function init() {
 		initEvents();
 	}

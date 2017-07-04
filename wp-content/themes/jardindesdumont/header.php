@@ -80,9 +80,11 @@
 		<button class="close-button" id="close-button"></button>
 	</div>
 
-</div><!-- /container -->
+	<div class="content-wrap">
 
+	</div><!-- /Menu wrap -->
 
+	</div><!-- /container -->
 
 
 
