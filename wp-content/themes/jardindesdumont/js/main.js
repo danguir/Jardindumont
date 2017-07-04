@@ -8,14 +8,14 @@
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
-/*(function() {
+(function() {
 
 	var bodyEl = document.body,
-		content = document.querySelector( '.content-wrap' ),
-		openbtn = document.getElementById( 'open-button' ),
-		closebtn = document.getElementById( 'close-button' ),
+		content = document.querySelector('.content-wrap'),
+		openbtn = document.getElementById('open-button'),
+		closebtn = document.getElementById('close-button'),
 		isOpen = false;
-		//console.log(openbtn);
+		console.log(openbtn);
 	function init() {
 		initEvents();
 	}
@@ -49,7 +49,7 @@
 	init();
 
 })();
-*/
+
 
 /*$(document).ready(function() {
     $('.gallerythumbnail').on('click', function() {
@@ -61,7 +61,7 @@
 });*/
 
 
-jQuery('.elementor-tab-title').click(function(){
+/*jQuery('.elementor-tab-title').click(function(){
 	var tabId = jQuery(this).data('tab');
 	//alert(jQuery(this).data('tab'));
 	//jQuery('.image-tab-'+tabId).find('img').hide();
@@ -71,7 +71,7 @@ jQuery('.elementor-tab-title').click(function(){
 	jQuery('.image-tab-1').addClass('showimagemaman');
 
 
-});
+});*/
 
  /*MAKE YOUR NAVIGATION APPEAR ON SCROLL
 
