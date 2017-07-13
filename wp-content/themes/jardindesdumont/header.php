@@ -48,8 +48,6 @@
             <li>
                 <a href="">
 									<img src="<?php echo get_template_directory_uri(); ?>/img/user.png" alt="user" class="user-icon">                    <p>
-                        <span class="caret"></span>
-                    </p>
                 </a>
         		</li>
 		        <li>
@@ -85,11 +83,6 @@
 	</div><!-- /Menu wrap -->
 
 	</div><!-- /container -->
-
-
-
-
-						</nav>
 
 
 

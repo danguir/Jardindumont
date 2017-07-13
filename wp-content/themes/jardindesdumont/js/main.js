@@ -8,6 +8,11 @@
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
+
+
+ /*------------------------------------*\
+     SIDE MENU
+ \*------------------------------------*/
 (function() {
 
 	var bodyEl = document.body,
@@ -49,6 +54,38 @@
 	init();
 
 })();
+
+
+
+
+ /*------------------------------------*\
+     VERTICAL MENU
+ \*------------------------------------*/
+
+
+/*(function () {
+  jQuery(document).ready(function(){*/
+
+	//jQuery("#vertical-bar").hide();
+
+		jQuery(window).scroll(function () {
+            // set distance user needs to scroll before we fadeIn navbar
+			if (jQuery(this).scrollTop() > 100) {
+				//jQuery('#vertical-bar').fadeIn();
+				jQuery('#vertical-bar').css('background-color', 'rgba(0, 0, 0, 0.5)');
+			} else {
+				//jQuery('#vertical-bar').fadeOut();
+				jQuery('#vertical-bar').css('background-color', 'transparent');
+
+			}
+		});
+
+/*
+});
+  }(jQuery));*/
+
+
+
 
 
 /*$(document).ready(function() {
