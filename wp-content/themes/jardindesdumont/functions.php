@@ -360,6 +360,52 @@ add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
+// Add Actions woocommerce
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title',5); // Add our HTML5 Pagination
+add_action('woocommerce_before_single_product_summary', 'woocommerce_template_single_title',5);
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
+
+
+// CVP - change the text of "Add to cart" button of Woocommerce
+add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' ); // 2.1 +
+function woo_archive_custom_cart_button_text() {
+	return __( 'ajouter au panier', 'woocommerce' );
+}
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
+function woo_custom_cart_button_text() {
+return __( 'ajouter au panier', 'woocommerce' );
+}
+
+/**
+ * only copy opening php tag if needed
+ * Displays shipping estimates for WC shipping rates
+ */
+function sv_shipping_method_estimate_label( $label, $method ) {
+	$label .= '<br /><small>';
+	switch ( $method->method_id ) {
+		case 'flat_rate':
+			$label .= 'Est delivery: 2-4 days';
+			break;
+		case 'free_shipping':
+			$label .= 'Est delivery: 4-7 days';
+			break;
+		case 'international_delivery':
+			$label .= 'Est delivery: 7-10 days';
+			break;
+		default:
+			$label .= 'Est delivery: 3-5 days';
+	}
+
+	$label .= '</small>';
+	return $label;
+}
+add_filter( 'woocommerce_cart_shipping_method_full_label', 'sv_shipping_method_estimate_label', 10, 2 );
+
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
 remove_action('wp_head', 'feed_links', 2); // Display the links to the general feeds: Post and Comment Feed

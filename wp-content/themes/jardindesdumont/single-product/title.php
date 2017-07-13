@@ -19,5 +19,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-the_title( '<h1 class="product_title entry-title">', '</h1>' );
+?>
+<div class="row">
+  <div class="col-md-12"><a href="#">Revenir aux kits</a></div>
+</div>
+<div class="row">
+  <div class="col-md-12"> <?php  the_title( '<h1 class="product_title entry-title">', '</h1>' ); ?> </div>
+</div>

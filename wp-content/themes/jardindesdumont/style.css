@@ -67,6 +67,13 @@
 \*------------------------------------*/
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:200,400,700,800);
+
+@font-face {
+    font-family: "Open_Sans"; /*a name to be used later*/
+    src: url('https://fonts.googleapis.com/css?family=PT+Sans'); /*URL to font*/
+}
+
+
 @font-face {
     font-family: "Gotham_Bold"; /*a name to be used later*/
     src: url('/wp-content/themes/jardindesdumont/fonts/Gotham_Bold_Regular.ttf'); /*URL to font*/
@@ -1067,4 +1074,109 @@ body {
 
 .center {
     text-align: center;
+}
+
+
+
+/*------------------------------------*\
+    WOOCOMERCE SINGLE PRODUCT PAGE
+\*------------------------------------*/
+.woocommerce div.product .product_title {
+    color: #b9ce00;
+    font-weight: 700;
+    font-family: 'Gotham_Bold';
+		margin-bottom: 20px;
+		margin-top: 20px;
+}
+
+.woocommerce div.product .product_title::after{
+		content: "";
+    width: 20%;
+    height: 1px;
+    border-bottom: 3px solid #fec833;
+    display: block;
+		margin: 40px auto;
+}
+.woocommerce div.product div.woocommerce-product-details__short-description{
+		color: black;
+    font-size: 15px;
+    font-family: Open_Sans;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.woocommerce div.product {
+	    margin-left: 100px;
+	    margin-right: 100px;
+	}
+
+	.woocommerce div.product p.price, .woocommerce div.product span.price {
+    color: #818181;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Gotham_bold';
+}
+
+.woocommerce .quantity .qty {
+    width: 70px;
+    text-align: center;
+    border-radius: 10px;
+    height: 40px;
+		font-style: normal;
+    font-family: 'Gotham_bold';
+}
+.woocommerce .quantity input[type="number"]{
+	    border: 1px solid #818181;
+			color: #818181;
+			font-size: 20px;
+}
+
+.woocommerce img.calcule, .woocommerce-page img.calcule{
+	width: 18px;
+}
+
+.woocommerce div.product form.cart .button{
+		vertical-align: middle;
+    padding: 10px 2em 10px 2em;
+    background: red;
+    color: #FFFFFF;
+    font-family: "Gotham Bold", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.5em;
+    outline: none;
+    box-sizing: border-box;
+		letter-spacing: 2px;
+}
+
+.woocommerce div.product form.cart {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel{
+	color: black;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel .banner-panel p{
+			background: #f7f7f7;
+	    color: black;
+	    font-size: 15px;
+	    font-family: Open_Sans;
+	    text-align: center;
+	    margin-bottom: 30px;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel .table>tbody>tr>th{
+		color: black;
+    font-size: 15px;
+    font-family: 'Gotham_bold';
+}
+.woocommerce div.product .woocommerce-tabs .panel .table>tbody>tr>td{
+			color: black;
+	    font-size: 15px;
+	    font-family: 'open_sans';
+	    font-style: italic;
+	    font-weight: 500;
+
 }

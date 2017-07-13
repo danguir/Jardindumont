@@ -27,6 +27,11 @@ if ( ! $post->post_excerpt ) {
 }
 
 ?>
-<div class="woocommerce-product-details__short-description">
-    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+<div class="row">
+  <div class="col-md-12">
+		<div class="woocommerce-product-details__short-description">
+		    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+		</div>
+
+  </div>
 </div>
