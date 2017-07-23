@@ -22,13 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post;
 
-$heading = esc_html( apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) ) );
+//$heading = esc_html( apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) ) );
 
 ?>
 
 <div class="row">
-	<div class="col-md-4">
-
+	<div class="col-md-9">
 		<div class="row">
 				<div class="col-md-8 banner-panel">
 						<p>
@@ -37,69 +36,67 @@ $heading = esc_html( apply_filters( 'woocommerce_product_description_heading', _
 							depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
 						</p>
 						<div class="col-md-8 banner-panel">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/product/dad.png" alt="papa" class="">                    <p>
-</div>
+								<img src="<?php echo get_template_directory_uri(); ?>/img/product/dad.png" alt="papa" class="">
 						</div>
+					</div>
 		</div>
 	</div>
-  <div class="col-md-8">
-		<div class="table-responsive">
-			<table class="table">
-				  <thead>
-						<tr class="center">
-							 Contenu du kit
+<div class="col-md-11">
+			<table class="table table-condensed table-responsive">
+				<thead>
+						<tr>
+								<th colspan="2">Contenu du kit</th>
 						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">Graines</th>
-							<td>Persil, radis, laitus, mente, lavender, basilic</td>
-						</tr>
-						<tr>
-							<th scope="row">Sol</th>
-							 <td>Sol humifière : idéale pour les petits légumes</td>
-						 </tr>
-					 <th scope="row">Boitier</th>
- 						 <td>Boitier à construire soi-même, notice inclus</td>
- 					 </tr>
-					 <th scope="row">Guide d'entretien</th>
-						 <td>Tous les conseils d'entretien à porte de main</td>
-					 </tr>
-					 </tbody>
-			</table>
-			<table class="table">
-				  <thead>
-						<tr>
-							 Contenu du kit
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">Graines</th>
-							<td>Persil, radis, laitus, mente, lavender, basilic</td>
-						</tr>
-						<tr>
-							<th scope="row">Sol</th>
-							 <td>Sol humifière : idéale pour les petits légumes</td>
-						 </tr>
-					 <th scope="row">Boitier</th>
- 						 <td>Boitier à construire soi-même, notice inclus</td>
- 					 </tr>
-					 <th scope="row">Guide d'entretien</th>
-						 <td>Tous les conseils d'entretien à porte de main</td>
-					 </tr>
-					 </tbody>
-			</table>
-		</div>
+				</thead>
 
-  </div>
+					<tbody>
+						<tr>
+							<th>Graines</th>
+							<td>Persil, radis, laitus, mente, lavender, basilic</td>
+						</tr>
+						<tr>
+							<th>Sol</th>
+							 <td>Sol humifière : idéale pour les petits légumes</td>
+						 </tr>
+					 <th>Boitier</th>
+ 						 <td>Boitier à construire soi-même, notice inclus</td>
+ 					 </tr>
+					 <th>Guide d'entretien</th>
+						 <td>Tous les conseils d'entretien à porte de main</td>
+					 </tr>
+					 </tbody>
+			</table>
+			<table class="table">
+				<thead>
+						<tr>
+								<th colspan="2">caracteristiques</th>
+						</tr>
+				</thead>
+					<tbody>
+						<tr>
+							<th scope="row">Période de plantation</th>
+							<td>De février à mai</td>
+						</tr>
+						<tr>
+							<th scope="row">Période de récolte</th>
+							 <td>En août-septembre</td>
+						 </tr>
+					 <th scope="row">Zone d'exposition</th>
+ 						 <td>Semi-ombre ; ensoleillée</td>
+ 					 </tr>
+					 <th scope="row">Climat</th>
+						 <td>Recommandé en bord de mer Résiste aux embruns et au vent ;résistant aux vents ;résistant au climat montagnard ; climat tempéré</td>
+					 </tr>
+					 </tbody>
+			</table>
+</div>
 </div>
 
 
 
 
-<?php if ( $heading ) : ?>
-  <h2><?php echo $heading; ?></h2>
-<?php endif; ?>
+<?php //if ( $heading ) : ?>
+  <!--h2><?php //echo $heading; ?></h2-->
+<?php //endif; ?>
 
-<?php the_content(); ?>
+<?php //the_content(); ?>

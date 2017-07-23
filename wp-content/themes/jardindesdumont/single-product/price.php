@@ -30,12 +30,14 @@ global $product;
 				<div class="quantity hidden">
 					<input type="hidden" value="1" class="qty" name="<?php echo esc_attr( $input_name ); ?>" value="<?php echo esc_attr( $min_value ); ?>" />
 				</div>
+					<p class="txt-under-price">Quantité</p>
 				<?php
 			} else {
 				?>
 				<div class="quantity">
 					<input type="number" value="1" class="input-text qty text" step="<?php echo esc_attr( $step ); ?>" min="<?php echo esc_attr( $min_value ); ?>" max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>" name="<?php echo esc_attr( $input_name ); ?>" value="<?php echo esc_attr( $input_value ); ?>" title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ) ?>" size="4" pattern="<?php echo esc_attr( $pattern ); ?>" inputmode="<?php echo esc_attr( $inputmode ); ?>" />
 				</div>
+				<p class="txt-under-price">Quantité</p>
 				<?php
 			}
 			?>
@@ -44,17 +46,17 @@ global $product;
 
 	<div class="col-md-2">
 		<img src="<?php echo get_template_directory_uri();?>/img/product/x.png" class="calcule center-block img-responsive" alt="Responsive image">
-  </div>
+	</div>
 	<div class="col-md-2">
-  	<p class="price"><?php echo $product->get_price_html(); ?></p>
-
+		<p class="price"><?php //echo $product->get_total_price_html();  ?>65€</p>
+		<p class="txt-under-price">Prix à l'unité</p>
   </div>
 	<div class="col-md-2">
 		<img src="<?php echo get_template_directory_uri();?>/img/product/egale.png" class="calcule center-block img-responsive" alt="Responsive image">
   </div>
-  <div class="col-md-2">
-		<p class="price"><?php //echo $product->get_total_price_html();  ?>65€</p>
-
+  <div class="col-md-3">
+		<p class="price"><?php echo $product->get_price_html(); ?></p>
+		<p class="txt-under-price">Prix finale sans livraison</p>
   </div>
 </div>
 <!--div class="row">
@@ -64,3 +66,19 @@ global $product;
 	<div class="col-md-2"><p>Prix finale sans livraison</p></div>
 
 </div-->
+
+<div class="livraison-gratuite">
+	<div class="row">
+		<div class="col-md-12"><p>Livraison gratuite à partir de 80€</p></div>
+	</div>
+</div>
+
+<div class="nb-jour-livraison">
+	<div class="row">
+		<div class="col-md-3">
+			<img src="<?php echo get_template_directory_uri();?>/img/product/livraison.png" class="img-responsive" alt="Responsive image">
+		</div>
+		<div class="col-md-6">Livré dans 5 jour<br><a href="#"><span>Conditions de livraison</span></a></div>
+
+	</div>
+</div>

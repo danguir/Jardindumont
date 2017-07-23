@@ -36,6 +36,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 }
 ?>
 
+<section id="homepage" class="homepage_content" style="background-color:#ffffff;">
+	<div class="container">
+
 <div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php
@@ -47,6 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
+
 
 	<div class="summary entry-summary">
 
@@ -81,5 +85,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 
 </div><!-- #product-<?php the_ID(); ?> -->
+
+</div>
+
+</section>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

@@ -31,8 +31,6 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-
-	<h1>Test</h1>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>

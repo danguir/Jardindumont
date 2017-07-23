@@ -88,6 +88,12 @@
     src: url('/wp-content/themes/jardindesdumont/fonts/beyond_the_mountains.otf'); /*URL to font*/
 }
 
+
+@font-face {
+    font-family: 'Gotham_Medium';
+    src: url('/wp-content/themes/jardindesdumont/fonts/Gotham-Medium.otf'); /*URL to font*/
+}
+
 .font-beyond-the-mountains{
 	font-family: 'beyond_the_mountains';
 }
@@ -271,7 +277,7 @@ button:focus {
 
 html,
 body,
-.container,
+Header .container,
 .content-wrap {
 	background: #fff;
 	margin: 0;
@@ -1000,7 +1006,8 @@ input[type="week"], input:not([type]), textarea, select[multiple=multiple]{
       background-size: cover; } }
 
 .container {
-  display: flex; }
+  /*display: flex; */
+}
 
 .block {
   padding: 2em;
@@ -1014,8 +1021,9 @@ input[type="week"], input:not([type]), textarea, select[multiple=multiple]{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  text-align: center; }
+  /*align-items: center;*/
+  text-align: center;
+}
 
 .block-full {
   flex: 1; }
@@ -1067,6 +1075,7 @@ code {
 body {
   display: flex;
   flex-direction: column;
+	overflow-x: hidden;
 }
 .content {
   flex: 1 0 auto;
@@ -1104,16 +1113,16 @@ body {
 		text-align: center;
 		margin-bottom: 30px;
 	}
-	.woocommerce div.product {
+	/*.woocommerce div.product {
 	    margin-left: 100px;
 	    margin-right: 100px;
-	}
+	}*/
 
 	.woocommerce div.product p.price, .woocommerce div.product span.price {
     color: #818181;
     font-size: 25px;
-    font-weight: 900;
-    font-family: 'Gotham_bold';
+    font-family: 'Gotham_Medium';
+		display: inline;
 }
 
 .woocommerce .quantity .qty {
@@ -1136,11 +1145,12 @@ body {
 
 .woocommerce div.product form.cart .button{
 		vertical-align: middle;
-    padding: 10px 2em 10px 2em;
+    padding: 16px 2em 30px 2em;
+
     background: red;
     color: #FFFFFF;
     font-family: "Gotham Bold", sans-serif;
-    font-size: 12px;
+    font-size: 18px;
     text-transform: uppercase;
     border: none;
     border-radius: 0.5em;
@@ -1156,6 +1166,8 @@ body {
 
 .woocommerce div.product .woocommerce-tabs .panel{
 	color: black;
+	-webkit-box-shadow: none;
+box-shadow: transparent;
 }
 
 .woocommerce div.product .woocommerce-tabs .panel .banner-panel p{
@@ -1165,12 +1177,19 @@ body {
 	    font-family: Open_Sans;
 	    text-align: center;
 	    margin-bottom: 30px;
+			padding-top: 40px;
+	    padding-bottom: 50px;
+	    padding-left: 20px;
+	    padding-right: 20px;
+
 }
 
 .woocommerce div.product .woocommerce-tabs .panel .table>tbody>tr>th{
 		color: black;
     font-size: 15px;
     font-family: 'Gotham_bold';
+		padding: 20px;
+		padding-left: 0px;
 }
 .woocommerce div.product .woocommerce-tabs .panel .table>tbody>tr>td{
 			color: black;
@@ -1178,5 +1197,455 @@ body {
 	    font-family: 'open_sans';
 	    font-style: italic;
 	    font-weight: 500;
+			padding: 20px;
+			text-align: right;
+}
 
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+		    border-top: 1px solid #7c7d72;
+}
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+	/*.woocommerce div.product {
+		margin-left: 50px;
+	 	margin-right: 50px;
+	}*/
+}
+
+@media only screen and (min-width:1024px) {
+	/*.woocommerce div.product {
+		margin-left: 100px;
+	 	margin-right: 100px;
+	}*/
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+	/*.woocommerce div.product {
+		margin-left: 100px;
+    margin-right: 100px;
+	}*/
+}
+
+/*------------------------------------*\
+    SLIDER PRODUITS
+\*------------------------------------*/
+
+/* WooCommerce 3.0 Gallery */
+
+.woocommerce-product-gallery {
+position: relative;
+margin-bottom: 3em
+}
+
+.woocommerce-product-gallery figure {
+margin: 0
+}
+
+.woocommerce-product-gallery .woocommerce-product-gallery__image:nth-child(n+2) {
+width: 25%;
+display: inline-block
+}
+
+.woocommerce-product-gallery .flex-control-thumbs li {
+list-style: none;
+float: left;
+cursor: pointer
+}
+
+.woocommerce-product-gallery .flex-control-thumbs img {
+opacity: .5
+}
+
+.woocommerce-product-gallery .flex-control-thumbs img.flex-active,.woocommerce-product-gallery .flex-control-thumbs img:hover {
+opacity: 1
+}
+
+.woocommerce-product-gallery img {
+display: block
+}
+
+.woocommerce-product-gallery--columns-3 .flex-control-thumbs li {
+width: 33.3333%
+}
+
+.woocommerce-product-gallery--columns-4 .flex-control-thumbs li {
+width: 25%
+}
+
+.woocommerce-product-gallery--columns-5 .flex-control-thumbs li {
+width: 20%
+}
+
+.woocommerce-product-gallery__trigger {
+position: absolute;
+top: 1em;
+right: 1em;
+z-index: 99;
+}
+
+a.woocommerce-product-gallery__trigger {
+text-decoration: none;
+}
+
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+position: absolute;
+top: .875em;
+right: .875em;
+display: block;
+height: 2em;
+width: 2em;
+border-radius: 3px;
+z-index: 99;
+text-align: center;
+text-indent: -999px;
+overflow: hidden;
+}
+
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+background-color: #169fda;
+color: #ffffff;
+}
+
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger:hover {
+background-color: #1781ae;
+border-color: #1781ae;
+color: #ffffff;
+}
+
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger:before {
+font: normal normal normal 1em/1 FontAwesome;
+font-size: inherit;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+display: block;
+content: "\f00e";
+line-height: 2;
+text-indent: 0;
+}
+
+
+
+/***************************************
+TABS PAGE PRODUITS
+******************************************/
+
+.woocommerce div.product .woocommerce-tabs ul.tabs{
+		list-style: none;
+    padding: 0 0 0 1em;
+    margin: 0 0 1.618em;
+    overflow: hidden;
+    position: relative;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Gotham_bold';
+    letter-spacing: 2px;
+    color: black;
+    text-transform: uppercase;
+}
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    border: 0px solid;
+    background-color: transparent;
+}
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+    content: "";
+    width: 100%;
+    border-bottom: 3px solid #fec833;
+    display: block;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before{
+	    border-bottom: 0px solid ;
+}
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active::before {
+    box-shadow: none;
+}
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+    border: 0px solid #d3ced2;
+    width: 0px;
+    height: 0px;
+    content: ' ';
+}
+
+.woocommerce div.product .livraison-gratuite{
+	background: #b9ce00;
+	font-family: 'Gotham_medium';
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: white;
+	margin-top: 30px;
+	font-weight: 900;
+}
+.woocommerce div.product .nb-jour-livraison{
+	background: #f7f7f7;
+	font-family: 'Gotham_bold';
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: black;
+	margin-bottom: 30px;
+}
+
+.woocommerce div.product .nb-jour-livraison img{
+	width: 65px;
+  float: none;
+  margin: 0 auto;
+}
+
+.woocommerce div.product .nb-jour-livraison .col-md-6 span {
+	font-family: 'Open_Sans';
+	letter-spacing: 0px;
+	font-size: 12px;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: lowercase;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   opacity: 1;
+}
+
+#wl-wrapper .wl-add-link.present {
+    background: url('/wp-content/themes/jardindesdumont/img/product/wishlist.png') no-repeat  !important;
+    padding-left: 20px !important;
+		font-size: 15px;
+		text-transform: uppercase;
+		color: #b9ce00;
+		font-family: 'Gotham_bold';
+		letter-spacing: 2px;
+}
+
+.table thead tr th {
+		 background: #f8fae5;
+		 text-align: left;
+		text-transform: uppercase;
+		color: #bfd320;
+		padding: 20px;
+		font-family: 'Gotham_bold';
+		font-size: 15px;
+}
+
+
+/***************************************
+RELATED products
+******************************************/
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title,
+ .woocommerce ul.products li.product .woocommerce-loop-product__title,
+  .woocommerce ul.products li.product h3{
+		color: #000000;
+		text-transform: uppercase;
+		font-weight: 600;
+		line-height: 1;
+		font-family: 'Gotham_Bold'!important;
+		font-size: 20px;
+	}
+
+ .woocommerce ul.products li.product .woocommerce-loop-product__title::after{
+    content: "";
+		width: 55%;
+		margin: 0 auto;
+    border-bottom: 3px solid #fec833;
+    display: block;
+		margin-top: 20px;
+}
+
+
+.woocommerce ul.products li.product .price {
+    display: block;
+    font-weight: 400;
+    font-family: 'Open_sans';
+    color: #000000;
+    font-size: 18px;
+    font-style: normal;
+    margin-bottom: .5em;
+}
+
+@media (min-width: 1200px){
+	.container {
+	    width: 1300px;
+	    /* max-width: 1140px; */
+	}
+}
+
+.woocommerce .up-sells  h2 {
+	color: #000000;
+	font-size: 30px;
+	font-family: 'Gotham_bold';
+}
+.woocommerce .up-sells h2::after {
+	content: "";
+	width: 10%;
+	margin: 0 auto;
+	border-bottom: 3px solid #b9ce00;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+
+.woocommerce ul.products li.product .overlay, .woocommerce-page ul.products li.product .overlay{
+	background: rgba(0,0,0,0);
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+-webkit-transition: all ease-in-out .2s;
+-moz-transition: all ease-in-out .2s;
+-o-transition: all ease-in-out .2s;
+transition: all ease-in-out .2s;
+
+}
+
+.woocommerce ul.products li.product:hover .overlay, .woocommerce-page ul.products li.product:hover .overlay{
+	    background: rgba(16,184,199, 0.90 );
+}
+
+.woocommerce #respond input#submit,
+ .woocommerce a.button,
+  .woocommerce button.button,
+	 .woocommerce input.button{
+	/*display: none;*/
+}
+.woocommerce ul.products li.product .price del{
+	display: inline;
+}
+.woocommerce ul.products li.product .price ins{
+	font-weight: normal;
+}
+
+
+/***************************************
+CAROUSEl #FAMILLEDUMONT
+******************************************/
+
+.carousel-control {
+  padding-top:10%;
+  width:5%;
+}
+section .hashtag-dumont{
+	background: #f7f7f7;
+}
+
+.hashtag-dumont h2{
+	color: #000000;
+	font-size: 30px;
+	font-family: 'beyond_the_mountains';
+	line-height: 33px;
+	letter-spacing: 3px;
+	font-weight: 500;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.hashtag-dumont p{
+	color: #000000;
+	font-family: 'Open_sans';
+	font-size:15px;
+}
+
+.hashtag-dumont .well{
+		border: none;
+		background-color: transparent;
+    padding: 0px;
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger:before,.woocommerce div.product div.images .woocommerce-product-gallery__trigger:after{
+	display: none;
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger{
+	background-image:url('/wp-content/themes/jardindesdumont/img/product/icon_zoom.png');
+	width: 70px;
+	height: 70px;
+	background-size: cover;
+}
+
+
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger:hover{
+background-color: transparent;
+}
+
+.woocommerce .woocommerce-breadcrumb{
+	display: block;
+	margin: 0 0 1em;
+	padding: 0;
+	font-size: 15px;
+	color: #818181;
+	text-align: center;
+	margin-top: 100px;
+ 	font-family: 'Open_sans';
+ 	text-decoration: underline;
+
+}
+
+.txt-under-price{
+	color: #818181;
+	font-family: 'Open_sans';
+	font-style: italic;
+	letter-spacing: 0px;
+	font-size: 12px;
+	font-style: italic;
+  margin-top: 20px;
+	}
+
+.yith-wcwl-add-button a.add_to_wishlist{
+	color: #b9ce00;
+	font-family: "Gotham Bold", sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600;
+}
+
+.yith-wcwl-add-to-wishlist{
+	margin-top: 28px;
+}
+.yith-wcwl-add-to-wishlist .wishlist-icon{
+	width: 40px;
+}
+
+.woocommerce #content div.product .woocommerce-tabs,
+.woocommerce div.product .woocommerce-tabs,
+.woocommerce-page #content div.product .woocommerce-tabs,
+.woocommerce-page div.product .woocommerce-tabs{
+		padding-top: 50px;
+		padding-bottom: 50px;
+ }
+
+
+
+section .hashtag-dumont p{
+	text-align: center;
+	margin-bottom: 30px;
+	padding-top: 20px;
 }

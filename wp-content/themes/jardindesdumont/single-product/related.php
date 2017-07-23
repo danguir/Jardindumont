@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( $related_products ) : ?>
 
 	<section class="related products">
-
+holaaa dude
 		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
 
 		<?php woocommerce_product_loop_start(); ?>

@@ -280,7 +280,7 @@ function html5_style_remove($tag)
 // Remove thumbnail width and height dimensions that prevent fluid images in the_thumbnail
 function remove_thumbnail_dimensions( $html )
 {
-    $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
+    //$html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
     return $html;
 }
 
@@ -381,10 +381,80 @@ function woo_custom_cart_button_text() {
 return __( 'ajouter au panier', 'woocommerce' );
 }
 
+//product zoom slider
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+
+
+//Add a custom tab
+add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+function woo_new_product_tab( $tabs ) {
+
+	// Adds the new tab
+	$tabs['additional_information'] = array(
+		'title' 	=> __( 'guide d\'entretien', 'woocommerce' ),
+		'priority' 	=> 50,
+		'callback' 	=> 'woo_new_product_tab_content'
+	);
+
+	return $tabs;
+}
+
+function woo_new_product_tab_content()  {
+    // The new tab content
+    $prod_id = get_the_ID();
+    echo'<p>'.get_post_meta($prod_id,'additional information',true).'</p>';
+}
+
+//Renaming Tabs
+add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
+function woo_rename_tabs( $tabs ) {
+
+	$tabs['description']['title'] = __( 'kit en détail' );		// Rename the description tab
+  $tabs['additional_information']['title'] = __( 'guide d\'entretien' );	// Rename the additional information tab
+	$tabs['reviews']['title'] = __( 'avis des clients' );				// Rename the reviews tab
+
+	return $tabs;
+}
+
+//Reorder Custom Tabs
+add_filter( 'woocommerce_product_tabs', 'sb_woo_move_description_tab', 98);
+function sb_woo_move_description_tab($tabs) {
+
+  $tabs['description']['priority'] = 5;
+  $tabs['additional_information']['priority'] = 20;
+	$tabs['reviews']['priority'] = 40;
+  return $tabs;
+}
+
+//Recommendation products
+function woocommerce_output_related_products() {
+    // woocommerce_related_products(4,2); // Display 4 products in rows of 2
+}
+
+/* ====== Product single thumb size ====== */
+add_image_size( 'tw_shop_single', 360, 999, false );
+
+// Remove the product rating display on product loops
+//remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+
+//How to remove star review rating under the product title when enable review is off.
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+//add_action( 'woocommerce_single_product_summary', 'my_woocommerce_template_single_rating', 10 );
+/*function my_woocommerce_template_single_rating() {
+    global $product;
+    if ( $product->post->comment_status === 'open' )
+        wc_get_template( 'single-product/rating.php' );
+    return true;
+}*/
+
+
 /**
  * only copy opening php tag if needed
  * Displays shipping estimates for WC shipping rates
  */
+ /*
 function sv_shipping_method_estimate_label( $label, $method ) {
 	$label .= '<br /><small>';
 	switch ( $method->method_id ) {
@@ -404,7 +474,11 @@ function sv_shipping_method_estimate_label( $label, $method ) {
 	$label .= '</small>';
 	return $label;
 }
-add_filter( 'woocommerce_cart_shipping_method_full_label', 'sv_shipping_method_estimate_label', 10, 2 );
+add_filter( 'woocommerce_cart_shipping_method_full_label', 'sv_shipping_method_estimate_label', 10, 2 );*/
+
+
+//remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds

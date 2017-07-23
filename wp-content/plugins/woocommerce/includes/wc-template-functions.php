@@ -618,6 +618,7 @@ if ( ! function_exists( 'woocommerce_template_loop_category_title' ) ) {
  */
 function woocommerce_template_loop_product_link_open() {
 	echo '<a href="' . get_the_permalink() . '" class="woocommerce-LoopProduct-link">';
+	
 }
 /**
  * Insert the opening anchor tag for products in the loop.
@@ -1815,9 +1816,16 @@ if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
 
 			// Add responsive image markup if available
 			if ( $image_srcset && $image_sizes ) {
+				//echo '<div class="image_wrap">';
+				//echo '<span class="overlay"></span>';
 				echo '<img src="' . esc_url( $image ) . '" alt="' . esc_attr( $category->name ) . '" width="' . esc_attr( $dimensions['width'] ) . '" height="' . esc_attr( $dimensions['height'] ) . '" srcset="' . esc_attr( $image_srcset ) . '" sizes="' . esc_attr( $image_sizes ) . '" />';
+				//echo '</div>';
 			} else {
+				//echo '<div class="image_wrap">';
+				//echo '<span class="overlay"></span>';
 				echo '<img src="' . esc_url( $image ) . '" alt="' . esc_attr( $category->name ) . '" width="' . esc_attr( $dimensions['width'] ) . '" height="' . esc_attr( $dimensions['height'] ) . '" />';
+				//echo '</div>';
+
 			}
 		}
 	}
