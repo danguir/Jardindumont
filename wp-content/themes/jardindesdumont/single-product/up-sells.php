@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<p>L’univers de La Famille Dumont forme un art de vivre  qu'on partage avec ses connaisseurs de par le monde.</p>
 		    <div class="col-md-12">
 		        <div class="well">
-		            <div id="myCarousel" class="carousel slide">
+		            <div id="myCarousel" class="carousel slide media-carousel">
 
 		                <!-- Carousel items -->
 		                <div class="carousel-inner">
@@ -41,19 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		                            </div>
 		                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
 		                            </div>
-		                        </div>
-		                        <!--/row-->
-		                    </div>
-		                    <!--/item-->
-		                    <div class="item">
-		                        <div class="row">
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+																<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
 		                            </div>
 		                        </div>
 		                        <!--/row-->
@@ -69,18 +57,41 @@ if ( ! defined( 'ABSPATH' ) ) {
 		                            </div>
 		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
 		                            </div>
+																<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+																</div>
+		                        </div>
+		                        <!--/row-->
+		                    </div>
+		                    <!--/item-->
+		                    <div class="item">
+		                        <div class="row">
+		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+		                            </div>
+		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+		                            </div>
+		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+		                            </div>
+		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+		                            </div>
+																<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+																</div>
 		                        </div>
 		                        <!--/row-->
 		                    </div>
 		                    <!--/item-->
 		                </div>
-		                <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+		                <!--/carousel-inner-->
 
-		                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+										<a data-slide="prev" href="#media" class="left carousel-control">
+											<img src="<?php echo get_template_directory_uri();?>/img/product/arrow-left.png" class=""/>
+										</a>
+			 							<a data-slide="next" href="#media" class="right carousel-control">
+											<img src="<?php echo get_template_directory_uri();?>/img/product/arrow-right.png" class=""/>
+										</a>
 		            </div>
 		            <!--/myCarousel-->
-								<div class="col-sm-3">
-									<a href="#" class="">ajoutez une photo</a>
+								<div class="col-sm-12 center">
+									<a href="#" class="add-photo">ajoutez une photo</a>
 
 		        </div>
 		        <!--/well-->
@@ -94,8 +105,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php
 if ( $upsells ) : ?>
 
-	<section class="up-sells upsells products">
-
+	<section class="up-sells upsells center products">
+		<div class="container">
 		<h2><?php esc_html_e( 'Vous allez aimer', 'woocommerce' ) ?></h2>
 
 		<?php woocommerce_product_loop_start(); ?>
@@ -111,7 +122,7 @@ if ( $upsells ) : ?>
 			<?php endforeach; ?>
 
 		<?php woocommerce_product_loop_end(); ?>
-
+</div>
 	</section>
 
 <?php endif;

@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section id="homepage" class="homepage_content" style="background-color:#ffffff;">
-	<div class="container">
+	<!--div class="container"-->
 
 <div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -53,7 +53,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 	<div class="summary entry-summary">
-
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook.
@@ -71,6 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 
 	</div><!-- .summary -->
+</div><!--end container single-product-->
 
 
 	<?php
@@ -86,7 +86,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
-</div>
+<!--/div-->
 
 </section>
 
