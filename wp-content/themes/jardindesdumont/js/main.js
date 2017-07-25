@@ -86,6 +86,52 @@
 
 
 
+/********************************
+FILTER CATGORIE PAGE
+********************************/
+
+/*jQuery('div.tags').delegate('input:checkbox', 'change', function(){
+     var $lis = jQuery('.results > li').hide();
+     //For each one checked
+     jQuery('input:checked').each(function(){
+          $lis.filter('.' + $(this).attr('rel')).show();
+     });
+});
+
+$('input#someCheckbox').click(function() {
+    if ($(this).is(':checked')) {
+        // checked
+    } else {
+       // not checked
+    };
+});*/
+
+
+jQuery(document).ready(function(){
+    jQuery("input:checkbox").change(function(){
+        var value = jQuery(this).attr('data-filter');
+				//if ($(this).is(':checked')) {
+        if(value == "all")
+        {
+            jQuery('.filter').show('1000');
+        }
+        else
+        {
+            jQuery(".filter").not('.'+value).hide('3000');
+            jQuery('.filter').filter('.'+value).show('3000');
+
+        }
+			//}
+    });
+
+    if (jQuery(".filter-button").removeClass("active")) {
+			jQuery(this).removeClass("active");
+		}
+			jQuery(this).addClass("active");
+
+});
+
+jQuery("#affected").zInput();
 
 
 /*$(document).ready(function() {

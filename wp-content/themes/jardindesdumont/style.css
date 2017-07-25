@@ -1120,7 +1120,7 @@ body {
     height: 1px;
     border-bottom: 4px solid #fec833;
     display: block;
-		margin: 40px auto;
+		margin: 30px auto;
 }
 .woocommerce div.product div.woocommerce-product-details__short-description{
 		color: black;
@@ -1353,6 +1353,47 @@ text-indent: 0;
 TABS PAGE PRODUITS
 ******************************************/
 
+.woocommerce #reviews #comments h2 {
+    color: #b9ce00;
+    font-weight: 700;
+    font-family: 'Gotham_Bold';
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.woocommerce #reviews #comments h2::after {
+    content: "";
+    width: 10%;
+    height: 1px;
+    border-bottom: 4px solid #fec833;
+    display: block;
+    margin: 30px auto;
+}
+
+.woocommerce #reviews #comments p{
+			color: black;
+	    font-size: 15px;
+	    font-family: Open_Sans;
+	    text-align: center;
+	    margin-bottom: 30px;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text{
+     border: none;
+    border-radius: 0px;
+		font-size: 18px;
+}
+.woocommerce .star-rating::before,.woocommerce .star-rating span::before{
+	color: #fdc832;
+}
+.woocommerce #reviews #comments ol.commentlist li img.avatar{
+	display: none;
+}
+
+.woocommerce .star-rating{
+	float: none;
+	margin: 0 auto;
+	display: block;
+}
 .woocommerce div.product .woocommerce-tabs ul.tabs{
 		list-style: none;
     padding: 0 0 0 1em;
@@ -1581,7 +1622,7 @@ section .hashtag-dumont{
 	font-family: 'beyond_the_mountains';
 	line-height: 33px;
 	letter-spacing: 3px;
-	font-weight: 500;
+	font-weight: 900;
 	margin-bottom: 10px;
 	margin-top: 20px;
 	text-align: center;
@@ -1728,4 +1769,224 @@ section .hashtag-dumont .carousel{
   top: auto;
   bottom: 0px;
   margin-right: -19px;
+}
+
+/*************************************
+PAGE CATEGORIE/UNIVERS
+***************************************/
+
+.gallery-title
+{
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #42B32F;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #42B32F;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+
+.woocommerce .page-categorie .page-title{
+		color: #b9ce00;
+    font-weight: 700;
+    font-family: 'Gotham_Bold';
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.woocommerce .page-categorie .page-title::after{
+	content: "";
+	width: 15%;
+	height: 1px;
+	border-bottom: 4px solid #fec833;
+	display: block;
+	margin: 30px auto;
+}
+.woocommerce .page-categorie p{
+
+		color: black;
+    font-size: 18px;
+    font-family: Open_Sans;
+    text-align: center;
+    margin-bottom: 30px;
+		text-align: center;
+	}
+
+/***************************
+Multicheck filters Page CATEGORIE
+****************************/
+
+
+	.zInputWrapper{
+	padding: 4px;
+	margin: 2px;
+	border-radius:12px;
+	display:inline-block;
+	}
+
+	.zInput{
+	display:inline-block;
+	width: 200px;
+	height:50px;
+	background-color: white;
+	margin:4px;
+	text-align:center;
+	cursor:default;
+	color: #336600;
+	border: #336600 1px solid;
+	border-radius:10px;
+	font-size: 18px;
+	overflow:hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	}
+
+
+	.zCheckbox{
+		color: #818181;
+    border: #818181 1px solid;
+		font-family: "Gotham Bold", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+	}
+
+	.zSelected{
+	color: white;
+	background-color:#b9ce00;
+	}
+
+	.zSelected.zCheckbox{
+		background-color: #b9ce00;
+		border-color: #b9ce00;
+
+	}
+
+	.woocommerce .products ul, .woocommerce ul.products{
+		text-align: center;
+	}
+
+.link-clear{
+	display: block;
+	padding: 0;
+	font-size: 15px;
+	color: #818181;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 30px;
+	font-family: 'Open_sans';
+	text-decoration: underline;
+}
+
+
+section.Trouver-kit{
+	background: #f7f7f7;
+	padding-bottom: 30px;
+}
+
+section.Trouver-kit h2{
+	color: #000000;
+    font-size: 30px;
+    font-family: 'beyond_the_mountains';
+    line-height: 33px;
+    letter-spacing: 3px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+section.Trouver-kit .Trouver-kit-link::after {
+    content: "";
+    width: 24%;
+    height: 1px;
+    border-bottom: 2px solid #fec833;
+    display: block;
+    margin: 6px 0px;
+    margin: 10px auto;
+}
+
+section.Trouver-kit .Trouver-kit-link {
+    color: #fec833;
+    font-family: "Gotham Bold", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-align: center;
+}
+section.Trouver-kit img.loop {
+	width: 70px;
+	margin: 0 auto;
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	 top: 1064.41px;
+	}
+
+	.woocommerce section.upsells-costumised{
+			padding-top: 50px;
+	}
+
+	.woocommerce section.networking h2 {
+    color: #000000;
+    font-size: 30px;
+    font-family: 'Gotham_bold';
+    margin-top: 50px;
+}
+
+.woocommerce section.networking h2::after {
+    content: "";
+    width: 9%;
+    margin: 0 auto;
+    border-bottom: 4px solid #fcea10;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 100px;
 }

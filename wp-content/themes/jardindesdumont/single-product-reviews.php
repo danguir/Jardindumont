@@ -28,15 +28,22 @@ if ( ! comments_open() ) {
 ?>
 <div id="reviews" class="woocommerce-Reviews">
 	<div id="comments">
-		<h2 class="woocommerce-Reviews-title"><?php
+		<!--h2 class="woocommerce-Reviews-title"><?php
 			if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) ) {
 				/* translators: 1: reviews count 2: product name */
 				printf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span>' . get_the_title() . '</span>' );
 			} else {
 				_e( 'Reviews', 'woocommerce' );
 			}
-		?></h2>
+		?></h2-->
 
+		<div class="col-md-9">
+			<h2 class="center">Avis des clients</h2>
+			<p>
+				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
+			</p>
+		</div>
+		<button class="ui-button ui-button-primary center">Laisser un avis</button>
 		<?php if ( have_comments() ) : ?>
 
 			<ol class="commentlist">

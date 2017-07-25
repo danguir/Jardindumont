@@ -100,12 +100,16 @@ function html5blank_header_scripts()
 
         wp_register_script('bootstrap', get_template_directory_uri() .'/js/bootstrap.min.js', array('jquery'), '1.0.0'); // Bootstrap
         wp_enqueue_script('bootstrap'); // Enqueue it!
+        wp_register_script('zInput', get_template_directory_uri() . '/js/zInput.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('zInput'); // Enqueue it!
 
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
 
         wp_register_script('classie', get_template_directory_uri() . '/js/classie.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('classie'); // Enqueue it!
+
+
 
       //  wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0'); // Custom scripts
       //  wp_enqueue_script('main'); // Enqueue it!
@@ -442,6 +446,9 @@ function woocommerce_output_related_products() {
 
 /* ====== Product single thumb size ====== */
 add_image_size( 'tw_shop_single', 360, 999, false );
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+
 
 // Remove the product rating display on product loops
 //remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
