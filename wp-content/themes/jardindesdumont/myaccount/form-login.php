@@ -33,22 +33,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="u-column1 col-1">
 
 <?php endif; ?>
+	<div class="container">
 
-		<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
-
+		<h2 class="title-form"><?php //_e( 'Login', 'woocommerce' ); ?>CONNECTEZ-VOUS À VOTRE COMPTE </h2>
+	<div class="login-woo">
 		<form class="woocomerce-form woocommerce-form-login login" method="post">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-				<label for="username"><?php _e( 'Username or email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
+				<label for="username"><?php //_e( 'Username or email address', 'woocommerce' ); ?> Email<span class="required">*</span></label>
+				<input type="text" class="ui-input woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
 			</p>
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-				<label for="password"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
+				<label for="password"><?php// _e( 'Password', 'woocommerce' ); ?> Mot de pass<span class="required">*</span></label>
 				<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
 			</p>
-
 			<?php do_action( 'woocommerce_login_form' ); ?>
 
 			<p class="form-row">
@@ -65,7 +65,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
 
 		</form>
+</div>
 
+</div>
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
 	</div>
