@@ -29,7 +29,12 @@ if ( ! $post->post_excerpt ) {
 ?>
 <div class="row">
   <div class="col-md-12">
-		<img style="width: 290px;  margin-bottom: 20px;" src="<?php echo get_template_directory_uri();?>/img/product/Networking.png" class=" center-block img-responsive" alt="Responsive image">
+
+          <div class="block-rs">
+              <div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+              <a href="https://twitter.com/share" class="twitter-share-button">Partager</a>
+          </div>
+
 		<div class="woocommerce-product-details__short-description">
 		    <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
 		</div>

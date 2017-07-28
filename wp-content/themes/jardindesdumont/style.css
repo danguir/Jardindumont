@@ -2201,3 +2201,15 @@ section.article .elementor-widget-text-editor p{
  .woocommerce label{
 	  font-size: 18px;
  }
+
+/*------------------------------------*\
+  Block partage réseaux sociaux -> short-description.php
+\*------------------------------------*/
+.block-rs {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.block-rs .twitter-share-button {
+	position: relative!important;
+	top: 3px;
+}
