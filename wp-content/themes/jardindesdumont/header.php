@@ -46,7 +46,7 @@
 
         	<ul class="list-inline" >
             <li>
-                <a href="">
+                <a href="/my-account/">
 									<img src="<?php echo get_template_directory_uri(); ?>/img/user.png" alt="user" class="user-icon">                    <p>
                 </a>
         		</li>

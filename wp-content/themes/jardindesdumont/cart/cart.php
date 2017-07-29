@@ -33,10 +33,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<thead>
 			<tr>
 				<th class="product-thumbnail">&nbsp;</th>
-				<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-				<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
-				<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-				<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
+				<th class="product-name"><?php _e( 'Produits', 'woocommerce' ); ?></th>
+				<th class="product-price"><?php _e( 'Prix', 'woocommerce' ); ?></th>
+				<th class="product-quantity"><?php _e( 'Quantité', 'woocommerce' ); ?></th>
+				<th class="product-subtotal"><?php _e( 'Totale', 'woocommerce' ); ?></th>
 				<th class="product-remove">&nbsp;</th>
 			</tr>
 		</thead>
@@ -137,12 +137,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="coupon">
-							<label for="coupon_code"><?php _e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" />
+							<label for="coupon_code"><?php _e( 'Code promo:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Code promo', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Code promo', 'woocommerce' ); ?>" />
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 						</div>
 					<?php } ?>
 
-					<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>" />
+					<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Mettre a jour panier', 'woocommerce' ); ?>" />
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 

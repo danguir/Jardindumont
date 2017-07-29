@@ -2202,6 +2202,122 @@ section.article .elementor-widget-text-editor p{
 	  font-size: 18px;
  }
 
+.woocommerce .login-woo input.button{
+	appearance: none;
+	background-color: #b9ce02;
+	border: 1px solid;
+	border-color: #b9ce02;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "Gotham_Bold", sans-serif;
+	font-size: 18px;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 600;
+	line-height: 1;
+	 padding: 16px 2em 30px 2em;
+	text-decoration: none;
+	transition: background-color 150ms ease;
+	text-transform: uppercase;
+	height: 42px;
+	width: 200px;
+	letter-spacing: 2px;
+	width: 200px;
+	letter-spacing: 2px;
+	margin-top: 30px;
+}
+
+.woocommerce .login-woo input.button:hover{
+	background-color: #fec833;
+}
+.woocommerce .login-woo .lost_password {
+	font-family:Gotham_Light, Arial, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 20px;
+}
+ .woocommerce .dashboard-compte {
+	margin-top: 100px;
+	color: black;
+}
+.woocommerce .navigation-compte{
+	margin-top: 50px;
+
+}
+.woocommerce-account .woocommerce-MyAccount-content{
+	float: none;
+	margin: 0 auto;
+  text-align: center;
+}
+
+.woocommerce .navigation-compte a{
+		font-family: 'Gotham_medium';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: 900;
+}
+.woocommerce .navigation-compte a.link-compte{
+		margin-top: 40px;
+    display: inline-block;
+}
+.woocommerce .navigation-compte a::after{
+		content: "";
+    width: 85px;
+    height: 1px;
+    border-bottom: 4px solid #fec833;
+    display: block;
+    margin: 20px auto;
+
+}
+.woocommerce .navigation-compte p{
+	color: #000000;
+  font-family: 'PT_Sans';
+  font-size: 20px;
+	line-height: 1;
+  margin-bottom: 20px;
+}
+.woocommerce .navigation-compte img{
+		width: 60px;
+    position: absolute;
+    top: -46px;
+    right: 191px;
+		left: 0;
+    right: 0;
+}
+
+.woocommerce .navigation-compte .border-compte{
+	border: 2px solid #8b8b8b;
+  margin-bottom: 70px;
+	width:270px;
+ 	max-width:270px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.woocommerce .dashboard-compte h1{
+	color: #000000;
+font-size: 30px;
+font-family: 'beyond_the_mountains';
+line-height: 33px;
+letter-spacing: 3px;
+font-weight: 900;
+margin-bottom: 10px;
+margin-top: 20px;
+text-align: center;
+}
+
+.woocommerce .dashboard-compte p{
+	text-align: center;
+	text-transform: uppercase;
+	padding: 20px;
+	font-family: 'Gotham_Light';
+	font-size: 15px;
+}
+
+
 /*------------------------------------*\
   Block partage réseaux sociaux -> short-description.php
 \*------------------------------------*/
