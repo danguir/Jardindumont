@@ -23,6 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
+<section class="commande">
+	<div class="container">
+		<h2>Commande</h2>
 
 <?php if ( $has_orders ) : ?>
 
@@ -117,12 +120,21 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 	<?php endif; ?>
 
 <?php else : ?>
-	<div class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
-		<a class="woocommerce-Button button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php _e( 'Go shop', 'woocommerce' ) ?>
-		</a>
-		<?php _e( 'No order has been made yet.', 'woocommerce' ); ?>
-	</div>
+
+
+		<div class="center col-md-4 col-md-offset-4">
+				<p class="order-empty"><?php _e( 'No order has been made yet.', 'woocommerce' ); ?></p>
+				<p class="return-to-shop">
+					<a class="woocommerce-Button button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
+						<?php _e( 'Return to shop', 'woocommerce' ) ?>
+					</a>
+				</p>
+		</div>
+
 <?php endif; ?>
+
+</div>
+</section>
+
 
 <?php do_action( 'woocommerce_after_account_orders', $has_orders ); ?>

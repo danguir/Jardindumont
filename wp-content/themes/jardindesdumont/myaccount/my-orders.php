@@ -25,7 +25,12 @@ $customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_q
 	'post_status' => array_keys( wc_get_order_statuses() ),
 ) ) );
 
+
+
 if ( $customer_orders ) : ?>
+<section class="mes-commande">
+	<div class="container">
+		<h2>Commande</h2>
 
 	<h2><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent orders', 'woocommerce' ) ); ?></h2>
 
@@ -105,4 +110,7 @@ if ( $customer_orders ) : ?>
 			<?php endforeach; ?>
 		</tbody>
 	</table>
+
+</div>
+</section>
 <?php endif; ?>

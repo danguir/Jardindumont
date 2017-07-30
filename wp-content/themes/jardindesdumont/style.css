@@ -2020,7 +2020,7 @@ section.cart{
     border-bottom: 4px solid #fcea10;
     display: block;
     margin-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .woocommerce-cart table.cart img{
@@ -2077,7 +2077,7 @@ section.cart{
     height: 42px;
 }
 
-.woocommerce-cart .cart-empty{
+.woocommerce-cart .cart-empty, .woocommerce-account .order-empty{
 	color: #000000;
     text-transform: uppercase;
     font-weight: 600;
@@ -2088,7 +2088,7 @@ section.cart{
 }
 
 
-.woocommerce-cart .cart .return-to-shop a.button {
+.woocommerce-cart .cart .return-to-shop a.button, .woocommerce-account .commande .return-to-shop a.button {
 		float: none;
     color: #fff;
     background: #fec833;
@@ -2106,7 +2106,6 @@ section.cart{
     margin-bottom: 50px;
 		margin-top: 50px;
 }
-
 
 /********************************
 ARTICLE SINGLE
@@ -2316,7 +2315,72 @@ text-align: center;
 	font-family: 'Gotham_Light';
 	font-size: 15px;
 }
+/******************************
+Page commande
+******************************/
 
+.woocommerce-cart .nobr,
+.woocommerce-cart .product-price,
+.woocommerce-cart .product-subtotal,
+.woocommerce-cart th.product-quantity {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    font-family: 'Gotham_Light';
+    font-size: 18px;
+}
+
+
+.woocommerce-account .woocommerce-MyAccount-content .nobr,
+.woocommerce-account .woocommerce-MyAccount-content .woocommerce-orders-table__row{
+		color: #000000;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    font-family: 'Gotham_Light';
+    font-size: 18px;
+}
+
+.woocommerce table.my_account_orders td {
+    padding: 20px 8px;
+    vertical-align: middle;
+}
+
+section.commande {
+    margin-top: 100px;
+    color: black;
+}
+.woocommerce-account section.commande h2 {
+    color: #b9ce00;
+    font-weight: 700;
+    font-family: 'Gotham_Bold';
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.woocommerce-account section.commande h2::after {
+	content: "";
+	width: 9%;
+	margin: 0 auto;
+	border-bottom: 4px solid #fcea10;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.woocommerce-account .woocommerce-MyAccount-content{
+	width: 100%;
+}
+.woocommerce table.my_account_orders{
+	margin-bottom: 50px;
+}
+
+.woocommerce-account span.woocommerce-Price-amount{
+    font-family: 'Gotham_Medium';
+    font-weight: 900;
+    color: #818181;
+}
 
 /*------------------------------------*\
   Block partage réseaux sociaux -> short-description.php
