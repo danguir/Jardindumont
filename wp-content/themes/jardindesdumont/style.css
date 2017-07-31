@@ -659,6 +659,10 @@ margin: 0;
     FOOTER
 \*------------------------------------*/
 
+.social-newsletter  input[type="email"]{
+	border: 1px solid #b9ce02;
+	border-radius: 0px;
+}
 .social-newsletter {
   	background: #f7f7f7;
     padding: 30px 0px;
@@ -710,8 +714,8 @@ input[type="number"], input[type="password"], input[type="search"],
 input[type="tel"], input[type="text"], input[type="time"], input[type="url"],
 input[type="week"], input:not([type]), textarea, select[multiple=multiple]{
 		background-color: #fff !important;
-		border: 1px solid #b9ce02;
-		border-radius: 0px;
+		/*border: 1px solid #b9ce02;
+		border-radius: 0px;*/
 		box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
 		box-sizing: border-box;
 		font-family: "Gotham_Light", sans-serif;
@@ -2003,7 +2007,7 @@ section.cart{
 	color: black;
 }
 
-.woocommerce section.cart h2 {
+.woocommerce section.cart h2{
     color: #b9ce00;
     font-weight: 700;
     font-family: 'Gotham_Bold';
@@ -2347,11 +2351,12 @@ Page commande
     vertical-align: middle;
 }
 
-section.commande {
+section.commande, section.details-commande, section.info-compte, section.mon-adress, section.edit-adress,
+section.lost-pass {
     margin-top: 100px;
     color: black;
 }
-.woocommerce-account section.commande h2 {
+.woocommerce-account section.commande h2, .woocommerce section.lost-pass h2 {
     color: #b9ce00;
     font-weight: 700;
     font-family: 'Gotham_Bold';
@@ -2360,7 +2365,7 @@ section.commande {
     text-align: center;
     text-transform: uppercase;
 }
-.woocommerce-account section.commande h2::after {
+.woocommerce-account section.commande h2::after, .woocommerce section.lost-pass h2::after {
 	content: "";
 	width: 9%;
 	margin: 0 auto;
@@ -2381,6 +2386,142 @@ section.commande {
     font-weight: 900;
     color: #818181;
 }
+
+.woocommerce section.details-commande h2{
+    color: #b9ce00;
+    font-weight: 700;
+    font-family: 'Gotham_Bold';
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+		text-transform: uppercase;
+}
+
+.woocommerce section.details-commande h2::after {
+    content: "";
+    width: 9%;
+    margin: 0 auto;
+    border-bottom: 4px solid #fcea10;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.woocommerce section.details-commande {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    font-family: 'Gotham_Light';
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.woocommerce section.info-compte h2{
+    color: #b9ce00;
+    font-weight: 700;
+    font-family: 'Gotham_Bold';
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+		text-transform: uppercase;
+}
+
+.woocommerce section.info-compte h2::after {
+    content: "";
+    width: 9%;
+    margin: 0 auto;
+    border-bottom: 4px solid #fcea10;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.woocommerce section.edit-adress h2{
+    color: #b9ce00;
+    font-weight: 700;
+    font-family: 'Gotham_Bold';
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+		text-transform: uppercase;
+}
+
+.woocommerce section.edit-adress h2::after {
+    content: "";
+    width: 9%;
+    margin: 0 auto;
+    border-bottom: 4px solid #fcea10;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+.woocommerce section.info-compte input, .woocommerce section.edit-adress input,
+.woocommerce section.lost-pass input{
+	width: 550px;
+}
+
+
+.woocommerce section.info-compte input[type="submit"],.woocommerce section.lost-pass input[type="submit"] {
+
+		float: none;
+    color: #fff;
+    background: #fec833;
+    font-weight: 600;
+    vertical-align: middle;
+    padding: 16px 2em 30px 2em;
+    font-family: "Gotham Bold", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.5em;
+    outline: none;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+		width: 22%;
+}
+.woocommerce section.lost-pass input[type="submit"] {
+	padding: 16px 13em 30px 2em;
+}
+
+.woocommerce section.lost-pass p{
+	color: #000000;
+	font-family: 'PT_Sans';
+	font-size: 20px;
+	line-height: 1;
+	margin-bottom: 50px;
+}
+
+
+legend{
+	border-bottom: none;
+}
+
+
+.woocommerce-MyAccount-content section.mon-adress h2 {
+    color: #b9ce00;
+    font-weight: 700;
+    font-family: 'Gotham_Bold';
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.woocommerce-MyAccount-content section.mon-adress h2::after {
+	content: "";
+	width: 9%;
+	margin: 0 auto;
+	border-bottom: 4px solid #fcea10;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
 
 /*------------------------------------*\
   Block partage réseaux sociaux -> short-description.php

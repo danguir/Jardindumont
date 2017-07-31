@@ -23,6 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+<section class="details-commande">
+	<div class="container">
+
 <p><?php
 	/* translators: 1: order number 2: order date 3: order status */
 	printf(
@@ -54,3 +57,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_view_order', $order_id ); ?>
+</div>
+</section>

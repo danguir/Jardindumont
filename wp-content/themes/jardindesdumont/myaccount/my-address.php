@@ -36,7 +36,9 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 $oldcol = 1;
 $col    = 1;
 ?>
-
+<section class="mon-adress">
+	<div class="container">
+		<h2>CARNET D'ADRESSES</h2>
 <p>
 	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); ?>
 </p>
@@ -46,10 +48,13 @@ $col    = 1;
 <?php foreach ( $get_addresses as $name => $title ) : ?>
 
 	<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address">
+<div class="col-sm-9 center">
 		<header class="woocommerce-Address-title title">
 			<h3><?php echo $title; ?></h3>
 			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a>
 		</header>
+		</div>
+		<div class="col-sm-9 center">
 		<address>
 			<?php
 				$address = apply_filters( 'woocommerce_my_account_my_address_formatted_address', array(
@@ -72,8 +77,11 @@ $col    = 1;
 					echo $formatted_address;
 			?>
 		</address>
+		</div>
 	</div>
 
 <?php endforeach; ?>
 
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) echo '</div>'; ?>
+</div>
+</section>
