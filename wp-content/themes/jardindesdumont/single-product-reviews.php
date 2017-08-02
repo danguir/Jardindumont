@@ -37,36 +37,46 @@ if ( ! comments_open() ) {
 			}
 		?></h2-->
 
-		<div class="col-md-9">
+		<div class="col-md-12 center">
 			<h2 class="center">Avis des clients</h2>
 			<p>
 				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
 			</p>
+			<button class="ui-button ui-button-primary center">Laisser un avis</button>
 		</div>
-		<button class="ui-button ui-button-primary center">Laisser un avis</button>
-		<?php if ( have_comments() ) : ?>
 
-			<ol class="commentlist">
-				<?php wp_list_comments( apply_filters( 'woocommerce_product_review_list_args', array( 'callback' => 'woocommerce_comments' ) ) ); ?>
-			</ol>
+		<div class="col-md-12 images-review center">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/product/avis-client.png" alt="Logo" class="logo-img">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/product/avis-client-1.png" alt="Logo" class="avis-img">
+		</div>
 
-			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
-				echo '<nav class="woocommerce-pagination">';
-				paginate_comments_links( apply_filters( 'woocommerce_comment_pagination_args', array(
-					'prev_text' => '&larr;',
-					'next_text' => '&rarr;',
-					'type'      => 'list',
-				) ) );
-				echo '</nav>';
-			endif; ?>
+		<div class="col-md-12">
+			<?php if ( have_comments() ) : ?>
 
+				<ol class="commentlist">
+					<?php wp_list_comments( apply_filters( 'woocommerce_product_review_list_args', array( 'callback' => 'woocommerce_comments' ) ) ); ?>
+				</ol>
+
+				<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+					echo '<nav class="woocommerce-pagination">';
+					paginate_comments_links( apply_filters( 'woocommerce_comment_pagination_args', array(
+						'prev_text' => '&larr;',
+						'next_text' => '&rarr;',
+						'type'      => 'list',
+					) ) );
+					echo '</nav>';
+				endif; ?>
+		</div>
+		<div class="col-md-12">
 		<?php else : ?>
 
 			<p class="woocommerce-noreviews"><?php _e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
 
 		<?php endif; ?>
+		</div>
 	</div>
 
+<div class="col-md-12">
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->get_id() ) ) : ?>
 
 		<div id="review_form_wrapper">
@@ -119,5 +129,6 @@ if ( ! comments_open() ) {
 
 	<?php endif; ?>
 
+</div>
 	<div class="clear"></div>
 </div>

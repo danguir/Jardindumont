@@ -439,6 +439,28 @@ function woo_custom_hide_sales_flash()
     return false;
 }
 
+// Change the shop / product prices if a unit_price is set
+function sv_change_product_html( $price_html, $product ) {
+	$unit_price = get_post_meta( $product->id, 'unit_price', true );
+	if ( ! empty( $unit_price ) ) {
+		$price_html = '<span class="woocommerce-Price-amount amount">Prix à l\'unité : ' . wc_price( $unit_price ) .'</span>';
+	}
+	return $price_html;
+}
+add_filter( 'woocommerce_get_price_html', 'sv_change_product_html', 10, 2 );
+
+
+// Change the cart prices if a unit_price is set
+/*function sv_change_product_price_cart( $price, $cart_item, $cart_item_key ) {
+	$unit_price = get_post_meta( $cart_item['product_id'], 'unit_price', true );
+	if ( ! empty( $unit_price ) ) {
+		$price = wc_price( $unit_price ) . ' per kg';
+	}
+	return $price;
+}
+add_filter( 'woocommerce_cart_item_price', 'sv_change_product_price_cart', 10, 3 );*/
+
+
 //Recommendation products
 function woocommerce_output_related_products() {
     // woocommerce_related_products(4,2); // Display 4 products in rows of 2
@@ -449,6 +471,13 @@ add_image_size( 'tw_shop_single', 360, 999, false );
 
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 
+/*// Separete Login form and registration form */
+add_action('woocommerce_before_customer_login_form','load_registration_form', 2);
+function load_registration_form(){
+  if(isset($_GET['action'])=='register'){
+    woocommerce_get_template( 'myaccount/form-register.php' );
+  }
+}
 
 // Remove the product rating display on product loops
 //remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );

@@ -30,6 +30,9 @@ do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
 
 <?php if ( $has_methods ) : ?>
 
+	<section class="info-compte">
+		<div class="container">
+			<h2>INFORMATIONS DE COMPTE</h2>
 	<table class="woocommerce-MyAccount-paymentMethods shop_table shop_table_responsive account-payment-methods-table">
 		<thead>
 			<tr>
@@ -67,6 +70,10 @@ do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
 			<?php endforeach; ?>
 		<?php endforeach; ?>
 	</table>
+
+
+	</div>
+	</section>
 
 <?php else : ?>
 

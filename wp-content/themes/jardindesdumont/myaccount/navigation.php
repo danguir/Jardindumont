@@ -74,14 +74,14 @@ do_action( 'woocommerce_before_account_navigation' );
 				<div class="border-compte">
 					<img style="width: 80px;" src="<?php echo get_template_directory_uri();?>/img/compte-client/adresse.png" class="center-block img-responsive" alt="Responsive image">
 					<a class="link-compte" href="/my-account/orders/">Addresses</a>
-					<p>Historique <br>des commandes</p>
+					<p>Facturation et livraison</p>
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-12">
 				<div style="height: 197px;" class="border-compte">
 				<img style="width: 90px;" src="<?php echo get_template_directory_uri();?>/img/compte-client/paiement.png" class="center-block img-responsive" alt="Responsive image">
-				<a class="link-compte" href="/my-lists/">Fortefeuille</a>
-				<p>Ce que vous plait</p>
+				<a class="link-compte" href="/my-account/payment-methods/">Fortefeuille</a>
+				<p>Mode de paiement</p>
 			</div>
 			</div>
 		</div>

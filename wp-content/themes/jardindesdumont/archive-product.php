@@ -46,7 +46,16 @@ get_header( 'shop' ); ?>
 		         </div>
 						 <div class="col-md-8 col-md-offset-2">
 							 <p>
-								 Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
+								 <?php
+									 /**
+										* woocommerce_archive_description hook.
+										*
+										* @hooked woocommerce_taxonomy_archive_description - 10
+										* @hooked woocommerce_product_archive_description - 10
+										*/
+									 do_action( 'woocommerce_archive_description' );
+								 ?>
+
 							 </p>
 						 </div>
 						 <div class="col-md-10 col-md-offset-1">
@@ -63,35 +72,12 @@ get_header( 'shop' ); ?>
 			         </div>
 
 							 <a class="link-clear" href="#" data-filter="all">Reinitialiser les filtres</a>
-
 		         </div>
-			</div>
-		             <!--div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter potager">
-		                 <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-		             </div>
-
-		             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter fruitiers">
-		                 <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-		             </div>
-
-		             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter potager">
-		                 <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-		             </div-->
-
-		         <!--/div-->
+					 </div>
 		     </div>
 		 </section>
 
 
-		<?php
-			/**
-			 * woocommerce_archive_description hook.
-			 *
-			 * @hooked woocommerce_taxonomy_archive_description - 10
-			 * @hooked woocommerce_product_archive_description - 10
-			 */
-			do_action( 'woocommerce_archive_description' );
-		?>
 
     </header>
 
@@ -193,6 +179,7 @@ get_header( 'shop' ); ?>
 </li>
 
 
+
 				<li class="post-263 product type-product status-publish has-post-thumbnail product_cat-jardigeek  instock sale shipping-taxable purchasable product-type-simple">
 	<a href="http://dev.jardindumont.local/product/mon-jardin-dinterieur/" class="woocommerce-LoopProduct-link">
 
@@ -204,21 +191,20 @@ get_header( 'shop' ); ?>
 
 				<li class="post-245 product type-product status-publish  instock shipping-taxable purchasable product-type-simple">
 	<a href="http://dev.jardindumont.local/product/kit-paradis-tropical/" class="woocommerce-LoopProduct-link"><img src="http://dev.jardindumont.local/wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Placeholder" width="300" class="woocommerce-placeholder wp-post-image" height="300"><h2 class="woocommerce-loop-product__title">Kit «&nbsp;Paradis Tropical&nbsp;»</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount">40<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+	<span class="price"><span class="woocommerce-Price-amount amount">Prix à l'unité : 40<span class="woocommerce-Price-currencySymbol">€</span></span></span>
 </a>
 </li>
 
 
 				<li class="post-241 product type-product status-publish has-post-thumbnail product_cat-jardigeek product_tag-jardigeek last instock shipping-taxable purchasable product-type-simple">
 	<a href="http://dev.jardindumont.local/product/kit-plante-sensitive/" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="00_MainPhoto" title="00_MainPhoto" srcset="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg 300w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-150x150.jpg 150w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-250x250.jpg 250w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-768x768.jpg 768w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-700x700.jpg 700w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-120x120.jpg 120w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-360x360.jpg 360w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-50x50.jpg 50w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-900x900.jpg 900w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto.jpg 1600w" sizes="(max-width: 300px) 100vw, 300px"><h2 class="woocommerce-loop-product__title">Kit «&nbsp;Plante sensitive&nbsp;»</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount">35<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+	<span class="price"><span class="woocommerce-Price-amount amount">Prix à l'unité : 35<span class="woocommerce-Price-currencySymbol">€</span></span></span>
 </a></li>
 
 
 		</ul>
 </div>
 	</section>
-
 
 	<section class="networking center " >
 		<h2>Suivez-nous</h2>

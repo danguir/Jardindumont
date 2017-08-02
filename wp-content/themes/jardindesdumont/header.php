@@ -35,10 +35,10 @@
 					<div id="vertical-bar" class="vertical-bar">
 
 						<button class="menu-button" id="open-button">
-							<img src="<?php echo get_template_directory_uri();?>/img/burger.png" class="burger"/>
+							<img src="<?php echo get_template_directory_uri();?>/img/burger.png" id="burger" class="burger"/>
 						</button>
 
-						<div class="logo">
+						<div class="logo" id="logo">
 							<a href="<?php echo home_url(); ?>">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
 							</a>

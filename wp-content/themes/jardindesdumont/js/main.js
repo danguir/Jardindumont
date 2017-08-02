@@ -67,18 +67,35 @@
   jQuery(document).ready(function(){*/
 
 	//jQuery("#vertical-bar").hide();
+	var templateUrl = '/wp-content/themes/jardindesdumont';
 
 		jQuery(window).scroll(function () {
             // set distance user needs to scroll before we fadeIn navbar
 			if (jQuery(this).scrollTop() > 100) {
 				//jQuery('#vertical-bar').fadeIn();
 				jQuery('#vertical-bar').css('background-color', 'rgba(0, 0, 0, 0.5)');
+				jQuery("#vertical-bar").css('height', '60px');
+				jQuery("#logo a img").css('height', '43px');
+				jQuery("#logo a img").css('width', '188px');
+				jQuery("#vertical-bar .list-inline li a img").css('width', '44px');
+				//jQuery("#burger").attr('src', templateUrl + '/img/burger.png');
+				jQuery(".menu-button #burger").css('width', '40px');
+				jQuery(".menu-button #burger").css('height', '22px');
+
+
 			} else {
 				//jQuery('#vertical-bar').fadeOut();
 				jQuery('#vertical-bar').css('background-color', 'transparent');
-
+				jQuery("#logo a img").css('height', '70px');
+				jQuery("#logo a img").css('width', '300px');
+				jQuery("#vertical-bar .list-inline li a img").css('width', '60px');
+				//jQuery("#burger").attr('src', templateUrl + '/img/burger-vert.png');
+				jQuery(".menu-button #burger").css('width', '48px');
+				jQuery(".menu-button #burger").css('height', '27px');
 			}
 		});
+
+		//var color = jQuery('#myDivID').css("background-color");
 
 /*
 });
@@ -169,3 +186,63 @@ jQuery("#affected").zInput();
         });
     });
 })(jQuery);*/
+
+
+
+	/*function stepnext(n){
+	    if(n != 0){
+			//$(".stepwizard-row a").switchClass('btn-primary','btn-default');
+	        jQuery(".stepwizard-row a").removeClass('btn-primary');
+	        jQuery(".stepwizard-row a").addClass('btn-default');
+			jQuery('.stepwizard a[href="#step-'+n+'"]').tab('show');
+			//$('.stepwizard-row a[href="#step-'+n+'"]').switchClass('btn-default','btn-primary');
+	      jQuery('.stepwizard-row a[href="#step-'+n+'"]').removeClass('btn-default');
+	      jQuery('.stepwizard-row a[href="#step-'+n+'"]').addClass('btn-primary');
+	    }
+	}
+	stepnext(1);*/
+
+
+	jQuery(document).ready(function () {
+
+    var navListItems = jQuery('div.setup-panel div a'),
+            allWells = jQuery('.setup-content'),
+            allNextBtn = jQuery('.nextBtn');
+
+    allWells.hide();
+
+    navListItems.click(function (e) {
+        e.preventDefault();
+        var $target = jQuery(jQuery(this).attr('href')),
+                $item = jQuery(this);
+
+        if (!$item.hasClass('disabled')) {
+            navListItems.removeClass('btn-primary').addClass('btn-default');
+            $item.addClass('btn-primary');
+            allWells.hide();
+            $target.show();
+            $target.find('input:eq(0)').focus();
+        }
+    });
+
+    allNextBtn.click(function(){
+        var curStep = jQuery(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = jQuery('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url']"),
+            isValid = true;
+
+        jQuery(".form-group").removeClass("has-error");
+        for(var i=0; i<curInputs.length; i++){
+            if (!curInputs[i].validity.valid){
+                isValid = false;
+                jQuery(curInputs[i]).closest(".form-group").addClass("has-error");
+            }
+        }
+
+        if (isValid)
+            nextStepWizard.removeAttr('disabled').trigger('click');
+    });
+
+    jQuery('div.setup-panel div a.btn-primary').trigger('click');
+});
