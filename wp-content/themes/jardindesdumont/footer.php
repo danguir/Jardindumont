@@ -14,7 +14,6 @@
 
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-
 				<div class="footer-level-one" >
 						<div class="row center">
 						  <div class="col-md-3 col-xs-12 text-center">
@@ -48,17 +47,25 @@
 								<button class="ui-button ui-button-secondary-red">Call me back</button>
 									<a href="" class="mention-legal" title="WordPress">
 										<h5>Pour vous, les curieux</h5>
-										<p>Méntions légales<br>Conditions de vente</p>
+										<p>Mentions légales<br>Conditions de vente</p>
 								</a>
 							</div>
 							<div class="col-md-6 col-xs-12 text-center">
 
 								<div class="row center">
-									<div class="col-md-4 col-xs-12 text-center">
-										<h4 class="app">application<br>mobile<br>Le jardin<br>des dumont</h4>
+									<div class="col-md-4 col-xs-12 text-center style='background:red;' ">
+										<h4 class="app">Application<br>What's this<br>plante</h4>
+										<div class="row">
+											<div class="col-md-12 col-xs-12 nopadding" style="text-align: right;">
+										<span class="badges">Développée par<br>famille Dumont</span>
 									</div>
+									<div class="col-md-4 col-xs-4 nopadding ">
+										<img src="<?php echo get_template_directory_uri();?>/img/footer/badge.png" class="img-badge" alt="Responsive image">
+									</div>
+								</div>
+							</div>
 									<div class="Iphone col-md-4 col-xs-12 text-center">
-										<img src="<?php echo get_template_directory_uri();?>/img/footer/app.png" class="app-phone center-block img-responsive" alt="Responsive image">
+										<img src="<?php echo get_template_directory_uri();?>/img/footer/app-download_2.png" class="app-phone center-block img-responsive" alt="Responsive image">
 									</div>
 									<div class="col-md-4 col-xs-12 text-center">
 										<img src="<?php echo get_template_directory_uri();?>/img/footer/app-telecharger.png" class="app-down center-block img-responsive" alt="Responsive image">

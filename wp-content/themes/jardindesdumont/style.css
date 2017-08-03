@@ -758,6 +758,21 @@ input[type="week"], input:not([type]), textarea, select[multiple=multiple]{
 .footer-level-two .app-down,.footer-level-two h4.app{
 	margin-top: 100px;
 }
+.footer-level-two span.badges{
+		color: #000;
+    font-size: 14px;
+    font-family: Gotham_Light;
+    text-align: right;
+}
+.footer-level-two img.img-badge{
+	width: 30px
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
 .footer-level-two h5{
 	color: #000;
 	font-weight: bold;
@@ -1961,7 +1976,7 @@ section.Trouver-kit h2{
     letter-spacing: 3px;
     font-weight: 900;
     margin-bottom: 30px;
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
 }
 section.Trouver-kit .Trouver-kit-link::after {
@@ -1992,10 +2007,10 @@ section.Trouver-kit img.loop {
 	width: 70px;
 	margin: 0 auto;
 	display: block;
-	position: absolute;
+	/*position: absolute;
 	left: 0;
 	right: 0;
-	 top: 1064.41px;
+	 top: 1064.41px;*/
 	}
 
 	.woocommerce section.upsells-costumised{
