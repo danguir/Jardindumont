@@ -440,11 +440,11 @@ function woo_custom_hide_sales_flash()
 }
 
 //add prix unite label in front of price
-add_filter( 'formatted_woocommerce_price', 'span_custom_prc', 10, 5 );
+/*add_filter( 'formatted_woocommerce_price', 'span_custom_prc', 10, 5 );
 
 function span_custom_prc( $number_format, $price, $decimals, $decimal_separator, $thousand_separator){
     return '<span class="woocommerce-Price-amount amount">Prix à l\'unité : '.$number_format.'</span>';
-}
+}*/
 
 
 // Change the shop / product prices if a unit_price is set
