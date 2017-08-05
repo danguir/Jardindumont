@@ -109,6 +109,9 @@ function html5blank_header_scripts()
         wp_register_script('classie', get_template_directory_uri() . '/js/classie.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('classie'); // Enqueue it!
 
+        wp_register_script('contact', get_template_directory_uri() . '/js/contact-form.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('contact'); // Enqueue it!
+
 
 
       //  wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0'); // Custom scripts

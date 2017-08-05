@@ -55,6 +55,44 @@
 
 })();
 
+
+//Fin KIT
+jQuery(document).ready(function () {
+    //Initialize tooltips
+    jQuery('.nav-tabs > li a[title]').tooltip();
+
+    //Wizard
+    jQuery('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+
+        var $target = jQuery(e.target);
+
+        if ($target.parent().hasClass('disabled')) {
+            return false;
+        }
+    });
+
+    jQuery(".next-step").click(function (e) {
+
+        var $active = jQuery('.wizard .nav-tabs li.active');
+        $active.next().removeClass('disabled');
+        nextTab($active);
+
+    });
+    jQuery(".prev-step").click(function (e) {
+
+        var $active = jQuery('.wizard .nav-tabs li.active');
+        prevTab($active);
+
+    });
+});
+
+function nextTab(elem) {
+    jQuery(elem).next().find('a[data-toggle="tab"]').click();
+}
+function prevTab(elem) {
+    jQuery(elem).prev().find('a[data-toggle="tab"]').click();
+}
+
 /*Load more ctegory page
 jQuery(function () {
     jQuery("div #article-loop").slice(0, 4).show();
@@ -162,6 +200,8 @@ jQuery(document).ready(function(){
 });
 
 jQuery("#affected").zInput();
+jQuery("#affected-step2").zInput();
+jQuery("#affected-step3").zInput();
 
 
 /*$(document).ready(function() {
