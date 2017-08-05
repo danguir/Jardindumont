@@ -55,8 +55,21 @@
 
 })();
 
-
-
+/*Load more ctegory page
+jQuery(function () {
+    jQuery("div #article-loop").slice(0, 4).show();
+		jQuery("#loadMore").on('click', function (e) {
+			//e.preventDefault();
+			jQuery("div:hidden").slice(0, 8).slideDown();
+			//alert(jQuery("div#article-loop:hidden").length );
+			if (jQuery("div:hidden").length == 0) {
+					jQuery("#load").fadeOut('slow');
+			}
+			jQuery('html,body').animate({
+					scrollTop: jQuery(this).offset().top
+			}, 1500);
+    });
+});*/
 
  /*------------------------------------*\
      VERTICAL MENU

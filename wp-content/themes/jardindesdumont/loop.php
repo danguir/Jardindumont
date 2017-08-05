@@ -1,34 +1,50 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 	<!-- article -->
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="col-md-5 center" id="article-loop">
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<!-- post thumbnail -->
-		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-			</a>
-		<?php endif; ?>
-		<!-- /post thumbnail -->
 
-		<!-- post title -->
-		<h2>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-		</h2>
-		<!-- /post title -->
+				<!-- post thumbnail -->
+				<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+						<?php the_post_thumbnail(array(420,420)); // Declare pixel size you need inside the array ?>
+					</a>
+				<?php endif; ?>
+				<!-- /post thumbnail -->
 
-		<!-- post details -->
-		<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-		<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-		<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-		<!-- /post details -->
+				<!-- post title -->
+				<div class="">
+					<div class="col-md-12">
+						<h2 class="article-title">
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+						</h2>
 
-		<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+					</div>
 
-		<?php edit_post_link(); ?>
+					<div class="col-md-12">
+						<span class="avatar"><?php echo get_avatar(get_the_author_meta('user_email')); ?></span>
+					</div>
+					<div class="col-md-12">
+						<span class="author"> <?php the_author_posts_link(); ?></span>
+					</div>
+
+				</div>
+
+				<!-- /post title -->
+
+				<!-- post details >
+				<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
+				<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
+				< /post details -->
+
+				<?php //html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+
+		<?php //edit_post_link(); ?>
 
 	</article>
 	<!-- /article -->
+		</div>
 
 <?php endwhile; ?>
 

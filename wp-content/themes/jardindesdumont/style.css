@@ -1720,7 +1720,7 @@ section .hashtag-dumont{
 background-color: transparent;
 }
 
-.woocommerce .woocommerce-breadcrumb{
+.woocommerce .woocommerce-breadcrumb, section.category-page .woocommerce-breadcrumb{
 	display: block;
 	margin: 0 0 1em;
 	padding: 0;
@@ -2043,14 +2043,14 @@ section.Trouver-kit img.loop {
 			padding-top: 50px;
 	}
 
-	.woocommerce section.networking h2 {
+	.woocommerce section.networking h2, section.networking h2 {
     color: #000000;
     font-size: 30px;
     font-family: 'Gotham_bold';
     margin-top: 50px;
 }
 
-.woocommerce section.networking h2::after {
+.woocommerce section.networking h2::after, section.networking h2::after {
     content: "";
     width: 9%;
     margin: 0 auto;
@@ -2206,7 +2206,7 @@ section.article span.avatar{
 	 top: 140px;
  }
 
-section.article img.avatar{
+section.article img.avatar, section.category-page img.avatar {
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	border: 2px solid #b9ce00;
@@ -2595,14 +2595,6 @@ legend{
 }
 
 
-
-
-
-
-
-
-
-
 .stepwizard-step p {
     margin-top: 10px;
 }
@@ -2689,4 +2681,139 @@ legend{
 
 .hesperiden.tparrows:hover{
 	background: #b9ce02;
+}
+
+/**************************
+category-page
+***************************/
+ section.category-page{
+	color: black;
+}
+
+
+section.category-page h1{
+    color: #b9ce00;
+    font-weight: 700;
+    font-family: 'Gotham_Bold';
+		margin-bottom: 20px;
+		margin-top: 20px;
+    text-align: center;
+}
+
+section.category-page h1::after{
+		content: "";
+    width: 20%;
+    height: 1px;
+    border-bottom: 4px solid #fec833;
+    display: block;
+		margin: 30px auto;
+}
+
+section.category-page .article-title{
+		color: black;
+		font-family:'Gotham_bold';
+		font-size:20px;
+		font-weight:700;
+    text-transform: uppercase;
+}
+section.category-page .article-title a:hover{
+		color: #fec833;
+		text-decoration: none;
+
+}
+section.category-page .avatar::after {
+	display: inline-block;
+	margin: 0 0 4px 20px;
+	height: 3px;
+	content: " ";
+	text-shadow: none;
+	background-color: #fec833;
+	width: 140px;
+}
+
+section.category-page img.avatar{
+	width: 40px;
+	height: 40px;
+}
+section.category-page .avatar::before {
+	display: inline-block;
+	margin: 0 20px 4px 0;
+	height: 3px;
+	content: " ";
+	text-shadow: none;
+	background-color: #fec833;
+	width: 140px;
+}
+section.category-page .author{
+	font-family:'PT_Sans';
+	font-size: 20px;
+	font-weight:400;
+	text-transform: capitalize;
+}
+
+section.category-page .side-menu-article{
+    background: #f7f7f7;
+		font-family:'Gotham_Light';
+		text-transform: uppercase;
+		font-size: 13px;
+  /**  position: fixed;*/
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 30px;
+		padding-top: 50px;
+		position: relative;
+		margin-bottom: 100px;
+
+}
+
+section.category-page .description p{
+		color: black;
+		font-size: 17px;
+		font-family: PT_Sans;
+		text-align: center;
+    margin-bottom: 100px;
+}
+
+section.category-page .side-menu-article img{
+	width: 70px;
+	margin-bottom: 30px;
+	bottom: 511px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: absolute;
+}
+section.category-page .side-menu-article li{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+section.category-page .side-menu-article li.title{
+	font-family:'Gotham_Bold';
+	color: #b9ce00;
+	letter-spacing: 2.4px;
+  font-size: 15px;
+}
+
+section.category-page .side-menu-article ul{
+	padding-left: 0px;
+}
+
+section.category-page #article-loop {
+    /*display:none;*/
+		margin-bottom: 50px;
+}
+
+#loadMore{
+	padding: 16px 2em 30px 2em;
+	font-family: "Gotham Bold", sans-serif;
+	font-size: 18px;
+	border-radius: 0.5em;
+	letter-spacing: 2px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	width: 18%;
+}
+
+section.category-page .full-height{
+ height: 100%:
 }
