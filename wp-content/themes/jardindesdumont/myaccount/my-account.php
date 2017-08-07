@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-wc_print_notices();
+
 
 /**
  * My Account navigation.
@@ -29,6 +29,7 @@ wc_print_notices();
  ?>
 
 <div class="woocommerce-MyAccount-content">
+	wc_print_notices();
 	<?php
 		/**
 		 * My Account content.

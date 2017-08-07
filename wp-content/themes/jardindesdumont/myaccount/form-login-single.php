@@ -22,12 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<?php wc_print_notices(); ?>
 
 <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 
 <div class="container">
+	<?php wc_print_notices(); ?>
  <h2 class="title-form"><?php //_e( 'Login', 'woocommerce' ); ?>CONNECTEZ-VOUS À VOTRE COMPTE </h2>
 	<div class="login-woo">
 		<form class="woocomerce-form woocommerce-form-login login" method="post">

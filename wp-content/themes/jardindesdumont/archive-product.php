@@ -94,6 +94,7 @@ get_header( 'shop' ); ?>
 				//do_action( 'woocommerce_before_shop_loop' );
 			?>
 			<section class="up-sells upsells center products">
+				<?php wc_print_notices(); ?>
 				<div class="container">
 					<!--div class="col-sm-3">
 						<a href="#">

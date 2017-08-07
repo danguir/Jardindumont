@@ -19,15 +19,13 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
-wc_print_notices();
-
 ?>
 <section class="cart">
 	<div class="container">
+	<?php	wc_print_notices(); ?>
+	</div>
 		<h2>Panier</h2>
 		<div class="center col-md-4 col-md-offset-4">
-
 				<p class="cart-empty">
 					<?php _e( 'Votre panier est vide.', 'woocommerce' ) ?>
 				</p>
@@ -40,7 +38,6 @@ wc_print_notices();
 							<?php _e( 'Return to shop', 'woocommerce' ) ?>
 						</a>
 					</p>
+					<?php endif; ?>
 			</div>
-		</div>
 </section>
-<?php endif; ?>

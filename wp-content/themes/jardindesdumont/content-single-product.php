@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 *
 	 * @hooked wc_print_notices - 10
 	 */
-	 do_action( 'woocommerce_before_single_product' );
+	 //do_action( 'woocommerce_before_single_product' );
 
 	 if ( post_password_required() ) {
 	 	echo get_the_password_form();
@@ -37,8 +37,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section id="homepage" class="homepage_content" style="background-color:#ffffff;">
-	<!--div class="container"-->
-
+	<div class="container">
+	<?php wc_print_notices(); ?>
+</div>
 <div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php

@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-wc_print_notices();
+
 
 do_action( 'woocommerce_before_checkout_form', $checkout );
 
@@ -33,6 +33,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 ?>
 
 <section class="checkout-client">
+	<?php wc_print_notices(); ?>
 	<h2>INFORMATIONS DE COMPTE</h2>
 	<!--div class="container">
 	<div class="stepwizard">

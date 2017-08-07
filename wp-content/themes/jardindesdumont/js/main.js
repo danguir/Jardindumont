@@ -133,7 +133,6 @@ jQuery(function () {
 				jQuery(".menu-button #burger").css('width', '40px');
 				jQuery(".menu-button #burger").css('height', '22px');
 
-
 			} else {
 				//jQuery('#vertical-bar').fadeOut();
 				jQuery('#vertical-bar').css('background-color', 'transparent');
@@ -179,15 +178,12 @@ jQuery(document).ready(function(){
     jQuery("input:checkbox").change(function(){
         var value = jQuery(this).attr('data-filter');
 				//if ($(this).is(':checked')) {
-        if(value == "all")
-        {
+        if(value == "all"){
             jQuery('.filter').show('1000');
         }
-        else
-        {
+        else{
             jQuery(".filter").not('.'+value).hide('3000');
             jQuery('.filter').filter('.'+value).show('3000');
-
         }
 			//}
     });
@@ -196,12 +192,18 @@ jQuery(document).ready(function(){
 			jQuery(this).removeClass("active");
 		}
 			jQuery(this).addClass("active");
-
 });
 
+//Radio and checkbox button
 jQuery("#affected").zInput();
 jQuery("#affected-step2").zInput();
 jQuery("#affected-step3").zInput();
+jQuery("#affected-step4").zInput();
+jQuery("#affected-step5").zInput();
+jQuery("#affected-step6").zInput();
+
+
+
 
 
 /*$(document).ready(function() {

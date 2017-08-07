@@ -19,10 +19,11 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-wc_print_notices(); ?>
+?>
 <section class="lost-pass">
 	<div class="container">
+		<?php wc_print_notices(); ?>
+
 		<h2>RÉINITIALISER VOTRE MOT DE PASSE</h2>
 
 <form method="post" class="form-horizontal center">

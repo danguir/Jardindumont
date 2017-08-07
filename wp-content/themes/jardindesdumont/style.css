@@ -2908,8 +2908,9 @@ span.round-tab i{
     color:#555555;
 }
 .wizard li.active span.round-tab {
-    background: #fff;
-    border: 2px solid #5bc0de;
+		background: #b9ce00;
+    border: 2px solid white;
+    color: white;
 
 }
 .wizard li.active span.round-tab i{
@@ -3021,4 +3022,29 @@ section.kit-form h1::after{
 section.kit-form .center{
 	margin-top: 50px;
 	margin-bottom: 50px;
+}
+section.kit-form .ui-button-primary, section.kit-form .ui-button{
+	font-family: "Gotham Bold", sans-serif;
+  font-size: 18px;
+  padding: 13px 2em 16px 2em;
+  letter-spacing: 2px;
+}
+
+section.kit-form .zSelected{
+	color: white;
+	background-color: #fdc832;
+	border-color: #fdc832;
+}
+
+
+/*************************
+ALERT POP UP
+*************************/
+
+.woocommerce-message {
+    border-top-color: #b9ce00;
+}
+
+.woocommerce-error {
+    border-top-color: #e6332a;
 }
