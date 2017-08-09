@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  ?>
 
 <div class="woocommerce-MyAccount-content">
-	wc_print_notices();
+
 	<?php
 		/**
 		 * My Account content.

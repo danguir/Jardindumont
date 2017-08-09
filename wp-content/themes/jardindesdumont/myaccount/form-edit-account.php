@@ -24,7 +24,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 <section class="info-compte">
 	<div class="container">
 		<h2>INFORMATIONS DE COMPTE</h2>
-<div class="col-sm-12">
+<div class="col-md-12 col-sm-12">
 <form class="form-horizontal center" action="" method="post">
 
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>

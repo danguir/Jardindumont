@@ -32,8 +32,12 @@ do_action( 'woocommerce_before_account_navigation' );
 		<?php// endforeach; ?>
 	</ul>
 </nav-->
+<div class="container ">
+	<?php wc_print_notices(); ?>
+</div>
 <section class="navigation-compte">
 	<div class="container ">
+				<?php wc_print_notices(); ?>
 		<div class="row">
 			<div class="col-md-4 col-xs-12">
 				<div class="border-compte">
@@ -60,7 +64,7 @@ do_action( 'woocommerce_before_account_navigation' );
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-12">
-				<div style="height: 197px;" class="border-compte">
+				<div  class="border-compte tall">
 				<img style="width: 90px;" src="<?php echo get_template_directory_uri();?>/img/compte-client/wishlist.png" class="center-block img-responsive" alt="Responsive image">
 				<a class="link-compte" href="/my-lists/">wishlist</a>
 				<p>Ce que vous plait</p>
@@ -71,26 +75,30 @@ do_action( 'woocommerce_before_account_navigation' );
 
 		<div class="row">
 			<div class="col-md-4 col-xs-12">
-				<div class="border-compte">
-					<img style="width: 80px;" src="<?php echo get_template_directory_uri();?>/img/compte-client/adresse.png" class="center-block img-responsive" alt="Responsive image">
+				<div class="border-compte tall">
+					<img style="width: 80px; margin-top:20px; " src="<?php echo get_template_directory_uri();?>/img/compte-client/adresse.png" class="center-block img-responsive" alt="Responsive image">
 					<a class="link-compte" href="/my-account/orders/">Addresses</a>
 					<p>Facturation et livraison</p>
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-12">
-				<div style="height: 197px;" class="border-compte">
-				<img style="width: 90px;" src="<?php echo get_template_directory_uri();?>/img/compte-client/paiement.png" class="center-block img-responsive" alt="Responsive image">
+				<div class="border-compte tall">
+				<img style="width: 90px; margin-top:20px;" src="<?php echo get_template_directory_uri();?>/img/compte-client/paiement.png" class="center-block img-responsive" alt="Responsive image">
 				<a class="link-compte" href="/my-account/payment-methods/">Fortefeuille</a>
 				<p>Mode de paiement</p>
 			</div>
 			</div>
 		</div>
 
+
 		<div class="row">
 			<div class="col-md-6">
-				<a href="/my-account/customer-logout/">Logout</a>
+			<?php if ( is_user_logged_in() ) : ?>
+				<a class="ui-button ui-button-secondary" href="<?php echo wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) );?>">Déconnexion</a>
+			<?php endif; ?>
 			</div>
 		</div>
+
 </div>
 </section>
 

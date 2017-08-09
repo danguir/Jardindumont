@@ -5,7 +5,7 @@ Template Name: Contact Form
 ?>
 
 
-<?php 
+<?php
 //If the form is submitted
 if(isset($_POST['submitted'])) {
 
@@ -13,7 +13,7 @@ if(isset($_POST['submitted'])) {
 	if(trim($_POST['checking']) !== '') {
 		$captchaError = true;
 	} else {
-	
+
 		//Check to make sure that the name field is not empty
 		if(trim($_POST['contactName']) === '') {
 			$nameError = 'Indiquez votre nom.';
@@ -21,7 +21,7 @@ if(isset($_POST['submitted'])) {
 		} else {
 			$name = trim($_POST['contactName']);
 		}
-		
+
 		//Check to make sure sure that a valid email address is submitted
 		if(trim($_POST['email']) === '')  {
 			$emailError = 'Indiquez une adresse e-mail valide.';
@@ -32,8 +32,8 @@ if(isset($_POST['submitted'])) {
 		} else {
 			$email = trim($_POST['email']);
 		}
-			
-		//Check to make sure comments were entered	
+
+		//Check to make sure comments were entered
 		if(trim($_POST['comments']) === '') {
 			$commentError = 'Entrez votre message.';
 			$hasError = true;
@@ -44,7 +44,7 @@ if(isset($_POST['submitted'])) {
 				$comments = trim($_POST['comments']);
 			}
 		}
-			
+
 		//If there is no error, send the email
 		if(!isset($hasError)) {
 
@@ -53,7 +53,7 @@ if(isset($_POST['submitted'])) {
 			$sendCopy = trim($_POST['sendCopy']);
 			$body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
 			$headers = 'De : mon site <'.$emailTo.'>' . "\r\n" . 'R&eacute;pondre &agrave; : ' . $email;
-			
+
 			mail($emailTo, $subject, $body, $headers);
 
 			if($sendCopy == true) {
@@ -70,7 +70,7 @@ if(isset($_POST['submitted'])) {
 
 
 <?php get_header(); ?>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts/contact-form.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/contact-form.js"></script>
 
 
 
@@ -84,36 +84,41 @@ if(isset($_POST['submitted'])) {
 <?php } else { ?>
 
 	<?php if (have_posts()) : ?>
-	
+
 	<?php while (have_posts()) : the_post(); ?>
+		<section class="contact-form">
+			<div class="container">
+				<div class="col-md-12 center">
+
 		<h1><?php the_title(); ?></h1>
 		<?php the_content(); ?>
-		
+
 		<?php if(isset($hasError) || isset($captchaError)) { ?>
 			<p class="error">Une erreur est survenue lors de l'envoi du formulaire.</p>
 		<?php } ?>
-	
-		<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
-	
+
+
+		<form class="form-horizontal center" action="<?php the_permalink(); ?>" id="contactForm" method="post">
+
 			<ol class="forms">
 				<li><label for="contactName">Nom</label>
 					<input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="requiredField" />
 					<?php if($nameError != '') { ?>
-						<span class="error"><?=$nameError;?></span> 
+						<span class="error"><?=$nameError;?></span>
 					<?php } ?>
 				</li>
-				
+
 				<li><label for="email">E-mail</label>
 					<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="requiredField email" />
 					<?php if($emailError != '') { ?>
 						<span class="error"><?=$emailError;?></span>
 					<?php } ?>
 				</li>
-				
+
 				<li class="textarea"><label for="commentsText">Message</label>
 					<textarea name="comments" id="commentsText" rows="20" cols="30" class="requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
 					<?php if($commentError != '') { ?>
-						<span class="error"><?=$commentError;?></span> 
+						<span class="error"><?=$commentError;?></span>
 					<?php } ?>
 				</li>
 				<li class="inline"><input type="checkbox" name="sendCopy" id="sendCopy" value="true"<?php if(isset($_POST['sendCopy']) && $_POST['sendCopy'] == true) echo ' checked="checked"'; ?> /><label for="sendCopy">Recevoir une copie du message</label></li>
@@ -121,7 +126,10 @@ if(isset($_POST['submitted'])) {
 				<li class="buttons"><input type="hidden" name="submitted" id="submitted" value="true" /><button type="submit">Envoyer</button></li>
 			</ol>
 		</form>
-	
+		</div>
+	</div>
+</section>
+
 		<?php endwhile; ?>
 	<?php endif; ?>
 <?php } ?>

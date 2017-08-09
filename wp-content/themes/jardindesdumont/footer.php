@@ -45,7 +45,7 @@
 							<div class="col-md-3 col-xs-12 text-center">
 								<h4>0 892 700 205</h4>
 								<button class="ui-button ui-button-secondary-red">Call me back</button>
-									<a href="" class="mention-legal" title="WordPress">
+									<a href="/mention-legale/" class="mention-legal" title="WordPress">
 										<h5>Pour vous, les curieux</h5>
 										<p>Mentions légales<br>Conditions de vente</p>
 								</a>

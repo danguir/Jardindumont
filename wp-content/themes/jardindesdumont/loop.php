@@ -1,7 +1,7 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 	<!-- article -->
-	<div class="col-md-5 center" id="article-loop">
+	<div class="col-md-6 center" id="article-loop">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 

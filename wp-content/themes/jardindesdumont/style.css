@@ -1,4 +1,4 @@
-/
+
 /*------------------------------------*\
 	TYPOGRAPHY
 \*------------------------------------*/
@@ -132,7 +132,6 @@
 .clearfix:after { clear: both; }
 
 body {
-	background: #fecd4e;
 	color: #fffce1;
 	font-weight: 400;
 	font-size: 1em;
@@ -370,6 +369,7 @@ header .container{
 	/*background: linear-gradient(#fff 10%, transparent 10%,
 	 transparent 50%, #fff 50%, #fff 60%, transparent 60%, transparent 90%, #fff 90%);*/
 	content: '';
+	width: 80px;
 }
 
 .menu-button .burger{
@@ -604,6 +604,10 @@ margin: 0;
 	transition-duration: 0.9s;
 }
 
+.show-menu .icon-list a:hover{
+	text-decoration: none;
+	color: #fec833;
+}
 .show-menu .content::before {
 	opacity: 1;
 	-webkit-transition: opacity 0.8s;
@@ -681,6 +685,7 @@ margin: 0;
 .social-newsletter {
   	background: #f7f7f7;
     padding: 30px 0px;
+			margin-top: 50px;
 }
 .social-newsletter .social-block {
     display: inline-block;
@@ -1404,15 +1409,18 @@ text-indent: 0;
 /***************************************
 TABS PAGE PRODUITS
 ******************************************/
-
-.woocommerce #reviews #comments h2 {
+#reviews.all-reviews #comments{
+	margin-top: 100px;
+	color: black;
+}
+.woocommerce #reviews #comments h2, #reviews.all-reviews #comments h2  {
     color: #b9ce00;
     font-weight: 700;
     font-family: 'Gotham_Bold';
     margin-bottom: 20px;
     margin-top: 20px;
 }
-.woocommerce #reviews #comments h2::after {
+.woocommerce #reviews #comments h2::after,  #reviews.all-reviews #comments h2::after {
     content: "";
     width: 10%;
     height: 1px;
@@ -1421,7 +1429,7 @@ TABS PAGE PRODUITS
     margin: 30px auto;
 }
 
-.woocommerce #reviews #comments p{
+.woocommerce #reviews #comments p, #reviews.all-reviews #comments p{
 			color: black;
 	    font-size: 15px;
 	    font-family: PT_Sans;
@@ -2329,28 +2337,34 @@ section.article .elementor-widget-text-editor p{
   text-align: center;
 }
 
-.woocommerce .navigation-compte a{
-		font-family: 'Gotham_medium';
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: black;
-    font-weight: 900;
-}
+
 .woocommerce .navigation-compte a.link-compte{
 		margin-top: 40px;
     display: inline-block;
+		font-family: 'Gotham_medium';
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: black;
+		font-weight: 900;
 }
-.woocommerce .navigation-compte a::after{
+.woocommerce .navigation-compte a.link-compte{
+		text-decoration: none;
+		color: #b9ce02;
+}
+.woocommerce .navigation-compte a.link-compte::after{
 		content: "";
     width: 85px;
     height: 1px;
     border-bottom: 4px solid #fec833;
     display: block;
     margin: 20px auto;
-
+}
+.woocommerce .navigation-compte a.link-compte:hover{
+ text-decoration: none;
+ color: #fec833;
 }
 .woocommerce .navigation-compte p{
 	color: #000000;
@@ -2376,6 +2390,11 @@ section.article .elementor-widget-text-editor p{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.woocommerce .navigation-compte .border-compte.tall{
+	height: 197px;
+}
+
 .woocommerce .dashboard-compte h1{
 	color: #000000;
 font-size: 30px;
@@ -2697,6 +2716,21 @@ legend{
 /**************************
 category-page
 ***************************/
+.fixed-sticky {
+	position:fixed !important;
+	top:0;
+	z-index:5;
+	margin-top:60px;
+	padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sticky-scroll-box{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
  section.category-page{
 	color: black;
 }
@@ -2768,19 +2802,21 @@ section.category-page .side-menu-article{
 		text-transform: uppercase;
 		font-size: 13px;
   /**  position: fixed;*/
-		padding-left: 20px;
-		padding-right: 20px;
 		padding-bottom: 30px;
 		padding-top: 50px;
 		position: relative;
 		margin-bottom: 100px;
 
 }
+section.category-page .side-menu-article a:hover{
+	color : #b9ce00;
+	text-decoration: none;
+}
 
 section.category-page .description p{
 		color: black;
 		font-size: 17px;
-		font-family: PT_Sans;
+		font-family: 'PT_Sans';
 		text-align: center;
     margin-bottom: 100px;
 }
@@ -2821,7 +2857,6 @@ section.category-page #article-loop {
 	border-radius: 0.5em;
 	letter-spacing: 2px;
 	margin-bottom: 50px;
-	margin-top: 50px;
 	width: 18%;
 }
 
@@ -3041,10 +3076,183 @@ section.kit-form .zSelected{
 ALERT POP UP
 *************************/
 
-.woocommerce-message {
-    border-top-color: #b9ce00;
+
+/*************************
+PAGE 404
+*************************/
+section.page-introuvable{
+	margin-top: 100px;
+	color: black;
+  margin-bottom: 100px;
 }
 
-.woocommerce-error {
-    border-top-color: #e6332a;
+section.page-introuvable h1, .erreur-number{
+	color: #b9ce00;
+	font-weight: 700;
+	font-family: 'Gotham_Bold';
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: center;
+}
+section.page-introuvable h1::after{
+	content: "";
+	width: 20%;
+	height: 1px;
+	border-bottom: 4px solid #fec833;
+	display: block;
+	margin: 30px auto;
+}
+.erreur-number{
+	font-size: 100px;
+}
+section.page-introuvable p{
+	font-size: 2em;
+	color: black;
+  font-family: PT_Sans;
+  text-align: center;
+	margin-bottom: 50px;
+}
+
+section.page-introuvable a{
+	font-family: "Gotham Bold", sans-serif;
+	font-size: 15px;
+	border-radius: 0.5em;
+	letter-spacing: 2px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	width: 18%;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+section.tab-famille{
+	color: black;
+}
+
+section.tab-famille .nav-pills>li{
+	width:24.5%;
+	height: 360px;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center bottom 40px;
+	display: inline-block;
+	vertical-align: bottom;
+	float:none;
+}
+
+section.tab-famille .nav-pills>li .nom-famille{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+section.tab-famille .nav-pills>li.active>a{
+	color: #b9ce00;
+	background-color: transparent;
+	font-family: 'beyond_the_mountains';
+	font-size: 20px;
+	letter-spacing: 2px;
+
+}
+section.tab-famille .nav-pills>li>a{
+	color: #dddddd;
+	background-color: transparent;
+	font-family: 'beyond_the_mountains';
+	font-size: 20px;
+	letter-spacing: 2px;
+	height: 100%;
+}
+section.tab-famille .nav-pills>li>a img{
+	    width: 100%;
+}
+
+section.tab-famille .nav-pills>li.maman{
+	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/maman.png);
+}
+
+section.tab-famille .nav-pills>li.active.maman{
+	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/maman-active.png);
+}
+
+section.tab-famille .nav-pills>li.fils{
+	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fils.png);
+}
+
+section.tab-famille .nav-pills>li.active.fils{
+	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fils-active.png);
+}
+
+section.tab-famille .nav-pills>li.fille{
+	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fille.png);
+}
+
+section.tab-famille .nav-pills>li.active.fille{
+	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fille-active.png);
+}
+
+section.tab-famille .nav-pills>li.papa{
+	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/papa.png);
+	    height: 456px;
+}
+
+section.tab-famille .nav-pills>li.active.papa{
+	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/papa-active.png);
+}
+
+
+section.tab-famille .nav-pills>li>a:hover{
+	background: transparent;
+	color: #b9ce00;
+}
+section.tab-famille p{
+		font-size: 18px;
+    color: black;
+    font-family: PT_Sans;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+section.tab-famille .nav>li>a{
+	    padding: 10px 40px;
+}
+
+
+
+section.contact-form {
+	margin-top: 100px;
+	color: black;
+}
+section.contact-form h1{
+	color: #b9ce00;
+	font-weight: 700;
+	font-family: 'Gotham_Bold';
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: center;
+}
+section.contact-form h1::after{
+	content: "";
+	width: 20%;
+	height: 1px;
+	border-bottom: 4px solid #fec833;
+	display: block;
+	margin: 30px auto;
+}
+
+
+
+/*************************
+ALERT POP UP
+*************************/
+
+.homepage .menu-button .burger-vert{
+		display: none;
+}
+.homepage .menu-button .burger-blanc{
+		display: block;
+}
+.menu-button .burger-blanc{
+		display: none;
 }

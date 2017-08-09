@@ -25,9 +25,6 @@ if ( ! $messages ) {
 }
 
 ?>
-<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
 <?php foreach ( $messages as $message ) : ?>
 		<div class="woocommerce-message"><?php echo wp_kses_post( $message ); ?></div>
 <?php endforeach; ?>

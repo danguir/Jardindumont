@@ -73,6 +73,9 @@ if ( ! comments_open() ) {
 			<p class="woocommerce-noreviews"><?php _e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
 
 		<?php endif; ?>
+		<div class="col-md-12 center">
+			<button class="ui-button ui-button-primary center">afficher plus</button>
+		</div>
 		</div>
 	</div>
 
@@ -121,6 +124,8 @@ if ( ! comments_open() ) {
 					comment_form( apply_filters( 'woocommerce_product_review_comment_form_args', $comment_form ) );
 				?>
 			</div>
+
+
 		</div>
 
 	<?php else : ?>

@@ -21,8 +21,7 @@
 
 					</div>
 						<div class="col-md-2 nopadding">
-							<div class="full-height"></div>
-								<div class="side-menu-article center">
+							<div class="side-menu-article center sticky-scroll-box">
 									<img src="<?php echo get_template_directory_uri();?>/img/Icon-menu-article.png" id="" class=""/>
 									<ul>
 										<li class="title">Catégories</li>
@@ -46,7 +45,10 @@
 							</div>
 
 
-							<?php get_template_part('loop'); ?>
+							<div class="col-md-10">
+								<?php get_template_part('loop'); ?>
+							</div>
+
 
 						<?php get_template_part('pagination'); ?>
 

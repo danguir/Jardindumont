@@ -35,7 +35,8 @@
 					<div id="vertical-bar" class="vertical-bar">
 
 						<button class="menu-button" id="open-button">
-							<img src="<?php echo get_template_directory_uri();?>/img/burger.png" id="burger" class="burger"/>
+							<img src="<?php echo get_template_directory_uri();?>/img/burger-vert.png" id="burger" class="burger burger-vert"/>
+							<img src="<?php echo get_template_directory_uri();?>/img/burger.png" id="burger" class="burger burger-blanc"/>
 						</button>
 
 						<div class="logo" id="logo">
@@ -51,7 +52,7 @@
                 </a>
         		</li>
 		        <li>
-                <a href="">
+                <a href="/cart/">
 									<img src="<?php echo get_template_directory_uri(); ?>/img/cart.png" alt="cart" class="cart-icon">                    <p>
 	            </a>
 		        </li>

@@ -114,43 +114,30 @@ jQuery(function () {
  \*------------------------------------*/
 
 
-/*(function () {
-  jQuery(document).ready(function(){*/
-
-	//jQuery("#vertical-bar").hide();
 	var templateUrl = '/wp-content/themes/jardindesdumont';
 
 		jQuery(window).scroll(function () {
             // set distance user needs to scroll before we fadeIn navbar
 			if (jQuery(this).scrollTop() > 100) {
-				//jQuery('#vertical-bar').fadeIn();
 				jQuery('#vertical-bar').css('background-color', 'rgba(0, 0, 0, 0.5)');
 				jQuery("#vertical-bar").css('height', '60px');
 				jQuery("#logo a img").css('height', '43px');
 				jQuery("#logo a img").css('width', '188px');
 				jQuery("#vertical-bar .list-inline li a img").css('width', '44px');
-				//jQuery("#burger").attr('src', templateUrl + '/img/burger.png');
+				jQuery("#burger").attr('src', templateUrl + '/img/burger.png');
 				jQuery(".menu-button #burger").css('width', '40px');
 				jQuery(".menu-button #burger").css('height', '22px');
 
 			} else {
-				//jQuery('#vertical-bar').fadeOut();
 				jQuery('#vertical-bar').css('background-color', 'transparent');
 				jQuery("#logo a img").css('height', '70px');
 				jQuery("#logo a img").css('width', '300px');
 				jQuery("#vertical-bar .list-inline li a img").css('width', '60px');
-				//jQuery("#burger").attr('src', templateUrl + '/img/burger-vert.png');
+				jQuery("#burger").attr('src', templateUrl + '/img/burger-vert.png');
 				jQuery(".menu-button #burger").css('width', '48px');
 				jQuery(".menu-button #burger").css('height', '27px');
 			}
 		});
-
-		//var color = jQuery('#myDivID').css("background-color");
-
-/*
-});
-  }(jQuery));*/
-
 
 
 /********************************
@@ -205,28 +192,34 @@ jQuery("#affected-step6").zInput();
 
 
 
+//NAV TAB HOMEPAGE
+jQuery('.nav-pills li').click(function(){
+	$('.nav-pills li').removeClass('active');
+	$(this).addClass('active');
+});
 
-/*$(document).ready(function() {
-    $('.gallerythumbnail').on('click', function() {
-        var img = $('<img />', {src    : this.src,
-                                'class': 'fullImage'
-                  });
-        $('.showimagediv').html(img).show();
-    });
-});*/
+//STIKY MENU CATEGORIE PAGE
+var topSticky = jQuery('.sticky-scroll-box').offset().top;
+var stickyHeight = jQuery('.sticky-scroll-box').height();
 
+jQuery(window).scroll(function (event) {
+	console.log(topSticky);
+	var limit = jQuery('.networking ').offset().top - stickyHeight - 300;
+	var stickyScroll = jQuery(this).scrollTop();
+	var windowTop = jQuery(window).scrollTop();
 
-/*jQuery('.elementor-tab-title').click(function(){
-	var tabId = jQuery(this).data('tab');
-	//alert(jQuery(this).data('tab'));
-	//jQuery('.image-tab-'+tabId).find('img').hide();
+	if (stickyScroll >= topSticky) {
+		jQuery('.sticky-scroll-box').addClass('fixed-sticky');
+	} else {
+		jQuery('.sticky-scroll-box').removeClass('fixed-sticky');
+	}
 
-	jQuery('.image-tab-1').find('img').hide();
-	//jQuery('.showimagemaman').show()
-	jQuery('.image-tab-1').addClass('showimagemaman');
-
-
-});*/
+	if (limit < windowTop) {
+		var diff = limit - windowTop;
+		jQuery('.sticky-scroll-box').css({top: diff});
+	}
+	//jQuery('.sticky-scroll-box').width(jQuery('.sticky-scroll-box').parent().width());
+	});
 
  /*MAKE YOUR NAVIGATION APPEAR ON SCROLL
 
