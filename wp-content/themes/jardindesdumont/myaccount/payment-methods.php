@@ -27,11 +27,10 @@ $has_methods   = (bool) $saved_methods;
 $types         = wc_get_account_payment_methods_types();
 
 do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
+<section class="methode-paiement">
+	<div class="container">
+		<?php if ( $has_methods ) : ?>
 
-<?php if ( $has_methods ) : ?>
-
-	<section class="info-compte">
-		<div class="container">
 			<h2>INFORMATIONS DE COMPTE</h2>
 	<table class="woocommerce-MyAccount-paymentMethods shop_table shop_table_responsive account-payment-methods-table">
 		<thead>
@@ -72,15 +71,16 @@ do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
 	</table>
 
 
-	</div>
-	</section>
 
 <?php else : ?>
 
-	<p class="woocommerce-Message woocommerce-Message--info woocommerce-info"><?php esc_html_e( 'No saved methods found.', 'woocommerce' ); ?></p>
+			<p class="woocommerce-Message woocommerce-Message--info woocommerce-info"><?php esc_html_e( 'No saved methods found.', 'woocommerce' ); ?></p>
 
 <?php endif; ?>
 
+
 <?php do_action( 'woocommerce_after_account_payment_methods', $has_methods ); ?>
 
-<a class="button" href="<?php echo esc_url( wc_get_endpoint_url( 'add-payment-method' ) ); ?>"><?php esc_html_e( 'Add payment method', 'woocommerce' ); ?></a>
+		<a class="button" href="<?php echo esc_url( wc_get_endpoint_url( 'add-payment-method' ) ); ?>"><?php esc_html_e( 'Add payment method', 'woocommerce' ); ?></a>
+</div>
+</section>

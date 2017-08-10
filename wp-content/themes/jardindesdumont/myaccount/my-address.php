@@ -39,23 +39,22 @@ $col    = 1;
 <section class="mon-adress">
 	<div class="container">
 		<h2>CARNET D'ADRESSES</h2>
-<p>
-	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); ?>
-</p>
+		<p>
+			<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); ?>
+		</p>
 
-<?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) echo '<div class="u-columns woocommerce-Addresses col2-set addresses">'; ?>
+<?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) echo '<div class=" row woocommerce-Addresses addresses">'; ?>
 
 <?php foreach ( $get_addresses as $name => $title ) : ?>
 
-	<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address">
-<div class="col-sm-9 center">
-		<header class="woocommerce-Address-title title">
+	<!--div class="u-column<?php// echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php //echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address"-->
+	<div class="col-sm-6 center woocommerce-Address">
+		<!--header class="center woocommerce-Address-title title"-->
+		<div class="col-sm-12">
 			<h3><?php echo $title; ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a>
-		</header>
 		</div>
-		<div class="col-sm-9 center">
-		<address>
+		<!--/header-->
+		<div class="col-sm-12 address-display">
 			<?php
 				$address = apply_filters( 'woocommerce_my_account_my_address_formatted_address', array(
 					'first_name'  => get_user_meta( $customer_id, $name . '_first_name', true ),
@@ -76,10 +75,12 @@ $col    = 1;
 				else
 					echo $formatted_address;
 			?>
-		</address>
 		</div>
-	</div>
+		<div class="col-sm-12">
+			<a class="ui-button ui-button-primary button" href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a>
+		</div>
 
+</div>
 <?php endforeach; ?>
 
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) echo '</div>'; ?>

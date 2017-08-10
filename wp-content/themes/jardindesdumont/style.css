@@ -2328,8 +2328,7 @@ section.article .elementor-widget-text-editor p{
 	color: black;
 }
 .woocommerce .navigation-compte{
-	margin-top: 50px;
-
+	margin-top: 100px;
 }
 .woocommerce-account .woocommerce-MyAccount-content{
 	float: none;
@@ -2447,9 +2446,18 @@ Page commande
 }
 
 section.commande, section.details-commande, section.info-compte, section.mon-adress, section.edit-adress,
-section.lost-pass, section.checkout-client{
+section.lost-pass, section.checkout-client,  section.methode-paiement {
     margin-top: 100px;
     color: black;
+}
+
+section.details-commande p {
+		margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+section.woocommerce-customer-details h3.adresse{
+	margin-top: 50px;
 }
 .woocommerce-account section.commande h2, .woocommerce section.lost-pass h2,
 .woocommerce section.checkout-client h2 {
@@ -2506,7 +2514,7 @@ section.lost-pass, section.checkout-client{
 
 .woocommerce section.details-commande {
     color: #000000;
-    text-transform: uppercase;
+		/*text-transform: uppercase;*/
     font-weight: 600;
     line-height: 1;
     font-family: 'Gotham_Light';
@@ -2515,7 +2523,7 @@ section.lost-pass, section.checkout-client{
 }
 
 
-.woocommerce section.info-compte h2{
+.woocommerce section.info-compte h2, .woocommerce section.methode-paiement h2{
     color: #b9ce00;
     font-weight: 700;
     font-family: 'Gotham_Bold';
@@ -2525,7 +2533,7 @@ section.lost-pass, section.checkout-client{
 		text-transform: uppercase;
 }
 
-.woocommerce section.info-compte h2::after {
+.woocommerce section.info-compte h2::after, .woocommerce section.methode-paiement h2::after {
     content: "";
     width: 9%;
     margin: 0 auto;
@@ -2545,6 +2553,9 @@ section.lost-pass, section.checkout-client{
 		text-transform: uppercase;
 }
 
+ .woocommerce section.methode-paiement a{
+		font-size: 18px;
+ }
 .woocommerce section.edit-adress h2::after {
     content: "";
     width: 9%;
@@ -2580,10 +2591,11 @@ section.lost-pass, section.checkout-client{
     letter-spacing: 2px;
     margin-bottom: 50px;
     margin-top: 50px;
-		width: 22%;
+		width: 39%;
 }
 .woocommerce section.lost-pass input[type="submit"] {
-	padding: 16px 13em 30px 2em;
+		padding: 16px 13em 30px 2em;
+    width: 40%;
 }
 
 .woocommerce section.lost-pass p{
@@ -2624,6 +2636,31 @@ legend{
 	margin-bottom: 50px;
 }
 
+.woocommerce-MyAccount-content section.mon-adress p, .woocommerce-MyAccount-content section.mon-adress h3{
+	color: #000000;
+	font-weight: 600;
+	line-height: 1;
+	font-family: 'Gotham_Light';
+	font-size: 18px;
+	text-align: center;
+}
+.woocommerce-MyAccount-content section.mon-adress h3{
+		text-transform: uppercase;
+}
+.woocommerce-MyAccount-content section.mon-adress .address-display{
+		color: #000000;
+    line-height: 1;
+    font-family: 'Gotham_Light';
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.woocommerce-MyAccount-content section.mon-adress a{
+	font-family: 'Gotham_Light';
+	font-size: 18px;
+}
 
 .stepwizard-step p {
     margin-top: 10px;
@@ -2907,8 +2944,8 @@ section.kit-form{
     }
 
 .connecting-line {
-    height: 2px;
-    background: #e0e0e0;
+    /*height: 2px;
+    background: #e0e0e0;*/
     position: absolute;
     width: 80%;
     margin: 0 auto;
@@ -2916,6 +2953,34 @@ section.kit-form{
     right: 0;
     top: 50%;
     z-index: 1;
+}
+
+.connecting-line img {
+    width: 90px;
+}
+
+.connecting-line.line-1 {
+    left: 0;
+    right: 0;
+		background-image: url('/wp-content/themes/jardindesdumont/img/checkout/step-active.png');
+		width: 500px; height: 500px;
+}
+
+.connecting-line.line-2 {
+    left: 275px;
+}
+
+.connecting-line.line-3 {
+    left: 435px;
+}
+.connecting-line.line-4 {
+    left: 595px;
+}
+.connecting-line.line-5 {
+    left: 754px;
+}
+.connecting-line.line-6 {
+    left: 914px;
 }
 
 .wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
@@ -2946,6 +3011,7 @@ span.round-tab i{
 		background: #b9ce00;
     border: 2px solid white;
     color: white;
+    font-family: 'Gotham_Bold';
 
 }
 .wizard li.active span.round-tab i{
@@ -3255,4 +3321,21 @@ ALERT POP UP
 }
 .menu-button .burger-blanc{
 		display: none;
+}
+
+/*************************
+Message error
+*************************/
+.woocommerce-message{
+    border-top-color: #b9ce00;
+}
+.woocommerce-info{
+	border-top-color: #fec833;
+}
+.woocommerce-info::before{
+	color: #fec833;
+}
+
+.woocommerce ul.products li.product .star-rating{
+	margin: 10px auto;
 }

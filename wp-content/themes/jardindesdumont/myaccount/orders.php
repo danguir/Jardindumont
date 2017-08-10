@@ -122,7 +122,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 <?php else : ?>
 
 
-		<div class="center col-md-4 col-md-offset-4">
+		<div class="center col-md-6 col-md-offset-3">
 				<p class="order-empty"><?php _e( 'No order has been made yet.', 'woocommerce' ); ?></p>
 				<p class="return-to-shop">
 					<a class="woocommerce-Button button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">

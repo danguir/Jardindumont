@@ -25,13 +25,14 @@ do_action( 'woocommerce_before_account_navigation' );
 
 <!--nav class="woocommerce-MyAccount-navigation">
 	<ul>
-		<?php// foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
+		<?php //foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 			<li class="<?php //echo wc_get_account_menu_item_classes( $endpoint ); ?>">
-				<a href="<?php //echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"><?php// echo esc_html( $label ); ?></a>
+				<a href="<?php //echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"><?php // echo esc_html( $label ); ?></a>
 			</li>
-		<?php// endforeach; ?>
+		<?php //endforeach; ?>
 	</ul>
 </nav-->
+
 <div class="container ">
 	<?php wc_print_notices(); ?>
 </div>
@@ -77,7 +78,7 @@ do_action( 'woocommerce_before_account_navigation' );
 			<div class="col-md-4 col-xs-12">
 				<div class="border-compte tall">
 					<img style="width: 80px; margin-top:20px; " src="<?php echo get_template_directory_uri();?>/img/compte-client/adresse.png" class="center-block img-responsive" alt="Responsive image">
-					<a class="link-compte" href="/my-account/orders/">Addresses</a>
+					<a class="link-compte" href="/my-account/edit-address/">Addresses</a>
 					<p>Facturation et livraison</p>
 				</div>
 			</div>

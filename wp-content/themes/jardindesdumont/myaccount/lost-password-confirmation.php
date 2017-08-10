@@ -20,11 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-wc_print_notice( __( 'Password reset email has been sent.', 'woocommerce' ) );
 ?>
 <section class="lost-pass">
 	<div class="container">
-		<?php wc_print_notices(); ?>
+		<?php
+			wc_print_notice( __( 'Password reset email has been sent.', 'woocommerce' ) );
+		 	wc_print_notices();
+		  ?>
 
 		<h2>RÉINITIALISER LE LIEN DU MOT DE PASSE ENVOYÉ</h2>
 		<p><?php echo apply_filters( 'woocommerce_lost_password_message', __( 'A password reset email has been sent to the email address on file for your account, but may take several minutes to show up in your inbox. Please wait at least 10 minutes before attempting another reset.', 'woocommerce' ) ); ?></p>

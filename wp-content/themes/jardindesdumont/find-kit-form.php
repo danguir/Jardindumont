@@ -16,35 +16,39 @@ Template Name: Find Kit Form
 		</div>
 			<div class="wizard">
 					<div class="wizard-inner">
-							<div class="connecting-line"></div>
-							<ul class="nav nav-tabs" role="tablist">
 
+							<ul class="nav nav-tabs" role="tablist">
+								<div class="connecting-line line-1"><!--img src="/wp-content/themes/jardindesdumont/img/checkout/step-active.png" alt=""--></div>
 									<li role="presentation" class="active">
 											<a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
 													<span class="round-tab">1</span>
 											</a>
 									</li>
-
+									<div class="connecting-line line-2"><img src="/wp-content/themes/jardindesdumont/img/checkout/next-step.png" alt=""></div>
 									<li role="presentation" class="disabled">
 											<a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
 													<span class="round-tab">2</span>
 											</a>
 									</li>
+									<div class="connecting-line line-3"><img src="/wp-content/themes/jardindesdumont/img/checkout/next-step.png" alt=""></div>
 									<li role="presentation" class="disabled">
 											<a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
 													<span class="round-tab">3</span>
 											</a>
 									</li>
+									<div class="connecting-line line-4"><img src="/wp-content/themes/jardindesdumont/img/checkout/next-step.png" alt=""></div>
 									<li role="presentation" class="disabled">
 											<a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Step 4">
 													<span class="round-tab">4</span>
 											</a>
 									</li>
+									<div class="connecting-line line-5"><img src="/wp-content/themes/jardindesdumont/img/checkout/next-step.png" alt=""></div>
 									<li role="presentation" class="disabled">
 											<a href="#step5" data-toggle="tab" aria-controls="step5" role="tab" title="Step 5">
 													<span class="round-tab">5</span>
 											</a>
 									</li>
+									<div class="connecting-line line-6"><img src="/wp-content/themes/jardindesdumont/img/checkout/next-step.png" alt=""></div>
 									<li role="presentation" class="disabled">
 											<a href="#step6" data-toggle="tab" aria-controls="step6" role="tab" title="Step 6">
 													<span class="round-tab">6</span>

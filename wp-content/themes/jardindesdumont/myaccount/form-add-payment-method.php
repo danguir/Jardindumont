@@ -20,7 +20,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( $available_gateways = WC()->payment_gateways->get_available_payment_gateways() ) : ?>
+?>
+
+<section class="methode-paiement">
+	<div class="container">
+
+<?php if ( $available_gateways = WC()->payment_gateways->get_available_payment_gateways() ) : ?>
 	<form id="add_payment_method" method="post">
 		<div id="payment" class="woocommerce-Payment">
 			<ul class="woocommerce-PaymentMethods payment_methods methods">
@@ -58,3 +63,6 @@ if ( $available_gateways = WC()->payment_gateways->get_available_payment_gateway
 <?php else : ?>
 	<p class="woocommerce-notice woocommerce-notice--info woocommerce-info"><?php esc_html_e( 'Sorry, it seems that there are no payment methods which support adding a new payment method. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ); ?></p>
 <?php endif; ?>
+
+</div>
+</section>

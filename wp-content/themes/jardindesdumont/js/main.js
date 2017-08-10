@@ -60,29 +60,22 @@
 jQuery(document).ready(function () {
     //Initialize tooltips
     jQuery('.nav-tabs > li a[title]').tooltip();
-
     //Wizard
     jQuery('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
 
         var $target = jQuery(e.target);
-
         if ($target.parent().hasClass('disabled')) {
             return false;
         }
     });
-
     jQuery(".next-step").click(function (e) {
-
         var $active = jQuery('.wizard .nav-tabs li.active');
         $active.next().removeClass('disabled');
         nextTab($active);
-
     });
     jQuery(".prev-step").click(function (e) {
-
         var $active = jQuery('.wizard .nav-tabs li.active');
         prevTab($active);
-
     });
 });
 
@@ -190,21 +183,19 @@ jQuery("#affected-step5").zInput();
 jQuery("#affected-step6").zInput();
 
 
-
-
 //NAV TAB HOMEPAGE
 jQuery('.nav-pills li').click(function(){
 	$('.nav-pills li').removeClass('active');
 	$(this).addClass('active');
 });
 
+
 //STIKY MENU CATEGORIE PAGE
 var topSticky = jQuery('.sticky-scroll-box').offset().top;
 var stickyHeight = jQuery('.sticky-scroll-box').height();
 
 jQuery(window).scroll(function (event) {
-	console.log(topSticky);
-	var limit = jQuery('.networking ').offset().top - stickyHeight - 300;
+	var limit = jQuery('.networking ').offset().top - stickyHeight - 100;
 	var stickyScroll = jQuery(this).scrollTop();
 	var windowTop = jQuery(window).scrollTop();
 
@@ -221,19 +212,6 @@ jQuery(window).scroll(function (event) {
 	//jQuery('.sticky-scroll-box').width(jQuery('.sticky-scroll-box').parent().width());
 	});
 
- /*MAKE YOUR NAVIGATION APPEAR ON SCROLL
-
-(function($) {
-    $(document).ready(function(){
-        $(window).scroll(function(){
-            if ($(this).scrollTop() > 200) {
-                $('#vertical-bar').fadeIn(500);
-            } else {
-                $('#vertical-bar').fadeOut(500);
-            }
-        });
-    });
-})(jQuery);*/
 
 
 

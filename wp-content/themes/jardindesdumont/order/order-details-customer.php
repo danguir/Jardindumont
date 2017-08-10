@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php endif; ?>
 
-			<h3 class="woocommerce-column__title"><?php _e( 'Billing address', 'woocommerce' ); ?></h3>
+			<h3 class="woocommerce-column__title adresse"><?php _e( 'Billing address', 'woocommerce' ); ?></h3>
 
 			<address>
 				<?php echo ( $address = $order->get_formatted_billing_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>
