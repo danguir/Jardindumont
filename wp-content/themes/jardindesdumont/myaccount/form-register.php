@@ -1,4 +1,9 @@
 <?php
+
+/*
+Template Name: Rgister
+
+ */
 /**
  * Login Form
  *

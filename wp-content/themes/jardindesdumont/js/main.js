@@ -55,12 +55,9 @@
 
 })();
 
-
-//Fin KIT
+/*Fin KIT wiard tabs
 jQuery(document).ready(function () {
-    //Initialize tooltips
     jQuery('.nav-tabs > li a[title]').tooltip();
-    //Wizard
     jQuery('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
 
         var $target = jQuery(e.target);
@@ -84,7 +81,10 @@ function nextTab(elem) {
 }
 function prevTab(elem) {
     jQuery(elem).prev().find('a[data-toggle="tab"]').click();
-}
+}*/
+
+
+
 
 /*Load more ctegory page
 jQuery(function () {

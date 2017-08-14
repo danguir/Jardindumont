@@ -2083,6 +2083,10 @@ section.cart{
 	margin-top: 100px;
 	color: black;
 }
+section.cart a:hover {
+	color: #b9ce00;
+}
+
 
 .woocommerce section.cart h2{
     color: #b9ce00;
@@ -2130,7 +2134,7 @@ section.cart{
 	    font-size: 2.5em;
 }
 
-.woocommerce-cart a.button.alt{
+.woocommerce-cart a.button.alt, section.checkout-form a.button.alt{
 	color: #fff;
 	    background: #b9ce02;
 	    color: white;
@@ -2962,8 +2966,8 @@ section.kit-form{
 .connecting-line.line-1 {
     left: 0;
     right: 0;
-		background-image: url('/wp-content/themes/jardindesdumont/img/checkout/step-active.png');
-		width: 500px; height: 500px;
+		/*background-image: url('/wp-content/themes/jardindesdumont/img/checkout/step-active.png');
+		width: 500px; height: 500px;*/
 }
 
 .connecting-line.line-2 {
@@ -3025,6 +3029,7 @@ span.round-tab:hover {
 
 .wizard .nav-tabs > li {
     width: 14%;
+		text-align: center;
 }
 
 .wizard li:after {
@@ -3071,6 +3076,9 @@ span.round-tab:hover {
     margin-top: 0;
 		text-align: center;
     margin-bottom: 30px;
+		text-transform: uppercase;
+    font-family: 'Gotham_Bold';
+    letter-spacing: 2px;
 }
 
 @media( max-width : 585px ) {
@@ -3338,4 +3346,166 @@ Message error
 
 .woocommerce ul.products li.product .star-rating{
 	margin: 10px auto;
+}
+
+
+
+
+/*************************
+Checkout
+**************************/
+
+section.checkout-form{
+	margin-top: 100px;
+	color: black;
+}
+section.checkout-form h1{
+		color: #b9ce00;
+    font-weight: 700;
+    font-family: 'Gotham_Bold';
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+section.checkout-form h1::after{
+	content: "";
+	width: 15%;
+	height: 1px;
+	border-bottom: 4px solid #fec833;
+	display: block;
+	margin: 30px auto;
+}
+
+
+/*section.kit-form .center{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+}*/
+section.checkout-form .ui-button-primary, section.checkout-form .ui-button{
+	font-family: "Gotham Bold", sans-serif;
+  font-size: 18px;
+  padding: 13px 2em 16px 2em;
+  letter-spacing: 2px;
+}
+
+
+section.checkout-form table.shop_table {
+		color: #000000;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: 'Gotham_Light';
+    font-size: 18px;
+}
+
+section.checkout-form .quantity input[type="number"]{
+	font-size: 10px;
+}
+section.checkout-form .etape-valider, section.checkout-form .etape-en-cours, section.checkout-form .etape-suivante{
+		text-transform: uppercase;
+    line-height: 1;
+    font-family: 'Gotham_Bold';
+    font-size: 15px;
+		color: #b9ce00;
+}
+section.checkout-form .etape-en-cours{
+	color: #fec833;
+}
+section.checkout-form .etape-suivante{
+	color: #bdbbbb;
+}
+
+section.checkout-form .wizard .nav-tabs > li {
+    width: 16%;
+		text-align: center;
+}
+section.checkout-form .connecting-line{
+	    top: 35%;
+}
+section.checkout-form .connecting-line img {
+    width: 112px;
+}
+
+section.checkout-form .connecting-line.line-1{
+	left: 23px;
+}
+section.checkout-form .connecting-line.line-2{
+	left: 308px;
+}
+section.checkout-form .connecting-line.line-3 {
+    left: 491px;
+}
+section.checkout-form .connecting-line.line-5 {
+    left: 857px;
+}
+section.checkout-form .connecting-line.line-4 {
+    left: 674px;
+}
+
+section.checkout-form{
+	margin-top: 100px;
+}
+
+section.checkout-form .methode-paiement a.link-compte{
+		margin-top: 40px;
+    display: inline-block;
+		font-family: 'Gotham_medium';
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: black;
+		font-weight: 900;
+}
+section.checkout-form .methode-paiement a.link-compte{
+		text-decoration: none;
+}
+section.checkout-form .methode-paiement a.link-compte::after{
+		content: "";
+    width: 85px;
+    height: 1px;
+    border-bottom: 4px solid #fec833;
+    display: block;
+    margin: 20px auto;
+}
+section.checkout-form .methode-paiement a.link-compte:hover{
+ text-decoration: none;
+ color: #fec833;
+}
+section.checkout-form .methode-paiement p{
+	color: #000000;
+  font-family: 'PT_Sans';
+  font-size: 20px;
+	line-height: 1;
+  margin-bottom: 20px;
+}
+section.checkout-form .methode-paiement img{
+		width: 90px;
+    position: absolute;
+    top: -32px;
+    right: 191px;
+		left: 0;
+    right: 0;
+}
+
+section.checkout-form .methode-paiement .border-compte{
+	border: 2px solid #8b8b8b;
+  margin-bottom: 70px;
+	width:270px;
+ 	max-width:270px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section.checkout-form .methode-paiement .border-compte.tall{
+	height: 197px;
+}
+
+section.checkout-form .methode-paiement p {
+	font-size: 35px;
+}
+section.checkout-form .methode-paiement p span {
+	font-size: 20px;
 }
