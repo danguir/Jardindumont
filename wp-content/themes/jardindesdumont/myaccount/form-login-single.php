@@ -55,8 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</form>
 
 		<p class="new_user">
-			<a href="<?php echo get_permalink(woocommerce_get_page_id('myaccount')) . '&action=register'; ?>"><?php _e( 'Register' ); ?></a>
-
+			<a href="<?php echo get_permalink(woocommerce_get_page_id('myaccount')) . '?action=register'; ?>"><?php _e( 'Register' ); ?></a>
 			<!--a href="/my-account/form-register/">Vous avez pas de compte ? créer un nouveau compte</a-->
 		</p>
 
