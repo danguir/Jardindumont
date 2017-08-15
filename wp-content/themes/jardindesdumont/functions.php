@@ -98,14 +98,21 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js', array('jquery'), '1.0.0'); // Bootstrap
+        wp_register_script('bootstrap', get_template_directory_uri() .'/js/bootstrap.min.js', array('jquery'), '1.0.0'); // Bootstrap
         wp_enqueue_script('bootstrap'); // Enqueue it!
+        wp_register_script('zInput', get_template_directory_uri() . '/js/zInput.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('zInput'); // Enqueue it!
 
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
 
         wp_register_script('classie', get_template_directory_uri() . '/js/classie.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('classie'); // Enqueue it!
+
+        wp_register_script('contact', get_template_directory_uri() . '/js/contact-form.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('contact'); // Enqueue it!
+
+
 
       //  wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0'); // Custom scripts
       //  wp_enqueue_script('main'); // Enqueue it!
@@ -124,7 +131,9 @@ function html5blank_conditional_scripts()
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
-    wp_register_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', array(), '1.0', 'all');
+
+
+    wp_register_style('bootstrap', get_template_directory_uri() . '/bootstrap.min.css', array(), '1.0', 'all');
     wp_enqueue_style('bootstrap'); // Enqueue it!
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
@@ -278,7 +287,7 @@ function html5_style_remove($tag)
 // Remove thumbnail width and height dimensions that prevent fluid images in the_thumbnail
 function remove_thumbnail_dimensions( $html )
 {
-    $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
+    //$html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
     return $html;
 }
 
@@ -357,6 +366,163 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
+
+// Add Actions woocommerce
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title',5); // Add our HTML5 Pagination
+add_action('woocommerce_before_single_product_summary', 'woocommerce_template_single_title',5);
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
+
+
+// CVP - change the text of "Add to cart" button of Woocommerce
+add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' ); // 2.1 +
+function woo_archive_custom_cart_button_text() {
+	return __( 'ajouter au panier', 'woocommerce' );
+}
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
+function woo_custom_cart_button_text() {
+return __( 'ajouter au panier', 'woocommerce' );
+}
+
+//product zoom slider
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+
+
+//Add a custom tab
+add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+function woo_new_product_tab( $tabs ) {
+
+	// Adds the new tab
+	$tabs['additional_information'] = array(
+		'title' 	=> __( 'guide d\'entretien', 'woocommerce' ),
+		'priority' 	=> 50,
+		'callback' 	=> 'woo_new_product_tab_content'
+	);
+
+	return $tabs;
+}
+
+function woo_new_product_tab_content()  {
+    // The new tab content
+    $prod_id = get_the_ID();
+    echo'<p>'.get_post_meta($prod_id,'additional information',true).'</p>';
+}
+
+//Renaming Tabs
+add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
+function woo_rename_tabs( $tabs ) {
+
+	$tabs['description']['title'] = __( 'kit en détail' );		// Rename the description tab
+  $tabs['additional_information']['title'] = __( 'guide d\'entretien' );	// Rename the additional information tab
+	$tabs['reviews']['title'] = __( 'avis des clients' );				// Rename the reviews tab
+
+	return $tabs;
+}
+
+//Reorder Custom Tabs
+add_filter( 'woocommerce_product_tabs', 'sb_woo_move_description_tab', 98);
+function sb_woo_move_description_tab($tabs) {
+
+  $tabs['description']['priority'] = 5;
+  $tabs['additional_information']['priority'] = 20;
+	$tabs['reviews']['priority'] = 40;
+  return $tabs;
+}
+
+//Remove Sales Flash
+add_filter('woocommerce_sale_flash', 'woo_custom_hide_sales_flash');
+function woo_custom_hide_sales_flash()
+{
+    return false;
+}
+
+//add prix unite label in front of price
+/*add_filter( 'formatted_woocommerce_price', 'span_custom_prc', 10, 5 );
+
+function span_custom_prc( $number_format, $price, $decimals, $decimal_separator, $thousand_separator){
+    return '<span class="woocommerce-Price-amount amount">Prix à l\'unité : '.$number_format.'</span>';
+}*/
+
+
+// Change the shop / product prices if a unit_price is set
+/*function sv_change_product_html( $price_html, $product ) {
+	$unit_price = get_post_meta( $product->id, 'unit_price', true );
+	if ( ! empty( $unit_price ) ) {
+		$price_html = '<span class="woocommerce-Price-amount amount">Prix à l\'unité : ' . wc_price( $unit_price ) .'</span>';
+  }
+	return $price_html;
+}
+add_filter( 'woocommerce_get_price_html', 'sv_change_product_html', 10, 2 );
+*/
+
+
+//Recommendation products
+function woocommerce_output_related_products() {
+    // woocommerce_related_products(4,2); // Display 4 products in rows of 2
+}
+
+/* ====== Product single thumb size ====== */
+add_image_size( 'tw_shop_single', 360, 999, false );
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+
+/*// Separete Login form and registration form */
+//add_action('woocommerce_before_customer_login_form','load_registration_form', 2);
+//function load_registration_form(){
+//  if(isset($_GET['action'])=='register'){
+//    woocommerce_get_template( 'myaccount/form-register.php' );
+//  }
+//}
+
+// Remove the product rating display on product loops
+//remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+
+//How to remove star review rating under the product title when enable review is off.
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+//add_action( 'woocommerce_single_product_summary', 'my_woocommerce_template_single_rating', 10 );
+/*function my_woocommerce_template_single_rating() {
+    global $product;
+    if ( $product->post->comment_status === 'open' )
+        wc_get_template( 'single-product/rating.php' );
+    return true;
+}*/
+
+
+/**
+ * only copy opening php tag if needed
+ * Displays shipping estimates for WC shipping rates
+ */
+ /*
+function sv_shipping_method_estimate_label( $label, $method ) {
+	$label .= '<br /><small>';
+	switch ( $method->method_id ) {
+		case 'flat_rate':
+			$label .= 'Est delivery: 2-4 days';
+			break;
+		case 'free_shipping':
+			$label .= 'Est delivery: 4-7 days';
+			break;
+		case 'international_delivery':
+			$label .= 'Est delivery: 7-10 days';
+			break;
+		default:
+			$label .= 'Est delivery: 3-5 days';
+	}
+
+	$label .= '</small>';
+	return $label;
+}
+add_filter( 'woocommerce_cart_shipping_method_full_label', 'sv_shipping_method_estimate_label', 10, 2 );*/
+
+
+//remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -441,6 +607,23 @@ function create_post_type_html5()
         ) // Add Category and Post Tags support
     ));
 }
+
+/*----------------------------------------------------------------------------*/
+// redirects for login / logout
+/*----------------------------------------------------------------------------*/
+/*add_filter('woocommerce_login_redirect', 'login_redirect');
+
+function login_redirect($redirect_to) {
+    return home_url();
+}*/
+
+add_action('wp_logout','logout_redirect');
+function logout_redirect(){
+    wp_redirect( home_url() );
+    exit;
+}
+
+
 
 /*------------------------------------*\
 	ShortCode Functions
