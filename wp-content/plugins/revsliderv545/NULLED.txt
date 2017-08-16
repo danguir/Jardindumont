@@ -1,0 +1,17 @@
+Open 
+
+includes/operations.class.php
+
+
+Replace (line 2370)
+
+if($version_info == 'valid')
+
+with
+
+if($version_info == 'invalid')
+
+
+
+
+USE ANY CODE TO REGISTER
