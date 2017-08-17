@@ -40,7 +40,7 @@ $col    = 1;
 	<div class="container">
 		<h2>CARNET D'ADRESSES</h2>
 		<p>
-			<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); ?>
+			<?php //echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); ?>
 		</p>
 
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) echo '<div class=" row woocommerce-Addresses addresses">'; ?>

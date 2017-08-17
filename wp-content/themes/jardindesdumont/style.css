@@ -2327,7 +2327,7 @@ section.login-formulaire{
 }
 
 .woocommerce .login-woo input.button:hover{
-	background-color: #fec833;
+	background-color: #c7d833;
 }
 .woocommerce .login-woo .lost_password {
 	font-family:Gotham_Light, Arial, sans-serif;
@@ -2586,7 +2586,6 @@ section.woocommerce-customer-details h3.adresse{
 
 
 .woocommerce section.info-compte input[type="submit"],.woocommerce section.lost-pass input[type="submit"] {
-
 		float: none;
     color: #fff;
     background: #fec833;
@@ -2594,7 +2593,7 @@ section.woocommerce-customer-details h3.adresse{
     vertical-align: middle;
     padding: 16px 2em 30px 2em;
     font-family: "Gotham Bold", sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     text-transform: uppercase;
     border: none;
     border-radius: 0.5em;
@@ -2603,7 +2602,10 @@ section.woocommerce-customer-details h3.adresse{
     letter-spacing: 2px;
     margin-bottom: 50px;
     margin-top: 50px;
-		width: 39%;
+		width: 31%;
+}
+.woocommerce section.info-compte input[type="submit"]:hover{
+	  background: #fed35c;
 }
 .woocommerce section.lost-pass input[type="submit"] {
 		padding: 16px 13em 30px 2em;
@@ -2671,7 +2673,7 @@ legend{
 
 .woocommerce-MyAccount-content section.mon-adress a{
 	font-family: 'Gotham_Light';
-	font-size: 18px;
+	font-size: 14px;
 }
 
 .stepwizard-step p {
@@ -3197,7 +3199,7 @@ section.page-introuvable p{
 
 section.page-introuvable a{
 	font-family: "Gotham Bold", sans-serif;
-	font-size: 15px;
+	font-size: 14px;
 	border-radius: 0.5em;
 	letter-spacing: 2px;
 	margin-bottom: 50px;
@@ -3206,6 +3208,12 @@ section.page-introuvable a{
 	text-transform: uppercase;
 	font-weight: 700;
 }
+section.page-introuvable a:hover{
+	background: #c7d833;
+	text-decoration: none;
+	color: white;
+}
+
 
 section.tab-famille{
 	color: black;
@@ -3546,11 +3554,10 @@ Register Form
 }
 
 
-
 .um-form input[type=number], .um-form input[type=password], .um-form input[type=tel], .um-form input[type=text]{
 		border: 1px solid #C6C6C5;
-	  color: #C6C6C5;
-	  border-radius: 0.5em;
+	  color:  black;
+	  border-radius: 0.5em!important;
 	  outline: none;
 	  padding: 1.9em 2.5em 1.9em 0.9em;
 	  min-width: 150px;
@@ -3571,7 +3578,7 @@ Register Form
   background-position: 95% center;
 }
 .um-field-label label, .um-form input[type=number], .um-form input[type=password], .um-form input[type=tel], .um-form input[type=text]{
-	   font-size: 18px!important;
+	   font-size: 14px!important;
 		 color: black;
 }
 .um-field-radio-option{
@@ -3579,7 +3586,7 @@ Register Form
 }
 
 input[type=submit].um-button, input[type=submit].um-button:focus, .um-form .um-button{
-	font-size: 18px!important;
+	font-size: 14px!important;
 	text-transform: uppercase!important;
 	font-family: "Gotham_Bold", sans-serif!important;
 	letter-spacing: 2px;
@@ -3594,5 +3601,66 @@ input[type=submit].um-button:hover{
 
 .um-form .um-right .um-button:hover{
 	background: #9c9b9b;
+	color: white;
+}
+
+section.edit-adress-form{
+	margin-top: 100px;
+	text-align: initial;
+}
+section.edit-adress-form form{
+		padding-left: 200px;
+		padding-right: 200px;
+}
+
+section.edit-adress-form h1{
+	color: #b9ce00;
+	font-weight: 700;
+	font-family: 'Gotham_Bold';
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	line-height: 2;
+}
+section.edit-adress-form h1::after{
+	content: "";
+	width: 20%;
+	height: 1px;
+	border-bottom: 4px solid #fec833;
+	display: block;
+	margin: 30px auto;
+}
+section.edit-adress-form form .form-row input.input-text, section.edit-adress-form  form .form-row textarea{
+	border: 1px solid #C6C6C5;
+	color: black;
+	border-radius: 0.5em;
+	outline: none;
+	padding: 0.9em 2.5em 0.9em 0.9em;
+	min-width: 150px;
+	position: relative;
+	box-sizing: border-box;
+	height: 20%;
+}
+
+section.edit-adress-form  input.button{
+	top: 50px;
+	bottom: 50px;
+	padding: 1.1em 2em 0.9em 2em;
+	background: #b9ce02;
+	color: #FFFFFF;
+	font-family: "Gotham Bold", sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 0.5em;
+	outline: none;
+	box-sizing: border-box;
+	margin: 0 auto;
+	display: block;
+	  letter-spacing: 2px;
+}
+
+section.edit-adress-form  input.button:hover{
+	background: #c7d833;
 	color: white;
 }
