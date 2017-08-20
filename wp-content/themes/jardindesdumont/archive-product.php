@@ -73,7 +73,7 @@ get_header( 'shop' ); ?>
                            title="terrasse">
                     <input class="filter-button" data-filter="jardin" type="checkbox" name="jardin" title="jardin">
                 </div>-->
-                <div class="filter-area">
+                <div class="filter-area" data-category-name="<?php echo slugify(single_cat_title('', false)); ?>">
 		            <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
                 </div>
 

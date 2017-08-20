@@ -175,6 +175,7 @@ function html5blank_header_scripts()
         wp_enqueue_script('zInput'); // Enqueue it!
 
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+	    wp_localize_script('html5blankscripts', 'ajaxurl', admin_url( 'admin-ajax.php' ) ); // Ajoute des fonctionalitées AJAX à scripts.js
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
 
         wp_register_script('classie', get_template_directory_uri() . '/js/classie.js', array('jquery'), '1.0.0'); // Custom scripts
@@ -718,4 +719,75 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
+/*------------------------------------*\
+slug function
+\*------------------------------------*/
+function slugify($string, $replace = array(), $delimiter = '-') {
+	// https://github.com/phalcon/incubator/blob/master/Library/Phalcon/Utils/Slug.php
+	if (!extension_loaded('iconv')) {
+		throw new Exception('iconv module not loaded');
+	}
+	// Save the old locale and set the new locale to UTF-8
+	$oldLocale = setlocale(LC_ALL, '0');
+	setlocale(LC_ALL, 'en_US.UTF-8');
+	$clean = iconv('UTF-8', 'ASCII//TRANSLIT', $string);
+	if (!empty($replace)) {
+		$clean = str_replace((array) $replace, ' ', $clean);
+	}
+	$clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
+	$clean = strtolower($clean);
+	$clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+	$clean = trim($clean, $delimiter);
+	// Revert back to the old locale
+	setlocale(LC_ALL, $oldLocale);
+	return $clean;
+}
+
+/*------------------------------------*\
+Function Ajax pour récupérer des produits en fonction d'une catégorie
+\*------------------------------------*/
+add_action( 'wp_ajax_get_products', 'get_products' );
+add_action( 'wp_ajax_nopriv_get_products', 'get_products' );
+
+function get_products() {
+
+
+	$args = array(
+		'product_cat' => $_POST['category_name'],
+		'product_tag' => $_POST['tags'],
+		'meta_query' => array(
+			array(
+				'key' => '_stock_status',
+				'value' => 'instock'
+			)
+		)
+	);
+
+    // Execution de la requête
+	$query = new WP_Query( $args );
+
+    if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
+        <li id="post-<?php the_ID(); ?>"  class="three columns product-post">
+            <?php
+            $liquor_brands = get_terms( 'pa_liquor-brands' );
+            foreach ( $liquor_brands as $liquor_brand ) {
+                echo $liquor_brand->slug . ' ';
+            }
+            ?>
+        </li>
+
+        <?php wp_reset_postdata(); ?>
+
+    <?php endwhile; else: ?>
+
+        <?php //error message ?>
+
+    <?php endif; ?>
+
+    <?php wp_reset_query(); ?>
+
+	die();
+
+}
 ?>

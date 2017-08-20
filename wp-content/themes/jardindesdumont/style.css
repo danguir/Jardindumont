@@ -2807,7 +2807,12 @@ filter-area : Zone de filtre dans les pages catégories
 	font-weight: bold;
 }
 
-.filter-area .tag-cloud-link:hover, .filter-area .tag-cloud-link:focus, .filter-area .tag-cloud-link.is-active {
+.filter-area .tag-cloud-link:focus {
+	text-decoration: none;
+	color: #4e4a46;
+}
+
+.filter-area .tag-cloud-link:hover, .filter-area .tag-cloud-link.is-active {
 	text-decoration: none;
 	color: white;
 	background-color: #b9ce00;
