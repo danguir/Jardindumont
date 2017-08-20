@@ -188,8 +188,38 @@ Template Name: checkout
 									</div>
 									<div class="tab-pane" role="tabpanel" id="step2">
 											<h3>informations personnelles</h3>
+											<div class="container">
+												<div class="um-form">
+													<div class="col-md-12 col-sm-12">
+														<form method="post" action="">
+														<div class="um-row _um_row_1 " style="margin: 0 0 30px 0;"><div class="um-col-1"><div class="um-field um-field-Civilite um-field-radio um-field-type_radio" data-key="Civilite"><div class="um-field-label"><label for="Civilite-592">Civilité*</label><div class="um-clear"></div></div><div class="um-field-area"><label class="um-field-radio active um-field-half "><input type="radio" name="Civilite[]" value="Madame" checked=""><span class="um-field-radio-state"><i class="um-icon-android-radio-button-on"></i></span><span class="um-field-radio-option">Madame</span></label><label class="um-field-radio  um-field-half right"><input type="radio" name="Civilite[]" value="Monsieur"><span class="um-field-radio-state"><i class="um-icon-android-radio-button-off"></i></span><span class="um-field-radio-option">Monsieur</span></label><div class="um-clear"></div><div class="um-clear"></div></div></div><div class="um-field um-field-first_name um-field-text um-field-type_text" data-key="first_name"><div class="um-field-label"><label for="first_name-592">Prénom*</label><div class="um-clear"></div></div><div class="um-field-area"><input autocomplete="off" class="um-form-field valid " type="text" name="first_name-592" id="first_name-592" value="" placeholder="" data-validate="alphabetic" data-key="first_name">
 
-											
+																	</div></div><div class="um-field um-field-last_name um-field-text um-field-type_text" data-key="last_name"><div class="um-field-label"><label for="last_name-592">Nom*</label><div class="um-clear"></div></div><div class="um-field-area"><input autocomplete="off" class="um-form-field valid " type="text" name="last_name-592" id="last_name-592" value="" placeholder="" data-validate="0" data-key="last_name">
+
+																	</div></div><div class="um-field um-field-user_email um-field-text um-field-type_text" data-key="user_email"><div class="um-field-label"><label for="user_email-592">Email*</label><div class="um-clear"></div></div><div class="um-field-area"><input autocomplete="off" class="um-form-field valid " type="text" name="user_email-592" id="user_email-592" value="" placeholder="" data-validate="unique_email" data-key="user_email">
+
+																	</div></div><div class="um-field um-field-user_password um-field-password um-field-type_password" data-key="user_password"><div class="um-field-label"><label for="user_password-592">Mot de passe*</label><div class="um-clear"></div></div><div class="um-field-area"><input class="um-form-field valid " type="password" name="user_password-592" id="user_password-592" value="" placeholder="" data-validate="" data-key="user_password">
+
+																	</div></div><div class="um-field um-field-user_password um-field-password um-field-type_password" data-key="confirm_user_password"><div class="um-field-label"><label for="confirm_user_password-592">Confirm Mot de passe*</label><div class="um-clear"></div></div><div class="um-field-area"><input class="um-form-field valid " type="password" name="confirm_user_password-592" id="confirm_user_password-592" value="" placeholder="" data-validate="" data-key="confirm_user_password">
+																	</div></div></div></div>
+													<input type="hidden" name="form_id" id="form_id" value="592">
+
+													<input type="hidden" name="timestamp" id="timestamp" value="1503179520">
+													<p class="request_name">
+														<label for="request">Only fill in if you are not human</label>
+														<input type="text" name="request" id="request" class="input" value="" size="25" autocomplete="off">
+													</p>
+													<input type="hidden" id="_wpnonce" name="_wpnonce" value="fb2c1c7c18"><input type="hidden" name="_wp_http_referer" value="/register/">
+													<div class="um-col-alt">
+														<div class="um-left um-half"><input type="submit" value="S'enregistrer" class="um-button" id="um-submit-btn"></div>
+														<div class="um-right um-half"><a href="http://dev.jardindumont.local/login/" class="um-button um-alt">se connecter</a></div>
+														<div class="um-clear"></div>
+													</div>
+														</form>
+													</div>
+												</div>
+
+											</div>
 
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
 													<button type="button" class="ui-button prev-step">Previous</button>
@@ -198,27 +228,9 @@ Template Name: checkout
 									</div>
 
 									<div class="tab-pane" role="tabpanel" id="step3">
-											<h3>Modes de livraison</h3>
-											<section class="methode-paiement">
-												<div class="container ">
-											<div class="row">
-													<div class="col-md-4 col-xs-12">
-														<div class="border-compte">
-															<img  src="<?php echo get_template_directory_uri();?>/img/checkout/adresse.png"  class="center-block img-responsive" alt="Responsive image">
-															<a class="link-compte" href="#">classique</a>
-															<p>2€ / 5<span> jours</span></p>
-														</div>
-													</div>
-													<div class="col-md-4 col-xs-12">
-														<div class="border-compte">
-															<img style="width: 118px;" src="<?php echo get_template_directory_uri();?>/img/checkout/express.png" class="center-block img-responsive" alt="Responsive image">
-															<a class="link-compte" href="#">express</a>
-															<p>9€ / 2 <span> jours</span></p>
-													</div>
-													</div>
-												</div>
-											</div>
-											</section>
+										<h3>adresse de livraison</h3>
+
+
 
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
 													<!--button type="button" class="ui-button prev-step">Previous</button-->
@@ -227,12 +239,27 @@ Template Name: checkout
 									</div>
 
 									<div class="tab-pane" role="tabpanel" id="step4">
-											<h3>Modes de livraison</h3>
-											<div align="center" id="affected-step4">
-													<input type="radio" name="set 4" title="débutant" >
-													<input type="radio" name="set 4" title="moyen">
-													<input type="radio" name="set 4" title="expert">
+										<h3>Modes de livraison</h3>
+										<section class="methode-paiement">
+											<div class="container ">
+										<div class="row">
+												<div class="col-md-4 col-xs-12">
+													<div class="border-compte">
+														<img  src="<?php echo get_template_directory_uri();?>/img/checkout/adresse.png"  class="center-block img-responsive" alt="Responsive image">
+														<a class="link-compte" href="#">classique</a>
+														<p>2€ / 5<span> jours</span></p>
+													</div>
+												</div>
+												<div class="col-md-4 col-xs-12">
+													<div class="border-compte">
+														<img style="width: 118px;" src="<?php echo get_template_directory_uri();?>/img/checkout/express.png" class="center-block img-responsive" alt="Responsive image">
+														<a class="link-compte" href="#">express</a>
+														<p>9€ / 2 <span> jours</span></p>
+												</div>
+												</div>
 											</div>
+										</div>
+										</section>
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
 												<button type="button" class="ui-button prev-step">Previous</button>
 													<button type="button" class="ui-button ui-button-primary next-step">confirmer</button>

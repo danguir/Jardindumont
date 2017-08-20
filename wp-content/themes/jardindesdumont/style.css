@@ -1124,6 +1124,10 @@ code {
 	font-family: 'Gotham_Bold'!important;
 
 }
+p.elementor-heading-title.elementor-size-default{
+	font-family: 'PT_Sans_bold'!important;
+
+}
 .elementor-element-tde4esw h2,
 .elementor-widget-tabs .elementor-tab-title{
 	font-family: 'beyond_the_mountains'!important;
@@ -1197,6 +1201,22 @@ body {
     font-family: 'Gotham_Medium';
 		display: inline;
 }
+.entry-summary p.price del{
+	color: #818181;
+	font-family: 'Gotham_Light';
+}
+
+.entry-summary p.price ins{
+	text-decoration: none;
+	color: #b9ce00;
+}
+.entry-summary .box-price{
+	padding-left: 60px;
+	padding-right: 60px;
+}
+.entry-summary .box-price img{
+	margin-top: 15px;
+}
 
 .woocommerce .quantity .qty {
     width: 70px;
@@ -1230,6 +1250,10 @@ body {
 		letter-spacing: 2px;
 }
 
+.woocommerce div.product form.cart .button:hover{
+	color: white;
+	background: #eb5c55;
+}
 .woocommerce div.product form.cart {
     margin-bottom: 20px;
     margin-top: 20px;
@@ -1710,6 +1734,7 @@ section .hashtag-dumont{
 		border: none;
 		background-color: transparent;
     padding: 0px;
+		-webkit-box-shadow: inset 0 1px 1px transparent;
 }
 
 .woocommerce div.product div.images .woocommerce-product-gallery__trigger:before,.woocommerce div.product div.images .woocommerce-product-gallery__trigger:after{
@@ -1793,6 +1818,10 @@ section .hashtag-dumont .add-photo{
 	    font-weight: 600;
 	    text-align: center;
 }
+section .hashtag-dumont .add-photo:hover{
+	text-decoration: none;
+	color: #fec833;
+}
 
 section .hashtag-dumont a.add-photo::after{
 	content: "";
@@ -1844,6 +1873,11 @@ section .hashtag-dumont .carousel{
   margin-right: -19px;
 }
 
+.media-carousel .thumbnail{
+  padding: 0px;
+	border: none;
+	background-color: transparent;
+}
 /*************************************
 PAGE CATEGORIE/UNIVERS
 ***************************************/
@@ -2206,7 +2240,9 @@ section.article .hesperiden.tparrows:before {
 section.article .hesperiden.tparrows {
   border: 2px solid #9d9d9c;
 }
-
+section.article .hesperiden.tparrows:hover {
+background: #c6c6c5;
+}
 section.article span.date, section.article span.author, section.article span.avatar{
 		text-align: center;
     position: absolute;
@@ -2216,7 +2252,7 @@ section.article span.date, section.article span.author, section.article span.ava
     font-size: 14px;
 }
 section.article span.date{
-	top: 420px;
+	top: 434px;
 	font-size: 20px;
 	font-weight: 600;
 }
@@ -3663,4 +3699,39 @@ section.edit-adress-form  input.button{
 section.edit-adress-form  input.button:hover{
 	background: #c7d833;
 	color: white;
+}
+
+
+.yikes-custom-woo-tab-title{
+	display :none;
+}
+
+.woocommerce-Tabs-panel  .banner-panel img{
+	position: relative;
+	bottom: 70px;
+}
+#wl-wrapper .wl-add-link {
+  display: none;
+}
+
+.woocommerce nav.woocommerce-pagination{
+	font-size: 14px;
+	margin-bottom: 50px;
+}
+
+
+.elementor-element.elementor-element-qrfqngw label.elementor-field-label{
+	font-size: 18px;
+	font-family: 'Gotham_Light' !important;
+	font-weight: 700;
+	color: black;
+}
+
+.elementor-element-9brtdru  button.elementor-button.elementor-size-md{
+	  margin-top: 50px;
+}
+
+
+.post-28 .woocommerce{
+	margin-top: 100px;
 }

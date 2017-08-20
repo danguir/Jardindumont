@@ -41,7 +41,10 @@
 			<?php //edit_post_link(); // Always handy to have Edit Post Links available ?>
 
 			<?php //comments_template(); ?>
-
+			<div class="block-rs">
+					<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+					<a href="https://twitter.com/share" class="twitter-share-button">Partager</a>
+			</div>
 		</article>
 		<!-- /article -->
 

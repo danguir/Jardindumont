@@ -20,86 +20,62 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section class="hashtag-dumont">
-	<div class="container full-width">
 
-		<h2>#lafamilledumont</h2>
-		<p>L’univers de La Famille Dumont forme un art de vivre  qu'on partage avec ses connaisseurs de par le monde.</p>
-		    <div class="col-md-12">
-		        <div class="well">
-		            <div id="myCarousel" class="carousel slide media-carousel">
+	<section class="hashtag-dumont">
+		<div class="container full-width">
+
+			<h2>#lafamilledumont</h2>
+			<p>L’univers de La Famille Dumont forme un art de vivre  qu'on partage avec ses connaisseurs de par le monde.</p>
+			    <div class="col-md-12">
+			        <div class="well">
+								<div class="row">
+								<div class="col-md-12">
+		                <div id="Carousel" class="carousel slide media-carousel">
 
 		                <!-- Carousel items -->
 		                <div class="carousel-inner">
-		                    <div class="item active">
-		                        <div class="row">
-		                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-		                            </div>
-																<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                        </div>
-		                        <!--/row-->
-		                    </div>
-		                    <!--/item-->
-		                    <div class="item">
-		                        <div class="row">
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-																<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-																</div>
-		                        </div>
-		                        <!--/row-->
-		                    </div>
-		                    <!--/item-->
-		                    <div class="item">
-		                        <div class="row">
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-		                            </div>
-																<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
-																</div>
-		                        </div>
-		                        <!--/row-->
-		                    </div>
-		                    <!--/item-->
-		                </div>
-		                <!--/carousel-inner-->
 
-										<a data-slide="prev" href="#media" class="left carousel-control">
+		                <div class="item active">
+		                	<div class="row">
+												<div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_1.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_2.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_3.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_4.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_5.png" alt="Image" style="max-width:100%;"></a></div>
+		                	</div><!--.row-->
+		                </div><!--.item-->
+
+		                <div class="item">
+		                	<div class="row">
+												<div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_1.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_2.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_3.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_4.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_5.png" alt="Image" style="max-width:100%;"></a></div>
+		                	</div><!--.row-->
+		                </div><!--.item-->
+
+		                </div><!--.carousel-inner-->
+
+										<a data-slide="prev" href="#Carousel" class="left carousel-control">
 											<img src="<?php echo get_template_directory_uri();?>/img/product/arrow-left.png" class=""/>
 										</a>
-			 							<a data-slide="next" href="#media" class="right carousel-control">
+			 							<a data-slide="next" href="#Carousel" class="right carousel-control">
 											<img src="<?php echo get_template_directory_uri();?>/img/product/arrow-right.png" class=""/>
 										</a>
-		            </div>
-		            <!--/myCarousel-->
-								<div class="col-sm-12 center">
-									<a href="#" class="add-photo">ajoutez une photo</a>
+		                </div><!--.Carousel-->
 
-		        </div>
-		        <!--/well-->
-		</div>
-</div>
-	</section>
+								</div>
+							</div>
 
 
+									<div class="col-sm-12 center">
+										<a href="#" class="add-photo">ajoutez une photo</a>
+			        	</div>
+			        <!--/well-->
+							</div>
+	</div>
+		</section>
 
 
 <?php

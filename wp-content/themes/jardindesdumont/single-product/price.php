@@ -23,8 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
-<div class="row">
-	<div class="col-md-2">
+<div class="row box-price">
+	<div class="col-md-4">
 			<?php if ( $max_value && $min_value === $max_value ) {
 				?>
 				<div class="quantity hidden">
@@ -47,25 +47,18 @@ global $product;
 	<div class="col-md-2">
 		<img src="<?php echo get_template_directory_uri();?>/img/product/x.png" class="calcule center-block img-responsive" alt="Responsive image">
 	</div>
-	<div class="col-md-2">
-		<p class="price"><?php //echo $product->get_total_price_html();  ?>65€</p>
+	<div class="col-md-6">
+		<p class="price"><?php echo $product->get_display_price();  ?>€</p>
 		<p class="txt-under-price">Prix à l'unité</p>
   </div>
 	<div class="col-md-2">
 		<img src="<?php echo get_template_directory_uri();?>/img/product/egale.png" class="calcule center-block img-responsive" alt="Responsive image">
   </div>
-  <div class="col-md-3">
+  <div class="col-md-12">
 		<p class="price"><?php echo $product->get_price_html(); ?></p>
 		<p class="txt-under-price">Prix finale sans livraison</p>
   </div>
 </div>
-<!--div class="row">
-	<div class="col-md-2"><p>Quantité</p></div>
-	<div class="col-md-2"></div>
-	<div class="col-md-2"><p>Prix à l'unité</p></div>
-	<div class="col-md-2"><p>Prix finale sans livraison</p></div>
-
-</div-->
 
 <div class="livraison-gratuite">
 	<div class="row">
