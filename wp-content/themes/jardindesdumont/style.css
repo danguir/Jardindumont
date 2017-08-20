@@ -2716,7 +2716,7 @@ legend{
 
 
 /*------------------------------------*\
-  Block partage réseaux sociaux -> short-description.php
+  Block partage réseaux sociaux -> short-description.php & single.php
 \*------------------------------------*/
 .block-rs {
 	text-align: center;
@@ -2726,6 +2726,20 @@ legend{
 	position: relative!important;
 	top: 3px;
 }
+
+.block-rs h2, .block-rs h3  {
+	text-align: center;
+	font-weight: normal;
+}
+
+.block-rs h2 {
+
+}
+
+.block-rs h3 {
+	color: #b9ce02;
+}
+
 
 
 .hesperiden.tparrows.tp-leftarrow:before {
