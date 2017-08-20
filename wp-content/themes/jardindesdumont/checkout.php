@@ -188,6 +188,7 @@ Template Name: checkout
 									</div>
 									<div class="tab-pane" role="tabpanel" id="step2">
 											<h3>informations personnelles</h3>
+<<<<<<< HEAD
 											<div class="container">
 												<div class="um-form">
 													<div class="col-md-12 col-sm-12">
@@ -220,6 +221,10 @@ Template Name: checkout
 												</div>
 
 											</div>
+=======
+
+											
+>>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
 													<button type="button" class="ui-button prev-step">Previous</button>
@@ -228,9 +233,33 @@ Template Name: checkout
 									</div>
 
 									<div class="tab-pane" role="tabpanel" id="step3">
+<<<<<<< HEAD
 										<h3>adresse de livraison</h3>
 
 
+=======
+											<h3>Modes de livraison</h3>
+											<section class="methode-paiement">
+												<div class="container ">
+											<div class="row">
+													<div class="col-md-4 col-xs-12">
+														<div class="border-compte">
+															<img  src="<?php echo get_template_directory_uri();?>/img/checkout/adresse.png"  class="center-block img-responsive" alt="Responsive image">
+															<a class="link-compte" href="#">classique</a>
+															<p>2€ / 5<span> jours</span></p>
+														</div>
+													</div>
+													<div class="col-md-4 col-xs-12">
+														<div class="border-compte">
+															<img style="width: 118px;" src="<?php echo get_template_directory_uri();?>/img/checkout/express.png" class="center-block img-responsive" alt="Responsive image">
+															<a class="link-compte" href="#">express</a>
+															<p>9€ / 2 <span> jours</span></p>
+													</div>
+													</div>
+												</div>
+											</div>
+											</section>
+>>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
 													<!--button type="button" class="ui-button prev-step">Previous</button-->
@@ -239,6 +268,7 @@ Template Name: checkout
 									</div>
 
 									<div class="tab-pane" role="tabpanel" id="step4">
+<<<<<<< HEAD
 										<h3>Modes de livraison</h3>
 										<section class="methode-paiement">
 											<div class="container ">
@@ -260,6 +290,14 @@ Template Name: checkout
 											</div>
 										</div>
 										</section>
+=======
+											<h3>Modes de livraison</h3>
+											<div align="center" id="affected-step4">
+													<input type="radio" name="set 4" title="débutant" >
+													<input type="radio" name="set 4" title="moyen">
+													<input type="radio" name="set 4" title="expert">
+											</div>
+>>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
 												<button type="button" class="ui-button prev-step">Previous</button>
 													<button type="button" class="ui-button ui-button-primary next-step">confirmer</button>

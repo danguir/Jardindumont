@@ -4,13 +4,29 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop
 Requires at least: 4.0
 Tested up to: 4.7.3
+<<<<<<< HEAD
 Stable tag: 2.1.0
+=======
+Stable tag: 2.1.1
+>>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Documentation: http://yithemes.com/docs-plugins/yith-woocommerce-wishlist
 
 == Changelog ==
 
+<<<<<<< HEAD
+=======
+= 2.1.1 - Released: Apr, 24 - 2017 = 
+
+* Tweak: improved endpoints creation, with dynamic flush
+* Tweak: added check over wc_print_notices existence, to avoid possible fatal errors
+* Tweak: updated plugin-fw
+* Fix: problem with duplicated meta
+* Fix: product created wince WC 3.0.x not being shown on wishlist
+* Dev: added yith_wcwl_admin_table_show_empty_list filter to show empty lists on admin
+
+>>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 = 2.1.0 - Released: Apr, 03 - 2017 =
 
 * New: WooCommerce 3.0-RC2 compatibility

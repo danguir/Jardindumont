@@ -32,6 +32,16 @@
 
 			<?php the_content(); // Dynamic Content ?>
 
+<<<<<<< HEAD
+=======
+			<div class="block-rs" style="margin-top: 30px;">
+				<h2>VOUS AVEZ TROUVEZ CET ARTICLE UTILE ?</h2>
+				<h3>PARTAGEZ-LE</h3>
+				<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+				<a href="https://twitter.com/share" class="twitter-share-button">Partager</a>
+			</div>
+
+>>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 			<?php //the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
 			<p><?php //_e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
@@ -41,10 +51,14 @@
 			<?php //edit_post_link(); // Always handy to have Edit Post Links available ?>
 
 			<?php //comments_template(); ?>
+<<<<<<< HEAD
 			<div class="block-rs">
 					<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 					<a href="https://twitter.com/share" class="twitter-share-button">Partager</a>
 			</div>
+=======
+
+>>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 		</article>
 		<!-- /article -->
 

@@ -25,7 +25,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 
+<<<<<<< HEAD
 <section class="login-formulaire">
+=======
+>>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 <div class="container">
 	<?php wc_print_notices(); ?>
@@ -56,12 +59,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</form>
 
 		<p class="new_user">
+<<<<<<< HEAD
 			<a href="<?php echo get_permalink(woocommerce_get_page_id('myaccount')) . 'register'; ?>"><?php _e( 'Register' ); ?></a>
+=======
+			<a href="<?php echo get_permalink(woocommerce_get_page_id('myaccount')) . '?action=register'; ?>"><?php _e( 'Register' ); ?></a>
+>>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 			<!--a href="/my-account/form-register/">Vous avez pas de compte ? créer un nouveau compte</a-->
 		</p>
 
 	</div>
 </div>
+<<<<<<< HEAD
 </section>
+=======
+>>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 <?php do_action( 'woocommerce_after_customer_login_form' ); ?>
