@@ -1,9 +1,7 @@
-/*(function ($, root, undefined) {
+(function ($, root, undefined) {
 
 	$(function () {
 
+    });
 
-
-
-
-})(jQuery, this);*/
+})(jQuery, this);

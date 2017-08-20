@@ -2785,6 +2785,34 @@ legend{
 .block-rs h3 {
 	color: #b9ce02;
 }
+/*------------------------------------*\
+filter-area : Zone de filtre dans les pages catégories
+\*------------------------------------*/
+.filter-area {
+	text-align: center;
+}
+
+.filter-area h3 {
+	display: none;
+}
+
+.filter-area .tag-cloud-link {
+	display: inline-block;
+	font-size: 2rem!important;
+	border: 1px solid #4e4a46;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.filter-area .tag-cloud-link:hover, .filter-area .tag-cloud-link:focus, .filter-area .tag-cloud-link.is-active {
+	text-decoration: none;
+	color: white;
+	background-color: #b9ce00;
+	border: 1px solid #b9ce00;
+}
 
 .hesperiden.tparrows.tp-leftarrow:before {
     content: '\e824';

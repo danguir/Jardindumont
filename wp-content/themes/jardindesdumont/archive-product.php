@@ -34,52 +34,54 @@ get_header( 'shop' ); ?>
 	?>
 
 
-    <header class="woocommerce-products-header">
-			<div class="page-categorie">
-		      <div class="">
-		         <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							 <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+<header class="woocommerce-products-header">
+    <div class="page-categorie">
+        <div class="">
+            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-								<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+                    <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 
-							<?php endif; ?>
-		         </div>
-						 <div class="col-md-8 col-md-offset-2">
-							 <p>
-								 <?php
-									 /**
-										* woocommerce_archive_description hook.
-										*
-										* @hooked woocommerce_taxonomy_archive_description - 10
-										* @hooked woocommerce_product_archive_description - 10
-										*/
-									 do_action( 'woocommerce_archive_description' );
-								 ?>
+				<?php endif; ?>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p>
+					<?php
+					/**
+					 * woocommerce_archive_description hook.
+					 *
+					 * @hooked woocommerce_taxonomy_archive_description - 10
+					 * @hooked woocommerce_product_archive_description - 10
+					 */
+					do_action( 'woocommerce_archive_description' );
+					?>
 
-							 </p>
-						 </div>
-						 <div class="col-md-10 col-md-offset-1">
-			         <div align="center" id="affected">
-									 <input class="filter-button" data-filter="potager" type="checkbox" name="potager" title="potager">
-									 <input class="filter-button" data-filter="fruitiers" type="checkbox" name="fruitiers" title="fruitiers">
-									 <input class="filter-button" data-filter="Plantes" type="checkbox" name="Plantes" title="Plantes">
-									 <input class="filter-button" data-filter="fleurs" type="checkbox" name="fleurs" title="fleurs">
-   								 <input class="filter-button" data-filter="arbres" type="checkbox" name="arbres" title="arbres">
-									 <input class="filter-button" data-filter="intérieur" type="checkbox" name="intérieur" title="intérieur">
-									 <input class="filter-button" data-filter="balcon" type="checkbox" name="balcon" title="balcon">
-									 <input class="filter-button" data-filter="terrasse" type="checkbox" name="terrasse" title="terrasse">
-									 <input class="filter-button" data-filter="jardin" type="checkbox" name="jardin" title="jardin">
-			         </div>
+                </p>
+            </div>
+            <div class="col-md-10 col-md-offset-1">
+                <!--<div align="center" id="affected">
+                    <input class="filter-button" data-filter="potager" type="checkbox" name="potager" title="potager">
+                    <input class="filter-button" data-filter="fruitiers" type="checkbox" name="fruitiers"
+                           title="fruitiers">
+                    <input class="filter-button" data-filter="Plantes" type="checkbox" name="Plantes" title="Plantes">
+                    <input class="filter-button" data-filter="fleurs" type="checkbox" name="fleurs" title="fleurs">
+                    <input class="filter-button" data-filter="arbres" type="checkbox" name="arbres" title="arbres">
+                    <input class="filter-button" data-filter="intérieur" type="checkbox" name="intérieur"
+                           title="intérieur">
+                    <input class="filter-button" data-filter="balcon" type="checkbox" name="balcon" title="balcon">
+                    <input class="filter-button" data-filter="terrasse" type="checkbox" name="terrasse"
+                           title="terrasse">
+                    <input class="filter-button" data-filter="jardin" type="checkbox" name="jardin" title="jardin">
+                </div>-->
+                <div class="filter-area">
+		            <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
+                </div>
 
-							 <a class="link-clear" href="#" data-filter="all">Reinitialiser les filtres</a>
-		         </div>
-					 </div>
-		     </div>
-		 </section>
-
-
-
-    </header>
+                <a class="link-clear" href="#" data-filter="all">Reinitialiser les filtres</a>
+            </div>
+        </div>
+    </div>
+</header>
 
 		<?php if ( have_posts() ) : ?>
 
