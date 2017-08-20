@@ -28,7 +28,6 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 			<?php wc_get_template( 'myaccount/my-address.php' ); ?>
 		<?php else : ?>
 
-<<<<<<< HEAD
 			<section class="edit-adress-form">
 				<div class="container">
 						<div class="col-md-12 col-sm-12">
@@ -36,11 +35,6 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
 							<form method="post">
 
-=======
-	<form method="post">
-
-		<h3><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></h3>
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 		<div class="woocommerce-address-fields">
 			<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>
@@ -48,10 +42,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 			<div class="woocommerce-address-fields__field-wrapper">
 				<?php
 					foreach ( $address as $key => $field ) {
-<<<<<<< HEAD
 						//var_dump($field['country_field']);
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 						if ( isset( $field['country_field'], $address[ $field['country_field'] ] ) ) {
 							$field['country'] = wc_get_post_data_by_key( $field['country_field'], $address[ $field['country_field'] ]['value'] );
 						}
@@ -71,13 +62,10 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
 	</form>
 
-<<<<<<< HEAD
 </div>
 </div>
 </section>
 
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_after_edit_account_address_form' ); ?>

