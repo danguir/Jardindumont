@@ -2785,6 +2785,94 @@ legend{
 .block-rs h3 {
 	color: #b9ce02;
 }
+/*------------------------------------*\
+filter-area : Zone de filtre dans les pages catégories
+\*------------------------------------*/
+.filter-area {
+	text-align: center;
+}
+
+.filter-area h3 {
+	display: none;
+}
+
+.filter-area .tag-cloud-link {
+	display: inline-block;
+	font-size: 2rem!important;
+	border: 1px solid #4e4a46;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.filter-area .tag-cloud-link:focus {
+	text-decoration: none;
+	color: #4e4a46;
+}
+
+.filter-area .tag-cloud-link:hover, .filter-area .tag-cloud-link.is-active {
+	text-decoration: none;
+	color: white;
+	background-color: #b9ce00;
+	border: 1px solid #b9ce00;
+}
+
+.loading {
+	margin: auto;
+	text-align: center;
+	width: 100%;
+}
+
+.loading:before {
+	content: "Veuillez patientez...";
+	font-size: 16px;
+	display: block;
+}
+
+.loading span {
+	-webkit-animation: loading 1s infinite alternate;
+	background: #869b00;
+	border-radius: 10px;
+	display: inline-block;
+	height: 10px;
+	margin: 60px auto;
+	width: 10px;
+}
+
+.loading span:nth-of-type(2) {
+	-webkit-animation-delay: 0.2s;
+	background: #90a500;
+}
+.loading span:nth-of-type(3) {
+	-webkit-animation-delay: 0.4s;
+	background: #9aaf00;
+}
+.loading span:nth-of-type(4) {
+	-webkit-animation-delay: 0.6s;
+	background: #a3b900;
+}
+.loading span:nth-of-type(5) {
+	-webkit-animation-delay: 0.8s;
+	background: #abc300;
+}
+
+@-webkit-keyframes loading {
+	0% {
+		-webkit-transform: translatey(0);
+		height: 10px;
+		width: 10px;
+	}
+	100% {
+		-webkit-transform: translatey(-40px);
+		height: 20px;
+		width: 20px;
+	}
+}
+/*------------------------------------*\
+ Fin de filter-area
+\*------------------------------------*/
 
 .hesperiden.tparrows.tp-leftarrow:before {
     content: '\e824';
