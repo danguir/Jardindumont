@@ -742,7 +742,6 @@ function slugify($string, $replace = array(), $delimiter = '-') {
 	setlocale(LC_ALL, $oldLocale);
 	return $clean;
 }
-
 /*------------------------------------*\
 Function Ajax pour récupérer des produits en fonction d'une catégorie
 \*------------------------------------*/
@@ -751,11 +750,10 @@ add_action( 'wp_ajax_nopriv_get_products', 'get_products' );
 
 function get_products() {
 
-
 	$args = array(
 		'product_cat' => $_POST['category_name'],
 		'product_tag' => $_POST['tags'],
-		'meta_query' => array(
+		'meta_query'  => array(
 			array(
 				'key' => '_stock_status',
 				'value' => 'instock'
@@ -763,29 +761,25 @@ function get_products() {
 		)
 	);
 
-    // Execution de la requête
+	// Execution de la requête
 	$query = new WP_Query( $args );
+	if ( $query->have_posts() ) :
+		while ( $query->have_posts() ) : $query->the_post();
 
-    if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+			do_action( 'woocommerce_shop_loop' );
 
-        <li id="post-<?php the_ID(); ?>"  class="three columns product-post">
-            <?php
-            $liquor_brands = get_terms( 'pa_liquor-brands' );
-            foreach ( $liquor_brands as $liquor_brand ) {
-                echo $liquor_brand->slug . ' ';
-            }
-            ?>
-        </li>
+			wc_get_template_part( 'content', 'product' );
 
-        <?php wp_reset_postdata(); ?>
+		endwhile; // end of the loop.
 
-    <?php endwhile; else: ?>
+    elseif ( ! woocommerce_product_subcategories( array(
+		'before' => woocommerce_product_loop_start( false ),
+		'after'  => woocommerce_product_loop_end( false )
+	) ) ) :
 
-        <?php //error message ?>
+		do_action( 'woocommerce_no_products_found' );
 
-    <?php endif; ?>
-
-    <?php wp_reset_query(); ?>
+	endif;
 
 	die();
 

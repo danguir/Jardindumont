@@ -55,7 +55,6 @@ get_header( 'shop' ); ?>
 					 */
 					do_action( 'woocommerce_archive_description' );
 					?>
-
                 </p>
             </div>
             <div class="col-md-10 col-md-offset-1">
@@ -125,6 +124,15 @@ get_header( 'shop' ); ?>
 			<?php woocommerce_product_loop_end(); ?>
 		</div>
 
+
+            <div class="loading" style="display: none;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
 			<?php
 				/**
 				 * woocommerce_after_shop_loop hook.
@@ -169,45 +177,77 @@ get_header( 'shop' ); ?>
 </section>
 
 <section class="upsells-costumised up-sells upsells center products">
-		<div class="container">
-		<ul class="products">
+    <div class="container">
+        <ul class="products not-filter">
 
 
-				<li class="post-249 product type-product status-publish has-post-thumbnail product_cat-jardigeek product_cat-pour-ceux-qui-debutent first instock sale shipping-taxable purchasable product-type-simple">
-	<a href="http://dev.jardindumont.local/product/kit-saveurs-du-monde/" class="woocommerce-LoopProduct-link">
+            <li class="post-249 product type-product status-publish has-post-thumbnail product_cat-jardigeek product_cat-pour-ceux-qui-debutent first instock sale shipping-taxable purchasable product-type-simple">
+                <a href="http://dev.jardindumont.local/product/kit-saveurs-du-monde/"
+                   class="woocommerce-LoopProduct-link">
 
-<img width="300" height="300" src="http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="00-Main Photo" title="00-Main Photo" srcset="http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-300x300.jpg 300w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-150x150.jpg 150w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-250x250.jpg 250w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-768x768.jpg 768w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-700x700.jpg 700w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-120x120.jpg 120w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-360x360.jpg 360w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-50x50.jpg 50w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-900x900.jpg 900w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo.jpg 1600w" sizes="(max-width: 300px) 100vw, 300px"><h2 class="woocommerce-loop-product__title">Kit «&nbsp;Saveurs du monde&nbsp;»</h2>
-	<span class="price"><del><span class="woocommerce-Price-amount amount">29<span class="woocommerce-Price-currencySymbol">€</span></span></del> <ins><span class="woocommerce-Price-amount amount">25<span class="woocommerce-Price-currencySymbol">€</span></span></ins></span>
-</a>
-</li>
-
-
-
-				<li class="post-263 product type-product status-publish has-post-thumbnail product_cat-jardigeek  instock sale shipping-taxable purchasable product-type-simple">
-	<a href="http://dev.jardindumont.local/product/mon-jardin-dinterieur/" class="woocommerce-LoopProduct-link">
-
-<img width="300" height="300" src="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpeg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="00_MainPhoto" title="00_MainPhoto" srcset="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpeg 300w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-150x150.jpeg 150w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-250x250.jpeg 250w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-768x768.jpeg 768w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-700x700.jpeg 700w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-120x120.jpeg 120w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-360x360.jpeg 360w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-50x50.jpeg 50w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-900x900.jpeg 900w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto.jpeg 1600w" sizes="(max-width: 300px) 100vw, 300px"><h2 class="woocommerce-loop-product__title">Mon jardin d’intérieur</h2>
-	<span class="price"><del><span class="woocommerce-Price-amount amount">30<span class="woocommerce-Price-currencySymbol">€</span></span></del> <ins><span class="woocommerce-Price-amount amount">25<span class="woocommerce-Price-currencySymbol">€</span></span></ins></span>
-</a>
-</li>
-
-
-				<li class="post-245 product type-product status-publish  instock shipping-taxable purchasable product-type-simple">
-	<a href="http://dev.jardindumont.local/product/kit-paradis-tropical/" class="woocommerce-LoopProduct-link"><img src="http://dev.jardindumont.local/wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="Placeholder" width="300" class="woocommerce-placeholder wp-post-image" height="300"><h2 class="woocommerce-loop-product__title">Kit «&nbsp;Paradis Tropical&nbsp;»</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount">Prix à l'unité : 40<span class="woocommerce-Price-currencySymbol">€</span></span></span>
-</a>
-</li>
+                    <img width="300" height="300"
+                         src="http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-300x300.jpg"
+                         class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="00-Main Photo"
+                         title="00-Main Photo"
+                         srcset="http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-300x300.jpg 300w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-150x150.jpg 150w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-250x250.jpg 250w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-768x768.jpg 768w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-700x700.jpg 700w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-120x120.jpg 120w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-360x360.jpg 360w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-50x50.jpg 50w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo-900x900.jpg 900w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00-Main-Photo.jpg 1600w"
+                         sizes="(max-width: 300px) 100vw, 300px">
+                    <h2 class="woocommerce-loop-product__title">Kit «&nbsp;Saveurs du monde&nbsp;»</h2>
+                    <span class="price"><del><span class="woocommerce-Price-amount amount">29<span
+                                        class="woocommerce-Price-currencySymbol">€</span></span></del> <ins><span
+                                    class="woocommerce-Price-amount amount">25<span
+                                        class="woocommerce-Price-currencySymbol">€</span></span></ins></span>
+                </a>
+            </li>
 
 
-				<li class="post-241 product type-product status-publish has-post-thumbnail product_cat-jardigeek product_tag-jardigeek last instock shipping-taxable purchasable product-type-simple">
-	<a href="http://dev.jardindumont.local/product/kit-plante-sensitive/" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="00_MainPhoto" title="00_MainPhoto" srcset="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg 300w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-150x150.jpg 150w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-250x250.jpg 250w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-768x768.jpg 768w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-700x700.jpg 700w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-120x120.jpg 120w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-360x360.jpg 360w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-50x50.jpg 50w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-900x900.jpg 900w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto.jpg 1600w" sizes="(max-width: 300px) 100vw, 300px"><h2 class="woocommerce-loop-product__title">Kit «&nbsp;Plante sensitive&nbsp;»</h2>
-	<span class="price"><span class="woocommerce-Price-amount amount">Prix à l'unité : 35<span class="woocommerce-Price-currencySymbol">€</span></span></span>
-</a></li>
+            <li class="post-263 product type-product status-publish has-post-thumbnail product_cat-jardigeek  instock sale shipping-taxable purchasable product-type-simple">
+                <a href="http://dev.jardindumont.local/product/mon-jardin-dinterieur/"
+                   class="woocommerce-LoopProduct-link">
+
+                    <img width="300" height="300"
+                         src="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpeg"
+                         class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="00_MainPhoto"
+                         title="00_MainPhoto"
+                         srcset="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpeg 300w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-150x150.jpeg 150w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-250x250.jpeg 250w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-768x768.jpeg 768w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-700x700.jpeg 700w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-120x120.jpeg 120w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-360x360.jpeg 360w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-50x50.jpeg 50w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-900x900.jpeg 900w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto.jpeg 1600w"
+                         sizes="(max-width: 300px) 100vw, 300px">
+                    <h2 class="woocommerce-loop-product__title">Mon jardin d’intérieur</h2>
+                    <span class="price"><del><span class="woocommerce-Price-amount amount">30<span
+                                        class="woocommerce-Price-currencySymbol">€</span></span></del> <ins><span
+                                    class="woocommerce-Price-amount amount">25<span
+                                        class="woocommerce-Price-currencySymbol">€</span></span></ins></span>
+                </a>
+            </li>
 
 
-		</ul>
-</div>
-	</section>
+            <li class="post-245 product type-product status-publish  instock shipping-taxable purchasable product-type-simple">
+                <a href="http://dev.jardindumont.local/product/kit-paradis-tropical/"
+                   class="woocommerce-LoopProduct-link"><img
+                            src="http://dev.jardindumont.local/wp-content/plugins/woocommerce/assets/images/placeholder.png"
+                            alt="Placeholder" width="300" class="woocommerce-placeholder wp-post-image" height="300">
+                    <h2 class="woocommerce-loop-product__title">Kit «&nbsp;Paradis Tropical&nbsp;»</h2>
+                    <span class="price"><span class="woocommerce-Price-amount amount">Prix à l'unité : 40<span
+                                    class="woocommerce-Price-currencySymbol">€</span></span></span>
+                </a>
+            </li>
+
+
+            <li class="post-241 product type-product status-publish has-post-thumbnail product_cat-jardigeek product_tag-jardigeek last instock shipping-taxable purchasable product-type-simple">
+                <a href="http://dev.jardindumont.local/product/kit-plante-sensitive/"
+                   class="woocommerce-LoopProduct-link"><img width="300" height="300"
+                                                             src="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg"
+                                                             class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                             alt="00_MainPhoto" title="00_MainPhoto"
+                                                             srcset="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg 300w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-150x150.jpg 150w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-250x250.jpg 250w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-768x768.jpg 768w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-700x700.jpg 700w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-120x120.jpg 120w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-360x360.jpg 360w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-50x50.jpg 50w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-900x900.jpg 900w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto.jpg 1600w"
+                                                             sizes="(max-width: 300px) 100vw, 300px">
+                    <h2 class="woocommerce-loop-product__title">Kit «&nbsp;Plante sensitive&nbsp;»</h2>
+                    <span class="price"><span class="woocommerce-Price-amount amount">Prix à l'unité : 35<span
+                                    class="woocommerce-Price-currencySymbol">€</span></span></span>
+                </a></li>
+
+
+        </ul>
+    </div>
+</section>
 
 	<section class="networking center " >
 		<h2>Suivez-nous</h2>

@@ -2819,6 +2819,61 @@ filter-area : Zone de filtre dans les pages catégories
 	border: 1px solid #b9ce00;
 }
 
+.loading {
+	margin: auto;
+	text-align: center;
+	width: 100%;
+}
+
+.loading:before {
+	content: "Veuillez patientez...";
+	font-size: 16px;
+	display: block;
+}
+
+.loading span {
+	-webkit-animation: loading 1s infinite alternate;
+	background: #869b00;
+	border-radius: 10px;
+	display: inline-block;
+	height: 10px;
+	margin: 60px auto;
+	width: 10px;
+}
+
+.loading span:nth-of-type(2) {
+	-webkit-animation-delay: 0.2s;
+	background: #90a500;
+}
+.loading span:nth-of-type(3) {
+	-webkit-animation-delay: 0.4s;
+	background: #9aaf00;
+}
+.loading span:nth-of-type(4) {
+	-webkit-animation-delay: 0.6s;
+	background: #a3b900;
+}
+.loading span:nth-of-type(5) {
+	-webkit-animation-delay: 0.8s;
+	background: #abc300;
+}
+
+@-webkit-keyframes loading {
+	0% {
+		-webkit-transform: translatey(0);
+		height: 10px;
+		width: 10px;
+	}
+	100% {
+		-webkit-transform: translatey(-40px);
+		height: 20px;
+		width: 20px;
+	}
+}
+/*------------------------------------*\
+ Fin de filter-area
+\*------------------------------------*/
+
 .hesperiden.tparrows.tp-leftarrow:before {
     content: '\e824';
     margin-left: -5px;
