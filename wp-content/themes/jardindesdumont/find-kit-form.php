@@ -18,7 +18,7 @@ Template Name: Find Kit Form
 					<div class="wizard-inner">
 
 							<ul class="nav nav-tabs" role="tablist">
-								<div class="connecting-line line-1"><!--img src="/wp-content/themes/jardindesdumont/img/checkout/step-active.png" alt=""--></div>
+								<div class="connecting-line line-1"><img src="/wp-content/themes/jardindesdumont/img/checkout/step-active.png" alt=""></div>
 									<li role="presentation" class="active">
 											<a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
 													<span class="round-tab">1</span>

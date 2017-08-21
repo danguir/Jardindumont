@@ -24,17 +24,21 @@ global $product;
 	    </div>
 
 	    <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
-	        <span class="feedback"><?php echo $product_added_text ?></span>
 	        <a href="<?php echo esc_url( $wishlist_url )?>" rel="nofollow">
-	            <?php echo apply_filters( 'yith-wcwl-browse-wishlist-label', $browse_wishlist_text )?>
+						<img src="<?php echo get_template_directory_uri();?>/img/product/wishlist-active.png" class="wishlist-icon" />
+							<?php echo apply_filters( 'yith-wcwl-browse-wishlist-label', $browse_wishlist_text )?>
 	        </a>
+					<span class="feedback"><?php echo $product_added_text ?></span>
+
 	    </div>
 
 	    <div class="yith-wcwl-wishlistexistsbrowse <?php echo ( $exists && ! $available_multi_wishlist ) ? 'show' : 'hide' ?>" style="display:<?php echo ( $exists && ! $available_multi_wishlist ) ? 'block' : 'none' ?>">
-	        <span class="feedback"><?php echo $already_in_wishslist_text ?></span>
 	        <a href="<?php echo esc_url( $wishlist_url ) ?>" rel="nofollow">
+						<img src="<?php echo get_template_directory_uri();?>/img/product/wishlist-active.png" class="wishlist-icon" />
 	            <?php echo apply_filters( 'yith-wcwl-browse-wishlist-label', $browse_wishlist_text )?>
 	        </a>
+					<span class="feedback"><?php echo $already_in_wishslist_text ?></span>
+
 	    </div>
 
 	    <div style="clear:both"></div>

@@ -13,6 +13,8 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 ?>
 
 <?php do_action( 'yith_wcwl_before_wishlist_form', $wishlist_meta ); ?>
+<section class="kit-form">
+	<div class="container">
 
 <form id="yith-wcwl-form" action="<?php echo $form_action ?>" method="post" class="woocommerce">
 
@@ -311,4 +313,7 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 			</button>
 		</form>
 	</div>
+
+</div>
+</section>
 <?php endif; ?>
