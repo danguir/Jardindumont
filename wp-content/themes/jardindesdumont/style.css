@@ -3723,7 +3723,7 @@ section.edit-adress-form  input.button:hover{
 	bottom: 70px;
 }
 #wl-wrapper .wl-add-link {
-  display: none;
+  /*display: none;*/
 }
 
 .woocommerce nav.woocommerce-pagination{
@@ -3800,3 +3800,69 @@ Checkout
 background-repeat: no-repeat;
 background-size: 147px;
 height: 100%;*/
+.woocommerce-checkout .woocommerce .argmc-wrapper table.shop_table  thead th,
+.argmc-wrapper .arg-product-desc{
+	font-size: 15px;
+}
+
+.woocommerce-checkout .woocommerce .argmc-wrapper label{
+	font-family: 'Gotham_Light';
+	font-size: 15px;
+	font-weight: 600;
+	color: black;
+}
+
+/**********************
+WISHLIST
+**********************/
+ .woocommerce #yith-wcwl-form table.shop_table{
+	color: #000000;
+	text-transform: uppercase;
+	font-weight: 600;
+	line-height: 1;
+	font-family: 'Gotham_Light';
+	font-size: 18px;
+}
+.woocommerce #yith-wcwl-form a.remove {
+  font-size: 1.5em;
+}
+
+#yith-wcwl-form .wishlist_table tr td{
+	text-align: left;
+}
+
+.woocommerce #yith-wcwl-form .wishlist-title h2 {
+  color: #b9ce00;
+  font-weight: 700;
+  font-family: 'Gotham_Bold';
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.woocommerce #yith-wcwl-form .wishlist-title h2::after {
+  content: "";
+  width: 9%;
+  margin: 0 auto;
+  border-bottom: 4px solid #fcea10;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.woocommerce #yith-wcwl-form .wishlist-title {
+  display: block;
+  text-align: center;
+}
+
+.yith-wcwl-wishlistexistsbrowse a, .yith-wcwl-wishlistaddedbrowse a{
+	color: #b9ce00;
+	font-family: "Gotham Bold", sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600;
+}
+.yith-wcwl-wishlistexistsbrowse span, .yith-wcwl-wishlistaddedbrowse span{
+	white-space: pre;
+}
