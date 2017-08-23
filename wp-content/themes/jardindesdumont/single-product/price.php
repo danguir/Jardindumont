@@ -23,39 +23,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
+<form class="cart" method="post" enctype='multipart/form-data'>
 <div class="row box-price">
 	<div class="col-md-4">
-			<?php if ( $max_value && $min_value === $max_value ) {
-				?>
-				<div class="quantity hidden">
-					<input type="hidden" value="1" class="qty" name="<?php echo esc_attr( $input_name ); ?>" value="<?php echo esc_attr( $min_value ); ?>" />
-				</div>
-					<p class="txt-under-price">Quantité</p>
-				<?php
-			} else {
-				?>
-				<div class="quantity">
-					<input type="number" value="1" class="input-text qty text" step="<?php echo esc_attr( $step ); ?>" min="<?php echo esc_attr( $min_value ); ?>" max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>" name="<?php echo esc_attr( $input_name ); ?>" value="<?php echo esc_attr( $input_value ); ?>" title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ) ?>" size="4" pattern="<?php echo esc_attr( $pattern ); ?>" inputmode="<?php echo esc_attr( $inputmode ); ?>" />
-				</div>
-				<p class="txt-under-price">Quantité</p>
-				<?php
-			}
-			?>
-
+        <?php
+        woocommerce_quantity_input( array(
+	        'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+	        'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+	        'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( $_POST['quantity'] ) : $product->get_min_purchase_quantity(),
+        ) );
+        ?>
   </div>
 
 	<div class="col-md-2">
 		<img src="<?php echo get_template_directory_uri();?>/img/product/x.png" class="calcule center-block img-responsive" alt="Responsive image">
 	</div>
 	<div class="col-md-6">
-		<p class="price"><?php echo $product->get_display_price();  ?>€</p>
+		<p class="price is-price" data-price="<?php echo $product->price; ?>"><?php echo $product->get_display_price();  ?>€</p>
 		<p class="txt-under-price">Prix à l'unité</p>
   </div>
 	<div class="col-md-2">
 		<img src="<?php echo get_template_directory_uri();?>/img/product/egale.png" class="calcule center-block img-responsive" alt="Responsive image">
   </div>
   <div class="col-md-12">
-		<p class="price"><?php echo $product->get_price_html(); ?></p>
+		<p class="price price-final"><?php echo $product->get_price_html(); ?></p>
 		<p class="txt-under-price">Prix finale sans livraison</p>
   </div>
 </div>

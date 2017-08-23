@@ -2,7 +2,9 @@
 
 	$(function () {
 
-	    var localhost = location.protocol + "//" + location.host;
+        /****
+         * FILTRE
+         */
         $('.filter-area .tag-cloud-link').click(function(e){
 
             e.preventDefault();
@@ -69,6 +71,17 @@
                 $('ul.products:not(.not-filter)').show();
             });
         }
+
+        /****
+         * Calcul de prix total
+         */
+
+        $('.qty').bind('keyup mouseup', function () {
+            var multiple = $(this).val();
+            var price = $('.is-price').data('price');
+            var finalPrice = multiple*price;
+            $('.price-final .woocommerce-Price-amount').text(finalPrice+"€");
+        });
 
         function log(output) {
             console.log(output);
