@@ -778,4 +778,49 @@ function get_products() {
 	die();
 
 }
+
+
+
+function argmcAddNewSteps($fields) {
+
+	//Add First Step
+	$position = 4;     //Set Step Position
+	$fields['steps'] = array_slice($fields['steps'] , 0, $position - 1, true) +
+	                   array(
+		                   'step_livraison' => array(
+			                   'text'  => __('MODE LIVRAISON', 'argMC'),     //"Tab Name" - Set First Tab Name
+			                   'class' => 'my-custom-step'             //'my-custom-step' - Set First Tab Class Name
+		                   ),
+	                   ) +
+	                   array_slice($fields['steps'], $position - 1, count($fields['steps']), true);
+
+	return $fields;
+
+}
+add_filter('arg-mc-init-options', 'argmcAddNewSteps');
+
+
+
+/**
+ * Add Content to the Related Steps Created Above
+ * @param string $step
+ * return void
+ */
+
+function argmcAddStepsContent($step) {
+
+	//First Step Content
+	if ($step == 'step_livraison') {
+		?>
+        <p>first step content ...</p>
+
+		<?php
+		wc_cart_totals_shipping_html();
+
+	}
+
+
+
+}
+add_action('arg-mc-checkout-step', 'argmcAddStepsContent');
 ?>
