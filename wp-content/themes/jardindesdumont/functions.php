@@ -811,10 +811,7 @@ function argmcAddStepsContent($step) {
 
 	//First Step Content
 	if ($step == 'step_livraison') {
-		?>
-        <p>first step content ...</p>
 
-		<?php
 		wc_cart_totals_shipping_html();
 
 	}

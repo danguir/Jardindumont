@@ -3651,6 +3651,50 @@ section.checkout-form .methode-paiement p span {
 	font-size: 20px;
 }
 
+#shipping_method li {
+	border: 2px solid #bdbbbb;
+	padding: 20px!important;
+	text-align: center!important;
+	margin-right: 20px!important;
+	display: inline-block!important;
+	cursor: pointer;
+}
+
+#shipping_method li.is-checked {
+	border: 2px solid #fec833;
+	background-color: #fec833;
+}
+
+#shipping_method li:hover {
+	border: 2px solid #fec833;
+}
+
+.woocommerce-checkout .woocommerce .argmc-wrapper #payment .payment_methods input[type="radio"].input-radio + label, .woocommerce-checkout .woocommerce .argmc-wrapper ul#shipping_method li input[type="radio"].shipping_method + label {
+	padding: 0px!important;
+	font-size: 2rem!important;
+	font-weight: bold!important;
+}
+
+.woocommerce-checkout .woocommerce .argmc-wrapper ul#shipping_method {
+	display: block;
+	text-align: center;
+}
+
+#shipping_method label:before, #shipping_method label:after {
+	/* display: none!important; */
+	background: transparent!important;
+	border: none!important;
+}
+
+#shipping_method .small {
+	font-size: 1rem!important;
+}
+
+#shipping_method .strong {
+	font-weight: bold;
+}
+
+
 /****************************
 Register Form
 ***************************/
@@ -3966,6 +4010,7 @@ WISHLIST
  text-align: center;
 }
 
+<<<<<<< HEAD
 
 /*------------------------------------*\
     RESPONSIVE
@@ -4170,3 +4215,8 @@ WISHLIST
 	   only screen and (min-resolution:144dpi) {
 
 }
+=======
+/**********************
+CHECKOUT
+**********************/
+>>>>>>> 7c48e3ae386a3054c9b59776a3cebf8c6382d803
