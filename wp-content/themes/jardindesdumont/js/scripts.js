@@ -2,6 +2,21 @@
 
 	$(function () {
 
+	    $('#shipping_method li').click(function(e){
+            $('#shipping_method li').removeClass('is-checked');
+            $(this).addClass('is-checked');
+        });
+
+        $('.argmc-wrapper').on('argmcBeforeStepChange', function(event, currentStep, nextStep) {
+            $('.shipping_method').closest('li').removeClass('is-checked');
+            $('.shipping_method[checked=checked]').closest('li').addClass('is-checked');
+        });
+
+        $('.argmc-wrapper').on('argmcAfterStepChange', function(event, currentStep, nextStep) {
+            $('.shipping_method').closest('li').removeClass('is-checked');
+            $('.shipping_method[checked=checked]').closest('li').addClass('is-checked');
+        });
+
         /****
          * FILTRE
          */
