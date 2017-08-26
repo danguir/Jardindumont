@@ -20,7 +20,7 @@
 					</div>
 
 					</div>
-						<div class="col-md-2 nopadding">
+						<div class="col-md-2 col-xs-12 nopadding nopadding">
 							<div class="side-menu-article center sticky-scroll-box">
 									<img src="<?php echo get_template_directory_uri();?>/img/Icon-menu-article.png" id="" class=""/>
 									<ul>
@@ -57,7 +57,7 @@
 				</section>	<!-- /section -->
 
 				<div class="row center">
-					<div class="col-md-12 ">
+					<div class="col-md-12col-xs-12 ">
 						<button class="ui-button ui-button-primary" id="loadMore">Afficher plus</button>
 					</div>
 				</div>

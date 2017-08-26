@@ -41,7 +41,7 @@
 
 					<div class="footer-level-two" >
 
-						<div class="row f-milieu center">
+						<div class="row hidden-xs f-milieu center">
 							<div class="col-md-3 col-xs-12 text-center">
 								<h4>0 892 700 205</h4>
 								<button class="ui-button ui-button-secondary-red">Call me back</button>
@@ -53,7 +53,7 @@
 							<div class="col-md-6 col-xs-12 text-center">
 
 								<div class="row center">
-									<div class="col-md-4 col-xs-12 text-center style='background:red;' ">
+									<div class="col-md-4 hidden-xs text-center style='background:red;' ">
 										<h4 class="app">Application<br>What's this<br>plante</h4>
 										<div class="row">
 											<div class="col-md-12 col-xs-12 nopadding" style="text-align: right;">
@@ -64,7 +64,7 @@
 									</div>
 								</div>
 							</div>
-									<div class="Iphone col-md-4 col-xs-12 text-center">
+									<div class="Iphone col-md-4 hidden-xs text-center">
 										<img src="<?php echo get_template_directory_uri();?>/img/footer/app-download_2.png" class="app-phone center-block img-responsive" alt="Responsive image">
 									</div>
 									<div class="col-md-4 col-xs-12 text-center">

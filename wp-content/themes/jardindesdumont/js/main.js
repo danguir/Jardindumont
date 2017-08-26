@@ -86,21 +86,6 @@ function prevTab(elem) {
 
 
 
-/*Load more ctegory page
-jQuery(function () {
-    jQuery("div #article-loop").slice(0, 4).show();
-		jQuery("#loadMore").on('click', function (e) {
-			//e.preventDefault();
-			jQuery("div:hidden").slice(0, 8).slideDown();
-			//alert(jQuery("div#article-loop:hidden").length );
-			if (jQuery("div:hidden").length == 0) {
-					jQuery("#load").fadeOut('slow');
-			}
-			jQuery('html,body').animate({
-					scrollTop: jQuery(this).offset().top
-			}, 1500);
-    });
-});*/
 
  /*------------------------------------*\
      VERTICAL MENU
@@ -109,49 +94,39 @@ jQuery(function () {
 
 	var templateUrl = '/wp-content/themes/jardindesdumont';
 
+	   // change functionality for smaller screens
+
 		jQuery(window).scroll(function () {
             // set distance user needs to scroll before we fadeIn navbar
 			if (jQuery(this).scrollTop() > 100) {
 				jQuery('#vertical-bar').css('background-color', 'rgba(0, 0, 0, 0.5)');
-				jQuery("#vertical-bar").css('height', '60px');
-				jQuery("#logo a img").css('height', '43px');
-				jQuery("#logo a img").css('width', '188px');
-				jQuery("#vertical-bar .list-inline li a img").css('width', '44px');
 				jQuery("#burger").attr('src', templateUrl + '/img/burger.png');
-				jQuery(".menu-button #burger").css('width', '40px');
-				jQuery(".menu-button #burger").css('height', '22px');
 
+				if(jQuery(window).width() < 768)
+				{
+					jQuery(".menu-button #burger").css('width', '40px');
+					jQuery(".menu-button #burger").css('height', '22px');
+					jQuery("#vertical-bar").css('height', '60px');
+					jQuery("#logo a img").css('height', '43px');
+					jQuery("#logo a img").css('width', '188px');
+					jQuery("#vertical-bar .list-inline li a img").css('width', '44px');
+
+				}
 			} else {
 				jQuery('#vertical-bar').css('background-color', 'transparent');
-				jQuery("#logo a img").css('height', '70px');
-				jQuery("#logo a img").css('width', '300px');
-				jQuery("#vertical-bar .list-inline li a img").css('width', '60px');
 				jQuery("#burger").attr('src', templateUrl + '/img/burger-vert.png');
-				jQuery(".menu-button #burger").css('width', '48px');
-				jQuery(".menu-button #burger").css('height', '27px');
+
+				if(jQuery(window).width() < 768)
+				{
+					jQuery("#logo a img").css('height', '70px');
+					jQuery("#logo a img").css('width', '300px');
+					jQuery("#vertical-bar .list-inline li a img").css('width', '60px');
+					jQuery(".menu-button #burger").css('width', '48px');
+					jQuery(".menu-button #burger").css('height', '27px');
+				}
 			}
 		});
 
-
-/********************************
-FILTER CATGORIE PAGE
-********************************/
-
-/*jQuery('div.tags').delegate('input:checkbox', 'change', function(){
-     var $lis = jQuery('.results > li').hide();
-     //For each one checked
-     jQuery('input:checked').each(function(){
-          $lis.filter('.' + $(this).attr('rel')).show();
-     });
-});
-
-$('input#someCheckbox').click(function() {
-    if ($(this).is(':checked')) {
-        // checked
-    } else {
-       // not checked
-    };
-});*/
 
 
 jQuery(document).ready(function(){
@@ -185,8 +160,8 @@ jQuery("#affected-step6").zInput();
 
 //NAV TAB HOMEPAGE
 jQuery('.nav-pills li').click(function(){
-	$('.nav-pills li').removeClass('active');
-	$(this).addClass('active');
+	jQuery('.nav-pills li').removeClass('active');
+	jQuery(this).addClass('active');
 });
 
 
@@ -194,11 +169,14 @@ jQuery('.nav-pills li').click(function(){
 var topSticky = jQuery('.sticky-scroll-box').offset().top;
 var stickyHeight = jQuery('.sticky-scroll-box').height();
 
+//if(jQuery(window).width() < 768){
+
 jQuery(window).scroll(function (event) {
 	var limit = jQuery('.networking ').offset().top - stickyHeight - 100;
 	var stickyScroll = jQuery(this).scrollTop();
 	var windowTop = jQuery(window).scrollTop();
 
+if(jQuery(window).width() > 768){
 	if (stickyScroll >= topSticky) {
 		jQuery('.sticky-scroll-box').addClass('fixed-sticky');
 	} else {
@@ -209,9 +187,13 @@ jQuery(window).scroll(function (event) {
 		var diff = limit - windowTop;
 		jQuery('.sticky-scroll-box').css({top: diff});
 	}
+
+}
+
+
 	//jQuery('.sticky-scroll-box').width(jQuery('.sticky-scroll-box').parent().width());
 	});
-
+//}
 
 
 

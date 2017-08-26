@@ -14,32 +14,6 @@
     font-style:normal;
 }
 
-/*------------------------------------*\
-    RESPONSIVE
-\*------------------------------------*/
-
-@media only screen and (min-width:320px) {
-
-}
-@media only screen and (min-width:480px) {
-
-}
-@media only screen and (min-width:768px) {
-
-}
-@media only screen and (min-width:1024px) {
-
-}
-@media only screen and (min-width:1140px) {
-
-}
-@media only screen and (min-width:1280px) {
-
-}
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-	   only screen and (min-resolution:144dpi) {
-
-}
 
 /*------------------------------------*\
     MISC
@@ -3055,7 +3029,7 @@ section.category-page #article-loop {
 	border-radius: 0.5em;
 	letter-spacing: 2px;
 	margin-bottom: 50px;
-	width: 18%;
+	width: 232px;
 }
 
 section.category-page .full-height{
@@ -3086,7 +3060,9 @@ section.kit-form{
 	margin-top: 100px;
 	color: black;
 }
-
+section.kit-form a:hover{
+	text-decoration: none;
+}
 .wizard {
     margin: 20px auto;
     background: #fff;
@@ -3988,4 +3964,209 @@ WISHLIST
 }
 #yith-wcwl-form .wishlist_table .wishlist-empty{
  text-align: center;
+}
+
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+	/*HEADER*/
+	.logo a img{
+		height: 30px;
+	  width: 141px;
+    margin-left: 65px;
+	}
+	.homepage .menu-button .burger-blanc {
+	  width: 33px;
+	  height: 21px;
+	}
+	.menu-button{
+		  font-size: 1em;
+	}
+	.vertical-bar .list-inline li a img{
+		margin-left: 10px;
+		margin-top: 5px;
+		width: 30px ;
+	}
+	.logo {
+  	margin-left: 0px;
+	}
+	/*FOOTER*/
+	input[type="email"]{
+		  width: 160px;
+	}
+	input[type="submit"]{
+		height: 34px;
+	  width: 148px;
+	}
+	.social-newsletter input.button{
+		font-size: 11px;
+	}
+	.footer .footer-level-one img{
+		width: 35px;
+	}
+	.footer .footer-level-one h4{
+		font-size: 10px;
+	  margin-top: 16px;
+	}
+	.footer .footer-level-one p {
+	  font-size: 8px;
+	}
+	.footer .footer-level-one .row.center > div:nth-child(1n){
+		  height: 155px;
+	}
+	/*SLIDER HOMEPAGE*/
+	.hesperiden.tparrows:before {
+	  font-size: 15px;
+	  color: white;
+	  line-height: 32px;
+	}
+	.hesperiden.tparrows {
+	  width: 35px;
+	  height: 35px;
+		border: 1px solid white;
+	}
+	.gyges .tp-bullet {
+		width: 6px;
+	  height: 6px;
+		border: 1px solid rgba(255, 255, 255, 1);
+	}
+	/*PAGE CATEGORIE IDEE JARDIN*/
+	section.category-page .avatar::after{
+		  margin: 0 0 4px 6px;
+	}
+	section.category-page .avatar::before{
+		margin: 0 6px 4px 0;
+	}
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+	/*HEADER*/
+	.logo a img{
+		height: 55px;
+	  width: 220px;
+	  margin-left: 105px;
+	}
+	.homepage .menu-button .burger-blanc {
+	  width: 33px;
+	  height: 21px;
+	}
+	.menu-button{
+		  font-size: 1em;
+	}
+	.vertical-bar .list-inline li a img{
+		width: 40px;
+	}
+	.logo {
+  	margin-left: 0px;
+	}
+	.list-inline{
+		margin-right: 26px;
+	}
+	/*SLIDER HOMEPAGE*/
+	.hesperiden.tparrows:before {
+		  font-size: 30px;
+			line-height: 48px;
+	}
+	.hesperiden.tparrows {
+		width: 50px;
+		height: 50px;
+		border: 2px solid white;
+	}
+	.gyges .tp-bullet {
+		width: 12px;
+		height: 12px;
+		border: 2px solid rgba(255, 255, 255, 1);
+	}
+ /*HOMEPAGE*/
+	section.tab-famille .nav-pills>li {
+		width: 22.5%;
+	}
+	section.tab-famille .nav-pills>li .nom-famille{
+		  font-size: 15px;
+	}
+
+	/*FOOTER*/
+	input[type="email"]{
+		  width: 350px;
+	}
+	input[type="submit"]{
+		height: 42px;
+	  width: 182px;
+	}
+	.social-newsletter input.button{
+		font-size: 13px;
+	}
+	.footer .footer-level-one img{
+		width: 40px;
+	}
+	.footer .footer-level-one h4{
+		font-size: 14px;
+	  margin-top: 16px;
+	}
+	.footer .footer-level-one p {
+	  font-size: 10px;
+	}
+	.footer .footer-level-one .row.center > div:nth-child(1n){
+		  height: 155px;
+	}
+}
+@media only screen and (min-width:1024px) {
+	.footer-level-two h4{
+		  font-size: 15px;
+		  margin-bottom: 12px;
+	}
+	.footer-level-two span.badges{
+		font-size: 13px;
+	}
+	.footer-level-two .app-down, .footer-level-two h4.app {
+	  margin-top: 82px;
+	}
+}
+@media only screen and (min-width:1140px) {
+	section.tab-famille .nav-pills>li {
+	  width: 24.5%;
+	}
+}
+@media only screen and (min-width:1280px) {
+	/*FOOTER*/
+
+	.footer .footer-level-one img {
+	  width: 80px;
+	}
+	.footer .footer-level-one p {
+	  font-size: 13px;
+	}
+	.footer-level-two .app-down, .footer-level-two h4.app {
+	  margin-top: 100px;
+	}
+	.footer-level-two h4 {
+	  font-size: 20px;
+	  margin-bottom: 30px;
+	}
+
+	/*HEADER*/
+	.logo a img {
+	  width: 300px;
+	  height: 70px;
+	  margin-top: 5px;
+	}
+	.vertical-bar .list-inline li a img {
+	  width: 60px ;
+	}
+	.homepage .menu-button .burger-blanc {
+	  height: 27PX;
+	  width: 48px;
+	}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
 }
