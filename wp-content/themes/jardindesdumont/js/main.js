@@ -170,7 +170,6 @@ var topSticky = jQuery('.sticky-scroll-box').offset().top;
 var stickyHeight = jQuery('.sticky-scroll-box').height();
 
 //if(jQuery(window).width() < 768){
-
 jQuery(window).scroll(function (event) {
 	var limit = jQuery('.networking ').offset().top - stickyHeight - 100;
 	var stickyScroll = jQuery(this).scrollTop();
@@ -189,14 +188,17 @@ if(jQuery(window).width() > 768){
 	}
 
 }
-
-
 	//jQuery('.sticky-scroll-box').width(jQuery('.sticky-scroll-box').parent().width());
 	});
 //}
 
 
-
+/*jQuery(document).ready(function(){
+	jQuery("#review_form_wrapper").hide();
+	jQuery("#review_show").click(function(){
+	    jQuery("#review_form_wrapper").show();
+	});
+});*/
 	/*function stepnext(n){
 	    if(n != 0){
 			//$(".stepwizard-row a").switchClass('btn-primary','btn-default');

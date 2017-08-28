@@ -22,7 +22,14 @@
         });
         </script>
 
+			<?php 	function wow_init() { ?>
+					<script type="text/javascript">
+						new WOW().init();
+					</script>
+				<?php } ?>
+
 	</head>
+
 	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->

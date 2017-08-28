@@ -894,7 +894,10 @@ margin-top: 50px;
 .ui-button-primary {
   background: #B9CE00; }
   .ui-button-primary:hover {
-    background: #d0e800; }
+    background: #d0e800;
+		text-decoration: none;
+		color: #fff;
+	 }
   .ui-button-primary:active {
     background: #E6332A; }
 
@@ -1102,8 +1105,7 @@ p.elementor-heading-title.elementor-size-default{
 	font-family: 'PT_Sans_bold'!important;
 
 }
-.elementor-element-tde4esw h2,
-.elementor-widget-tabs .elementor-tab-title{
+.elementor-element-tde4esw h2, .elementor-element-046lrpv h2, .elementor-widget-tabs .elementor-tab-title{
 	font-family: 'beyond_the_mountains'!important;
 }
 
@@ -1209,7 +1211,7 @@ body {
 	width: 18px;
 }
 
-  form.cart .button{
+  form.cart .button, .woocommerce div.product form.cart .button{
 		vertical-align: middle;
     padding: 16px 2em 30px 2em;
     background: red;
@@ -1403,10 +1405,33 @@ text-indent: 0;
 }
 
 
+/*************************
+PAGE LAISSER UN AVIS
+************************/
+
+#reviews.all-reviews .func-um_user{
+	display: none;
+}
+
 
 /***************************************
 TABS PAGE PRODUITS
 ******************************************/
+
+#review_form_wrapper{
+  text-align: center;
+}
+a.laisser_avis{
+	font-size: 14px;
+  font-family: "Gotham_Bold", sans-serif;
+  letter-spacing: 2px;
+}
+.woocommerce #reviews h3{
+	  margin-bottom: 30px;
+}
+.woocommerce #review_form #respond p{
+	font-size: 18px;
+}
 #reviews.all-reviews #comments{
 	margin-top: 100px;
 	color: black;
@@ -1589,7 +1614,9 @@ input[type=number]::-webkit-outer-spin-button {
 		font-size: 15px;
 }
 
-
+.woocommerce div.product div.images .flex-control-thumbs li{
+	width: 20%;
+}
 /***************************************
 RELATED products
 ******************************************/
@@ -1722,19 +1749,18 @@ section .hashtag-dumont{
 		-webkit-box-shadow: inset 0 1px 1px transparent;
 }
 
-  div.images .woocommerce-product-gallery__trigger:before,  div.images .woocommerce-product-gallery__trigger:after{
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger:before, .woocommerce div.product div.images .woocommerce-product-gallery__trigger:after{
 	display: none;
 }
 
-  div.images .woocommerce-product-gallery__trigger{
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger{
 	background-image:url('/wp-content/themes/jardindesdumont/img/product/icon_zoom.png');
 	width: 70px;
 	height: 70px;
 	background-size: cover;
 }
 
-
-  div.images .woocommerce-product-gallery__trigger:hover{
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger:hover{
 background-color: transparent;
 }
 
@@ -1772,7 +1798,7 @@ background-color: transparent;
 }
 
 .yith-wcwl-add-to-wishlist{
-	margin-top: 28px;
+	margin-top: 0px;
 }
 .yith-wcwl-add-to-wishlist .wishlist-icon{
 	width: 40px;
@@ -3456,7 +3482,9 @@ section.contact-form h1::after{
 	margin: 30px auto;
 }
 
-
+.homepage .elementor-30 .elementor-element.elementor-element-fu47lyv .elementor-element-populated a:hover {
+  color: #b9ce00;
+}
 
 /*************************
 ALERT POP UP
@@ -3495,7 +3523,23 @@ Message error
 /*************************
 Checkout
 **************************/
-
+.woocommerce-checkout .woocommerce .argmc-wrapper button#argmc-next,
+.woocommerce-checkout .woocommerce .argmc-wrapper button#argmc-prev{
+	background: #b9ce02;
+	color: white;
+	letter-spacing: 2px;
+  font-size: 14px;
+	font-family: 'Gotham_medium';
+}
+.woocommerce-checkout .woocommerce .argmc-wrapper button#argmc-prev{
+	background: #c6c6c5;
+}
+.woocommerce-checkout .woocommerce .argmc-wrapper button#argmc-next:hover{
+	background: #c7d833;
+}
+.woocommerce-checkout .woocommerce .argmc-wrapper button#argmc-prev:hover{
+	background: #9c9b9b;
+}
 section.checkout-form{
 	margin-top: 100px;
 	color: black;
@@ -3658,11 +3702,20 @@ section.checkout-form .methode-paiement p span {
 	margin-right: 20px!important;
 	display: inline-block!important;
 	cursor: pointer;
+	  width: 270px;
 }
 
 #shipping_method li.is-checked {
 	border: 2px solid #fec833;
 	background-color: #fec833;
+}
+#shipping_method li.is-checked .strong::after {
+	content: "";
+	width: 85px;
+	height: 1px;
+	border-bottom: 4px solid white;
+	display: block;
+	margin: 20px auto;
 }
 
 #shipping_method li:hover {
@@ -3673,6 +3726,7 @@ section.checkout-form .methode-paiement p span {
 	padding: 0px!important;
 	font-size: 2rem!important;
 	font-weight: bold!important;
+
 }
 
 .woocommerce-checkout .woocommerce .argmc-wrapper ul#shipping_method {
@@ -3687,11 +3741,36 @@ section.checkout-form .methode-paiement p span {
 }
 
 #shipping_method .small {
-	font-size: 1rem!important;
+	/*font-size: 1rem!important;*/
+	font-size: 15px!important;
+	margin-bottom: 20px
 }
 
 #shipping_method .strong {
 	font-weight: bold;
+	margin-top: 40px;
+  font-family: 'Gotham_medium';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: black;
+}
+#shipping_method .strong::after {
+content: "";
+width: 85px;
+height: 1px;
+border-bottom: 4px solid #fec833;
+display: block;
+margin: 20px auto;
+}
+
+#shipping_method p{
+	font-size: 35px;
+	color: #000000;
+	font-family: 'PT_Sans';
+	font-weight: normal;
 }
 
 
@@ -4010,7 +4089,7 @@ WISHLIST
  text-align: center;
 }
 
-<<<<<<< HEAD
+
 
 /*------------------------------------*\
     RESPONSIVE
@@ -4215,8 +4294,7 @@ WISHLIST
 	   only screen and (min-resolution:144dpi) {
 
 }
-=======
+
 /**********************
 CHECKOUT
 **********************/
->>>>>>> 7c48e3ae386a3054c9b59776a3cebf8c6382d803

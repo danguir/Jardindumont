@@ -42,7 +42,7 @@ if ( ! comments_open() ) {
 			<p>
 				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
 			</p>
-			<button class="ui-button ui-button-primary center">Laisser un avis</button>
+			<a id="review_show" class="ui-button ui-button-primary laisser_avis" href="#review_form_wrapper">Laisser un avis</a>
 		</div>
 
 		<div class="col-md-12 images-review center">
@@ -73,9 +73,9 @@ if ( ! comments_open() ) {
 			<p class="woocommerce-noreviews"><?php _e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
 
 		<?php endif; ?>
-		<div class="col-md-12 center">
+		<!--div class="col-md-12 center">
 			<button class="ui-button ui-button-primary center">afficher plus</button>
-		</div>
+		</div-->
 		</div>
 	</div>
 
@@ -90,8 +90,7 @@ if ( ! comments_open() ) {
 					$comment_form = array(
 						'title_reply'          => have_comments() ? __( 'Add a review', 'woocommerce' ) : sprintf( __( 'Be the first to review &ldquo;%s&rdquo;', 'woocommerce' ), get_the_title() ),
 						'title_reply_to'       => __( 'Leave a Reply to %s', 'woocommerce' ),
-						'title_reply_before'   => '<span id="reply-title" class="comment-reply-title">',
-						'title_reply_after'    => '</span>',
+
 						'comment_notes_after'  => '',
 						'fields'               => array(
 							'author' => '<p class="comment-form-author">' . '<label for="author">' . esc_html__( 'Name', 'woocommerce' ) . ' <span class="required">*</span></label> ' .

