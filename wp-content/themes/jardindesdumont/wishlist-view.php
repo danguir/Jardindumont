@@ -99,7 +99,7 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 
             <?php if( $show_stock_status ) : ?>
 
-                <th class="product-stock-status">
+                <th class="hidden-xs product-stock-status">
                     <span class="nobr">
                         <?php echo apply_filters( 'yith_wcwl_wishlist_view_stock_heading', __( 'Stock Status', 'yith-woocommerce-wishlist' ) ) ?>
                     </span>
@@ -174,7 +174,7 @@ if ( ! defined( 'YITH_WCWL' ) ) {
                         <?php endif ?>
 
                         <?php if( $show_stock_status ) : ?>
-                            <td class="product-stock-status">
+                            <td class="hidden-xs product-stock-status">
                                 <?php echo $stock_status == 'out-of-stock' ? '<span class="wishlist-out-of-stock">' . __( 'Out of Stock', 'yith-woocommerce-wishlist' ) . '</span>' : '<span class="wishlist-in-stock">' . __( 'In Stock', 'yith-woocommerce-wishlist' ) . '</span>'; ?>
                             </td>
                         <?php endif ?>

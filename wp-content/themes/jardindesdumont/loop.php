@@ -8,7 +8,9 @@
 				<!-- post thumbnail -->
 				<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail(array(420,420)); // Declare pixel size you need inside the array ?>
+						<?php //the_post_thumbnail(array(420,420));  
+						the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']);
+						// Declare pixel size you need inside the array ?>
 					</a>
 				<?php endif; ?>
 				<!-- /post thumbnail -->

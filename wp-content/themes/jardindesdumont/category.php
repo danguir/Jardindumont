@@ -56,16 +56,16 @@
 					</div>
 				</section>	<!-- /section -->
 
-				<div class="row center">
+				<!--div class="row center">
 					<div class="col-md-12col-xs-12 ">
 						<button class="ui-button ui-button-primary" id="loadMore">Afficher plus</button>
 					</div>
-				</div>
+				</div-->
 
 				<section class="networking center " >
 					<h2>Suivez-nous</h2>
 						<div class="elementor-image">
-							<img src="http://dev.jardindumont.local/wp-content/uploads/elementor/thumbs/network-nanlykb10ak10mvebkcyinqog9pz2hde2y78jtl0gy.png" title="network" alt="network">
+							<img class="img-responsive" src="http://dev.jardindumont.local/wp-content/uploads/elementor/thumbs/network-nanlykb10ak10mvebkcyinqog9pz2hde2y78jtl0gy.png" title="network" alt="network">
 						</div>
 				</section>
 	</main>

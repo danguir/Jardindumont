@@ -135,11 +135,13 @@ get_header(); ?>
 									<option value="1">Très mauvais</option>
 								</select>
 							</div>
-							<p class="comment-form-comment"><label for="comment">Votre avis <span class="required">*</span></label>
-								<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required=""></textarea>
-							</p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Soumettre"> <input type="hidden" name="comment_post_ID" value="247" id="comment_post_ID">
-								<input type="hidden" name="comment_parent" id="comment_parent" value="0">
-							</p><input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment" value="fc1936c869"><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>
+							<div class="container">
+								<p class="comment-form-comment"><label for="comment">Votre avis <span class="required">*</span></label>
+									<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required=""></textarea>
+								</p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Soumettre"> <input type="hidden" name="comment_post_ID" value="247" id="comment_post_ID">
+									<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+								</p><input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment" value="fc1936c869"><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>
+							</div>
 						</form>
 					</div><!-- #respond -->
 				</div>

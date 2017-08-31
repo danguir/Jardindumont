@@ -27,7 +27,7 @@ $heading = esc_html( apply_filters( 'woocommerce_product_additional_information_
 ?>
 
 <div class="row">
-	<div class="col-md-9">
+	<div class="hidden-xs col-md-9">
 		<div class="row">
 				<div class="col-md-8 banner-panel">
 						<p>

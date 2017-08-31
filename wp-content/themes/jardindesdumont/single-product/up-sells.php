@@ -23,9 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<section class="hashtag-dumont">
 		<div class="container full-width">
-
-			<h2>#lafamilledumont</h2>
-			<p>L’univers de La Famille Dumont forme un art de vivre  qu'on partage avec ses connaisseurs de par le monde.</p>
+		<h2>#lafamilledumont</h2>
+		<p>L’univers de La Famille Dumont forme un art de vivre  qu'on partage avec ses connaisseurs de par le monde.</p>
 			    <div class="col-md-12">
 			        <div class="well">
 								<div class="row">
@@ -37,21 +36,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		                <div class="item active">
 		                	<div class="row">
-												<div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_1.png" alt="Image" style="max-width:100%;"></a></div>
-		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_2.png" alt="Image" style="max-width:100%;"></a></div>
-		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_3.png" alt="Image" style="max-width:100%;"></a></div>
-		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_4.png" alt="Image" style="max-width:100%;"></a></div>
-		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_5.png" alt="Image" style="max-width:100%;"></a></div>
-		                	</div><!--.row-->
+								<div class="hidden-xs col-md-3 col-xs-6"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_1.png" alt="Image" style="max-width:100%;"></a></div>
+								  <div class="hidden-xs col-md-3 col-xs-6"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_2.png" alt="Image" style="max-width:100%;"></a></div>
+								  <div class="col-md-3 col-xs-6"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_3.png" alt="Image" style="max-width:100%;"></a></div>
+								  <div class="col-md-3 col-xs-6"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_4.png" alt="Image" style="max-width:100%;"></a></div>
+								  <div class="col-md-3 col-xs-6"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_5.png" alt="Image" style="max-width:100%;"></a></div>
+		                			  
+							</div><!--.row-->
 		                </div><!--.item-->
 
 		                <div class="item">
 		                	<div class="row">
-												<div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_1.png" alt="Image" style="max-width:100%;"></a></div>
-		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_2.png" alt="Image" style="max-width:100%;"></a></div>
-		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_3.png" alt="Image" style="max-width:100%;"></a></div>
-		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_4.png" alt="Image" style="max-width:100%;"></a></div>
-		                	  <div class="col-md-3"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_5.png" alt="Image" style="max-width:100%;"></a></div>
+								<div class="hidden-xs col-md-3 col-xs-6"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_1.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="hidden-xs col-md-3 col-xs-6"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_2.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3 col-xs-6"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_3.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3 col-xs-6"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_4.png" alt="Image" style="max-width:100%;"></a></div>
+		                	  <div class="col-md-3 col-xs-6"><a href="#" class="thumbnail"><img src="<?php echo get_template_directory_uri();?>/img/product/hashtag_5.png" alt="Image" style="max-width:100%;"></a></div>
 		                	</div><!--.row-->
 		                </div><!--.item-->
 

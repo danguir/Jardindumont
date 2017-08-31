@@ -168,8 +168,8 @@ get_header( 'shop' ); ?>
 
 	<section class="Trouver-kit">
 		<div class="container">
-			<img src="<?php echo get_template_directory_uri();?>/img/categorie/loop.png" class="loop"/>
-			<h2>Trouvez le kit qui vous convient</h2>
+			<img src="<?php echo get_template_directory_uri();?>/img/categorie/loop.png" class="wow bounceIn loop"/>
+			<h2 class="wow bounceIn">Trouvez le kit qui vous convient</h2>
 			<div class="col-sm-12 center">
 					<a href="#" class="Trouver-kit-link">lancer la recherche</a>
       </div>
@@ -252,7 +252,7 @@ get_header( 'shop' ); ?>
 	<section class="networking center " >
 		<h2>Suivez-nous</h2>
 		<div class="elementor-image">
-				<img src="http://dev.jardindumont.local/wp-content/uploads/elementor/thumbs/network-nanlykb10ak10mvebkcyinqog9pz2hde2y78jtl0gy.png" title="network" alt="network">		</div>
+				<img class="img-responsive" src="http://dev.jardindumont.local/wp-content/uploads/elementor/thumbs/network-nanlykb10ak10mvebkcyinqog9pz2hde2y78jtl0gy.png" title="network" alt="network">		</div>
 			</section>
 	<?php
 		/**

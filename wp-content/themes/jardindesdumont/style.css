@@ -602,6 +602,14 @@ margin: 0;
     text-align: center;
     z-index: 10;
 }*/
+.logo.center {
+	margin: 0 auto;
+  display: block;
+}
+.logo.center a img{
+	margin-left: 0px;
+}
+
 .logo a img{
 		width: 300px;
 		height: 70px;
@@ -620,7 +628,10 @@ margin: 0;
 		display: flex;
 		justify-content:  space-between;
 }
-.vertical-bar .list-inline li a img{
+.vertical-bar-mobile{
+	display: flex;
+}
+.vertical-bar .list-inline li a img, .vertical-bar-mobile .list-inline li a img{
 		margin-left: 30px;
 		margin-top: 10px;
 }
@@ -1865,7 +1876,7 @@ section .hashtag-dumont .carousel{
 /* Next button  */
 .media-carousel .carousel-control.right
 {
-  right: -50px !important;
+  right: -50px ;
   background-image: none;
   background: none repeat scroll 0 0 #fff;
   /*border: 4px solid #b9ce00;*/
@@ -1873,7 +1884,7 @@ section .hashtag-dumont .carousel{
   height: 40px;
   width : 40px;
   margin-top: 100px;
-	    padding-top: 0px;
+  padding-top: 0px;
 }
 /* Changes the position of the indicators */
 .media-carousel .carousel-indicators
@@ -2066,7 +2077,7 @@ section.Trouver-kit h2{
     letter-spacing: 3px;
     font-weight: 900;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 0px;
     text-align: center;
 }
 section.Trouver-kit .Trouver-kit-link::after {
@@ -2090,17 +2101,15 @@ section.Trouver-kit .Trouver-kit-link {
 }
 
 section.Trouver-kit .Trouver-kit-link:hover {
-    color: #b9ce02;
+    color: #fed35c;
 		text-decoration: none;
 }
 section.Trouver-kit img.loop {
 	width: 70px;
 	margin: 0 auto;
 	display: block;
-	/*position: absolute;
-	left: 0;
-	right: 0;
-	 top: 1064.41px;*/
+	bottom: 29px;
+	position: relative;
 	}
 
 	.woocommerce section.upsells-costumised{
@@ -2113,7 +2122,10 @@ section.Trouver-kit img.loop {
     font-family: 'Gotham_bold';
     margin-top: 50px;
 }
-
+section.networking .img-responsive{
+	margin: 0 auto;
+	display: block;
+}
 .woocommerce section.networking h2::after, section.networking h2::after {
     content: "";
     width: 9%;
@@ -2649,7 +2661,7 @@ section.woocommerce-customer-details h3.adresse{
     letter-spacing: 2px;
     margin-bottom: 50px;
     margin-top: 50px;
-		width: 31%;
+		width: 355px;
 }
 .woocommerce section.info-compte input[type="submit"]:hover{
 	  background: #fed35c;
@@ -3070,7 +3082,7 @@ section.category-page .full-height{
 	letter-spacing: 2px;
 	margin-bottom: 50px;
 	margin-top: 50px;
-	width: 25%;
+	width: 245px;
 }
 
 /*************************
@@ -3486,6 +3498,8 @@ section.contact-form h1::after{
   color: #b9ce00;
 }
 
+
+.show-menu .icon-list a:active{  color: #b9ce00;}
 /*************************
 ALERT POP UP
 *************************/
@@ -3524,7 +3538,8 @@ Message error
 Checkout
 **************************/
 .woocommerce-checkout .woocommerce .argmc-wrapper button#argmc-next,
-.woocommerce-checkout .woocommerce .argmc-wrapper button#argmc-prev{
+.woocommerce-checkout .woocommerce .argmc-wrapper button#argmc-prev,
+.woocommerce-checkout .woocommerce .argmc-wrapper .argmc-nav-buttons .button{
 	background: #b9ce02;
 	color: white;
 	letter-spacing: 2px;
@@ -3700,7 +3715,7 @@ section.checkout-form .methode-paiement p span {
 	padding: 20px!important;
 	text-align: center!important;
 	margin-right: 20px!important;
-	display: inline-block!important;
+	display: inline-block;
 	cursor: pointer;
 	  width: 270px;
 }
@@ -3906,6 +3921,7 @@ section.edit-adress-form  input.button{
 	margin: 0 auto;
 	display: block;
 	  letter-spacing: 2px;
+		  width: 285px;
 }
 
 section.edit-adress-form  input.button:hover{
@@ -4089,13 +4105,119 @@ WISHLIST
  text-align: center;
 }
 
-
+ol{
+	  list-style: none;
+}
 
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
 
 @media only screen and (min-width:320px) {
+
+	/*homepage*/
+	section.tab-famille .nav-pills>li.papa{
+		height: 279px;
+	}
+	section.tab-famille .nav-pills>li>a{
+		font-size: 10px;
+	}
+	section.tab-famille .nav-pills>li{
+		width: 20.5%;
+	}
+	section.tab-famille .nav-pills>li{
+		  height: 309px;
+	}
+	section.tab-famille .nav-pills>li.active>a{
+		  font-size: 10px;
+	}
+
+	/*Checkout*/
+		.argmc-wrapper .argmc-tab-text span {
+		  top: 35px;
+		  font-size: 10px;
+		}
+#shipping_method li{
+	display: block;
+}
+.woocommerce ul#shipping_method li{
+	  margin: 0 0 40px 0;
+}
+
+/*Page produit*/
+.entry-summary .box-price {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+form.cart .button, .woocommerce div.product form.cart .button{
+		padding: 10px 1em 10px 1em;
+	  font-size: 10px;
+}
+.yith-wcwl-add-button a.add_to_wishlist{
+	font-size: 10px;
+}
+.yith-wcwl-add-to-wishlist{
+	  margin-top: 6px;
+}
+.yith-wcwl-add-to-wishlist .wishlist-icon{
+	  width: 32px;
+}
+
+.woocommerce-tabs ul.tabs li a{
+	  margin-top: 20px;
+}
+.woocommerce-tabs ul.tabs li{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.woocommerce-tabs ul.tabs{
+	font-size: 12px;
+}
+.media-carousel .carousel-control.left, .media-carousel .carousel-control.right{
+	  margin-top: 20px;
+}
+
+.media-carousel .carousel-control.right{
+	right: -28px ;
+	height: 30px;
+  width: 30px;
+}
+.media-carousel .carousel-control.left{
+	left: -28px;
+	height: 30px;
+  width: 30px;
+}
+
+
+/*Mon compte*/
+section.edit-adress-form  input.button{
+	font-size: 12px;
+}
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"],
+input[type="email"], input[type="month"], input[type="number"], input[type="password"],
+input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"],
+input[type="week"], input:not([type]), textarea, select[multiple=multiple]{
+	  width: 100%;
+}
+.woocommerce section.info-compte input, .woocommerce section.edit-adress input, .woocommerce section.lost-pass input{
+	width: 100%;
+}
+.woocommerce section.info-compte input[type="submit"], .woocommerce section.lost-pass input[type="submit"]{
+	width: 267px;
+	font-size: 10px;
+}
+section.edit-adress-form form{
+	padding-left: 0px;
+  padding-right: 0px;
+}
+section.edit-adress-form form .form-row input.input-text{
+	  margin-left: 0px;
+}
+.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last{
+	  width: 100%;
+		/*width: 49%;*/
+}
+
 
 	/*HEADER*/
 	.logo a img{
@@ -4110,7 +4232,7 @@ WISHLIST
 	.menu-button{
 		  font-size: 1em;
 	}
-	.vertical-bar .list-inline li a img{
+	.vertical-bar .list-inline li a img, .vertical-bar-mobile .list-inline li a img {
 		margin-left: 10px;
 		margin-top: 5px;
 		width: 30px ;
@@ -4161,17 +4283,69 @@ WISHLIST
 	/*PAGE CATEGORIE IDEE JARDIN*/
 	section.category-page .avatar::after{
 		  margin: 0 0 4px 6px;
+			width: 60px;
 	}
 	section.category-page .avatar::before{
 		margin: 0 6px 4px 0;
+		width: 60px;
 	}
+	.woocommerce section.networking h2::after, section.networking h2::after{
+		  margin-bottom: 50px;
+	}
+	.woocommerce section.networking h2, section.networking h2{
+		margin-top: 0px;
+	}
+	/*PAGE 404*/
+	section.page-introuvable a{
+		font-size: 10px;
+	}
+	/*wishlist*/
+	.woocommerce #yith-wcwl-form table.shop_table{
+		font-size: 10px;
+	}
+	#yith-wcwl-form .wishlist_table tr td {
+  	padding-left: 3px;
+	}
+	.woocommerce a.button.alt{
+		font-size: 8px;
+		width: 106px;
+	}
+	.woocommerce label {
+	  font-size: 12px;
+		font-family: 'Gotham_Light';
+	}
+	section.details-commande p{
+		  line-height: 35px;
+	}
+
 
 }
 @media only screen and (min-width:480px) {
+	/*PAGE CATEGORIE IDEE JARDIN*/
+	section.category-page .avatar::after{
+			width: 80px;
+	}
+	section.category-page .avatar::before{
+		width: 80px;
+	}
+
+/*Mon compte*/
+.woocommerce label {
+  font-size: 12px;
+}
 
 }
+
 @media only screen and (min-width:768px) {
 
+	/*Mon compte*/
+	.woocommerce section.info-compte input, .woocommerce section.edit-adress input,
+	.woocommerce section.lost-pass input{
+		width: 75%;
+	}
+	.media-carousel .carousel-control.left, .media-carousel .carousel-control.right{
+		  margin-top: 50px;
+	}
 	/*HEADER*/
 	.logo a img{
 		height: 55px;
@@ -4185,7 +4359,7 @@ WISHLIST
 	.menu-button{
 		  font-size: 1em;
 	}
-	.vertical-bar .list-inline li a img{
+	.vertical-bar .list-inline li a img, .vertical-bar-mobile .list-inline li a img{
 		width: 40px;
 	}
 	.logo {
@@ -4214,7 +4388,7 @@ WISHLIST
 		width: 22.5%;
 	}
 	section.tab-famille .nav-pills>li .nom-famille{
-		  font-size: 15px;
+		  font-size: 20px;
 	}
 
 	/*FOOTER*/
@@ -4243,6 +4417,113 @@ WISHLIST
 	}
 }
 @media only screen and (min-width:1024px) {
+
+	section.tab-famille .nav-pills>li.papa{
+		height:456px;
+	}
+	section.tab-famille .nav-pills>li>a{
+		font-size: 20px;
+	}
+	section.tab-famille .nav-pills>li{
+		width: 24.5%;
+	}
+section.tab-famille .nav-pills>li.active>a{
+	  font-size: 20px;
+}
+
+/*Checkout*/
+	.argmc-wrapper .argmc-tab-text span {
+	  top: 0px;
+	  font-size: 15px;
+	}
+	#shipping_method li {
+		display: inline-block;
+
+	}
+	.woocommerce ul#shipping_method li{
+		  margin: 0px;
+	}
+
+	/* Page avis*/
+
+	.woocommerce .star-rating{
+		font-size: 2em;
+	}
+		/*Page produit*/
+	.entry-summary .box-price {
+	  padding-left: 60px;
+	  padding-right: 60px;
+	}
+	form.cart .button, .woocommerce div.product form.cart .button{
+		padding: 16px 2em 30px 2em;
+		font-size: 18px;
+	}
+	.yith-wcwl-add-button a.add_to_wishlist{
+		font-size: 18px;
+	}
+	.yith-wcwl-add-to-wishlist{
+		  margin-left:  60px;
+	}
+	.yith-wcwl-add-to-wishlist .wishlist-icon{
+		    width: 40px;
+	}
+
+	.yith-wcwl-add-button a.add_to_wishlist{
+		font-size: 18px;
+	}
+	.woocommerce-tabs ul.tabs li {
+	  padding-left: 35px;
+	  padding-right: 35px;
+	}
+	.woocommerce-tabs ul.tabs li a{
+		  margin-top: 0px;
+	}
+	.woocommerce-tabs ul.tabs{
+		font-size: 18px;
+	}
+
+	.media-carousel .carousel-control.left, .media-carousel .carousel-control.right{
+		  margin-top: 50px;
+	}
+	.media-carousel .carousel-control.right{
+		right: -50px ;
+		height: 40px;
+		width: 40px;
+	}
+	.media-carousel .carousel-control.left{
+		left: -50px;
+		height: 40px;
+		width: 40px;
+	}
+
+
+	/* Mon compte*/
+	section.edit-adress-form form{
+		padding-left: 200px;
+		padding-right: 200px;
+	}
+	section.edit-adress-form  input.button{
+		font-size: 14px;
+	}
+	/*wishlist*/
+	.woocommerce #yith-wcwl-form table.shop_table{
+		font-size: 14px;
+	}
+	#yith-wcwl-form .wishlist_table tr td {
+		padding-left: 20px;
+	}
+	.woocommerce a.button.alt{
+		font-size: 18px;
+	  width: 265px;
+	}
+	/*PAGE 404*/
+	section.page-introuvable a{
+		font-size: 14px;
+	}
+	.fixed-sticky {
+	  padding-left: 20px;
+	  padding-right: 20px;
+	}
 	.footer-level-two h4{
 		  font-size: 15px;
 		  margin-bottom: 12px;
@@ -4253,15 +4534,33 @@ WISHLIST
 	.footer-level-two .app-down, .footer-level-two h4.app {
 	  margin-top: 82px;
 	}
+
+	/*Mon compte*/
+	.woocommerce section.info-compte input[type="submit"], .woocommerce section.lost-pass input[type="submit"]{
+		width: 309px;
+		font-size: 12px;
+	}
+
 }
 @media only screen and (min-width:1140px) {
 	section.tab-famille .nav-pills>li {
 	  width: 24.5%;
 	}
+	/* Mon compte*/
+	section.edit-adress-form form{
+		padding-left: 200px;
+		padding-right: 200px;
+	}
 }
 @media only screen and (min-width:1280px) {
-	/*FOOTER*/
 
+	/* Mon compte*/
+	section.edit-adress-form form{
+		padding-left: 200px;
+		padding-right: 200px;
+	}
+
+	/*FOOTER*/
 	.footer .footer-level-one img {
 	  width: 80px;
 	}
@@ -4282,7 +4581,7 @@ WISHLIST
 	  height: 70px;
 	  margin-top: 5px;
 	}
-	.vertical-bar .list-inline li a img {
+	.vertical-bar .list-inline li a img, .vertical-bar-mobile .list-inline li a img {
 	  width: 60px ;
 	}
 	.homepage .menu-button .burger-blanc {

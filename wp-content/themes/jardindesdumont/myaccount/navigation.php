@@ -67,7 +67,7 @@ do_action( 'woocommerce_before_account_navigation' );
 			<div class="col-md-4 col-xs-12">
 				<div  class="border-compte tall">
 				<img style="width: 90px;" src="<?php echo get_template_directory_uri();?>/img/compte-client/wishlist.png" class="center-block img-responsive" alt="Responsive image">
-				<a class="link-compte" href="/my-lists/">wishlist</a>
+				<a class="link-compte" href="/wishlist/">wishlist</a>
 				<p>Ce que vous plait</p>
 			</div>
 			</div>

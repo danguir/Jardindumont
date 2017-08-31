@@ -35,10 +35,10 @@ global $product;
         ?>
   </div>
 
-	<div class="col-md-2">
+	<div class="hidden-xs hidden-sm col-md-2">
 		<img src="<?php echo get_template_directory_uri();?>/img/product/x.png" class="calcule center-block img-responsive" alt="Responsive image">
 	</div>
-	<div class="col-md-6">
+	<div class="hidden-xs hidden-sm col-md-6">
 		<p class="price is-price" data-price="<?php echo $product->price; ?>"><?php echo $product->get_display_price();  ?>€</p>
 		<p class="txt-under-price">Prix à l'unité</p>
   </div>
@@ -47,7 +47,7 @@ global $product;
   </div>
   <div class="col-md-12">
 		<p class="price price-final"><?php echo $product->get_price_html(); ?></p>
-		<p class="txt-under-price">Prix finale sans livraison</p>
+		<p class="hidden-xs hidden-sm txt-under-price">Prix finale sans livraison</p>
   </div>
 </div>
 

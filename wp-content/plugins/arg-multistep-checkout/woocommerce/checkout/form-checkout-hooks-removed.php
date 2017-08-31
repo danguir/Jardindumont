@@ -165,7 +165,7 @@ endif;
 								</div>
 							</div>
 
-							<div class="argmc-tab-text"><span><?php echo $step['text']; ?></span></div>
+							<div class="hidden-xs argmc-tab-text"><span><?php echo $step['text']; ?></span></div>
 						</div>
 					</div>
 
