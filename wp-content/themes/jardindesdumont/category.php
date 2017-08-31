@@ -65,7 +65,7 @@
 				<section class="networking center " >
 					<h2>Suivez-nous</h2>
 						<div class="elementor-image">
-							<img class="img-responsive" src="http://dev.jardindumont.local/wp-content/uploads/elementor/thumbs/network-nanlykb10ak10mvebkcyinqog9pz2hde2y78jtl0gy.png" title="network" alt="network">
+							<img class="img-responsive" src="/wp-content/uploads/elementor/thumbs/network-nanlykb10ak10mvebkcyinqog9pz2hde2y78jtl0gy.png" title="network" alt="network">
 						</div>
 				</section>
 	</main>

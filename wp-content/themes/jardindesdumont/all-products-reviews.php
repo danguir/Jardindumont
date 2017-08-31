@@ -35,7 +35,7 @@ get_header(); ?>
 				<ol class="commentlist">
 					<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-7">
 						<div id="comment-7" class="comment_container">
-							<img src="http://dev.jardindumont.local/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-default" width="60" height="60" alt="Sophie Dumont">
+							<img src="/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-default" width="60" height="60" alt="Sophie Dumont">
 							<div class="comment-text">
 								<div class="star-rating">
 									<span style="width:80%"><strong>4</strong> sur 5</span>
@@ -50,7 +50,7 @@ get_header(); ?>
 					</li><!-- #comment-## -->
 					<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-6">
 						<div id="comment-6" class="comment_container">
-							<img src="http://dev.jardindumont.local/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-default" width="60" height="60" alt="Sophie Dumont">
+							<img src="/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-default" width="60" height="60" alt="Sophie Dumont">
 							<div class="comment-text">
 								<div class="star-rating">
 									<span style="width:60%"><strong>3</strong> sur 5</span>
@@ -65,7 +65,7 @@ get_header(); ?>
 					</li><!-- #comment-## -->
 					<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-5">
 						<div id="comment-5" class="comment_container">
-							<img src="http://dev.jardindumont.local/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-default" width="60" height="60" alt="Sophie Dumont">
+							<img src="/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-default" width="60" height="60" alt="Sophie Dumont">
 							<div class="comment-text">
 								<div class="star-rating">
 									<span style="width:80%"><strong>4</strong> sur 5</span>
@@ -80,7 +80,7 @@ get_header(); ?>
 					</li><!-- #comment-## -->
 					<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-3">
 						<div id="comment-3" class="comment_container">
-							<img src="http://dev.jardindumont.local/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-default" width="60" height="60" alt="Sophie Dumont">
+							<img src="/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-default" width="60" height="60" alt="Sophie Dumont">
 							<div class="comment-text">
 								<div class="star-rating">
 									<span style="width:100%"><strong>5</strong> sur 5</span>
@@ -95,7 +95,7 @@ get_header(); ?>
 					</li><!-- #comment-## -->
 					<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-2">
 						<div id="comment-2" class="comment_container">
-							<img src="http://dev.jardindumont.local/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-default" width="60" height="60" alt="Sophie Dumont">
+							<img src="/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-default" width="60" height="60" alt="Sophie Dumont">
 							<div class="comment-text">
 								<div class="star-rating">
 									<span style="width:100%"><strong>5</strong> sur 5</span>
@@ -122,7 +122,7 @@ get_header(); ?>
 		<div id="review_form_wrapper">
 			<div id="review_form">
 					<div id="respond" class="comment-respond">
-							<h3 id="reply-title" class="comment-reply-title">Ajouter un Avis <small><a rel="nofollow" id="cancel-comment-reply-link" href="/shop/kit-petit-scientifique/#respond" style="display:none;">Annuler la réponse.</a></small></h3>			<form action="http://dev.jardindumont.local/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+							<h3 id="reply-title" class="comment-reply-title">Ajouter un Avis <small><a rel="nofollow" id="cancel-comment-reply-link" href="/shop/kit-petit-scientifique/#respond" style="display:none;">Annuler la réponse.</a></small></h3>			<form action="/wp-comments-post.php" method="post" id="commentform" class="comment-form">
 								<div class="comment-form-rating">
 									<label for="rating">Votre vote</label>
 									<p class="stars">

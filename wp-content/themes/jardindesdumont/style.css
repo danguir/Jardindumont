@@ -3421,36 +3421,36 @@ section.tab-famille .nav-pills>li>a img{
 }
 
 section.tab-famille .nav-pills>li.maman{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/maman.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/maman.png);
 }
 
 section.tab-famille .nav-pills>li.active.maman{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/maman-active.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/maman-active.png);
 }
 
 section.tab-famille .nav-pills>li.fils{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fils.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/fils.png);
 }
 
 section.tab-famille .nav-pills>li.active.fils{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fils-active.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/fils-active.png);
 }
 
 section.tab-famille .nav-pills>li.fille{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fille.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/fille.png);
 }
 
 section.tab-famille .nav-pills>li.active.fille{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fille-active.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/fille-active.png);
 }
 
 section.tab-famille .nav-pills>li.papa{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/papa.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/papa.png);
 	    height: 456px;
 }
 
 section.tab-famille .nav-pills>li.active.papa{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/papa-active.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/papa-active.png);
 }
 
 
