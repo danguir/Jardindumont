@@ -13,20 +13,12 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
-		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
 
-			<?php 	function wow_init() { ?>
-					<script type="text/javascript">
-						new WOW().init();
-					</script>
-				<?php } ?>
+        <?php function wow_init() { ?>
+            <script type="text/javascript">
+                new WOW().init();
+            </script>
+        <?php } ?>
 
 	</head>
 
