@@ -7,6 +7,26 @@
             $(this).addClass('is-checked');
         });
 
+
+	    $(document).on('click', '.wc_payment_method', function(e){
+	        e.preventDefault();
+
+	        $('.wc_payment_method').removeClass('is-checked');
+
+	        if ($(e.target).hasClass('.wc_payment_method')){
+                $(e.target).addClass('is-checked');
+            } else {
+	            $(e.target).closest('.wc_payment_method').addClass('is-checked');
+            }
+
+        });
+
+        // $('ul.wc_payment_methods li.wc_payment_method').click(function(e){
+        //     alert('lol');
+        //     $('ul.wc_payment_methods li.wc_payment_method').removeClass('is-checked');
+        //     $(this).addClass('is-checked');
+        // });
+
         $('.argmc-wrapper').on('argmcBeforeStepChange', function(event, currentStep, nextStep) {
             $('.shipping_method').closest('li').removeClass('is-checked');
             $('.shipping_method[checked=checked]').closest('li').addClass('is-checked');

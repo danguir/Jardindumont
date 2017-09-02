@@ -3704,21 +3704,31 @@ section.checkout-form .methode-paiement p span {
 	font-size: 20px;
 }
 
-#shipping_method li {
-	border: 2px solid #bdbbbb;
+#shipping_method li, .wc_payment_methods li {
+	border: 2px solid #bdbbbb!important;
 	padding: 20px!important;
 	text-align: center!important;
 	margin-right: 20px!important;
 	display: inline-block;
 	cursor: pointer;
-	  width: 270px;
+	width: 270px;
 }
 
-#shipping_method li.is-checked {
-	border: 2px solid #fec833;
-	background-color: #fec833;
+.wc_payment_methods li {
+	width: 230px!important;
+	float: left;
 }
-#shipping_method li.is-checked .strong::after {
+
+.wc_payment_methods label {
+	line-height: 30px!important;
+}
+
+#shipping_method li.is-checked, .wc_payment_methods li.is-checked {
+	border: 2px solid #fec833!important;
+	background-color: #fec833!important;
+}
+
+#shipping_method li.is-checked .strong::after, .wc_payment_methods li.is-checked .strong::after {
 	content: "";
 	width: 85px;
 	height: 1px;
@@ -3727,8 +3737,8 @@ section.checkout-form .methode-paiement p span {
 	margin: 20px auto;
 }
 
-#shipping_method li:hover {
-	border: 2px solid #fec833;
+#shipping_method li:hover, .wc_payment_methods li:hover {
+	border: 2px solid #fec833!important;
 }
 
 .woocommerce-checkout .woocommerce .argmc-wrapper #payment .payment_methods input[type="radio"].input-radio + label, .woocommerce-checkout .woocommerce .argmc-wrapper ul#shipping_method li input[type="radio"].shipping_method + label {
@@ -3743,7 +3753,7 @@ section.checkout-form .methode-paiement p span {
 	text-align: center;
 }
 
-#shipping_method label:before, #shipping_method label:after {
+#shipping_method label:before, #shipping_method label:after, .wc_payment_methods label:before, .wc_payment_methods label:after {
 	/* display: none!important; */
 	background: transparent!important;
 	border: none!important;
