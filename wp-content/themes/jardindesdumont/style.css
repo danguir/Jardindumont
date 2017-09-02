@@ -4626,6 +4626,6 @@ section.tab-famille .nav-pills>li.active>a{
 	margin-bottom: 20px;
 }
 
-.woocommerce-order-overview__order.order, .woocommerce table.shop_table, address {
+.woocommerce-order-overview__order.order, .woocommerce table.shop_table, .woocommerce-order-received address {
 	font-size: 17px;
 }
