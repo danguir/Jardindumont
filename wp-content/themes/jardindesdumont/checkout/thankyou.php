@@ -21,7 +21,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="woocommerce-order">
+<div class="woocommerce-order container">
+
+    <div class="order-confirmation">
+        <h2 class="font-beyond-the-mountains">Félicitation!</h2>
+        <p>
+            Nous procedons à la préparation de votre commande.
+            <br/><br/>
+            Voici le résumé de votre commande, vous allez recevoir également un email de confirmation avec le détail de votre commande.
+            <br/><br/>
+            Pour toute questions relatives à votre commande,
+            RDV dans votre espace perso ou contactez SAV.
+        </p>
+    </div>
 
 	<?php if ( $order ) : ?>
 
@@ -37,8 +49,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</p>
 
 		<?php else : ?>
-
-			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
 
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 
@@ -72,6 +82,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
 		<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
+
+        <div class="order-confirmation">
+            <h2>Merci et à bientôt</h2>
+            <a href="/" class="ui-button ui-button-secondary">RETOUR SUR LE SITE</a>
+        </div>
 
 	<?php else : ?>
 

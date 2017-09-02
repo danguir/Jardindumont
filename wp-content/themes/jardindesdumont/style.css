@@ -54,7 +54,7 @@
 	font-weight: 500;
 }
 
-.font-beyond-the-mountains{
+. {
 	font-family: 'beyond_the_mountains' !important;
 }
 
@@ -4596,4 +4596,36 @@ section.tab-famille .nav-pills>li.active>a{
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
 	   only screen and (min-resolution:144dpi) {
 
+}
+
+
+/*------------------------------------*\
+    ORDER CONFIRMATION
+\*------------------------------------*/
+.order-confirmation {
+	text-align:center;
+	font-size: 17px;
+	margin-bottom: 20px;
+}
+.order-confirmation h2 {
+	font-family: "beyond_the_mountains";
+	margin-bottom: 20px;
+}
+.order-confirmation a {
+	display: inline-block;
+}
+.woocommerce ul.order_details {
+	margin: 0px auto;
+	display: block;
+	width: fit-content;
+	padding: 0px;
+	font-size: 17px;
+}
+
+.woocommerce-order-details__title {
+	margin-bottom: 20px;
+}
+
+.woocommerce-order-overview__order.order, .woocommerce table.shop_table, address {
+	font-size: 17px;
 }
