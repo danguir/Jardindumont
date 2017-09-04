@@ -70,7 +70,7 @@ Template Name: checkout
 											<div class="woocommerce">
 											<section class="cart">
 												<div class="container">
-												<form class="woocommerce-cart-form" action="http://dev.jardindumont.local/cart/" method="post">
+												<form class="woocommerce-cart-form" action="/cart/" method="post">
 
 												<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 													<thead>
@@ -86,11 +86,11 @@ Template Name: checkout
 													<tbody>
 																<tr class="woocommerce-cart-form__cart-item cart_item">
 																	<td class="product-thumbnail">
-																		<a href="http://dev.jardindumont.local/shop/kit-plante-sensitive/"><img width="180" height="180" src="//dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="//dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-180x180.jpg 180w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-150x150.jpg 150w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-250x250.jpg 250w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-768x768.jpg 768w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-700x700.jpg 700w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-120x120.jpg 120w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg 300w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-600x600.jpg 600w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto.jpg 1600w" sizes="(max-width: 180px) 100vw, 180px">
+																		<a href="/shop/kit-plante-sensitive/"><img width="180" height="180" src="//dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="//dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-180x180.jpg 180w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-150x150.jpg 150w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-250x250.jpg 250w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-768x768.jpg 768w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-700x700.jpg 700w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-120x120.jpg 120w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg 300w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-600x600.jpg 600w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto.jpg 1600w" sizes="(max-width: 180px) 100vw, 180px">
 																		</a>
 																	</td>
 																	<td class="product-name" data-title="Produit">
-																		<a href="http://dev.jardindumont.local/shop/kit-plante-sensitive/">Kit "Plante sensitive"</a>
+																		<a href="/shop/kit-plante-sensitive/">Kit "Plante sensitive"</a>
 																	</td>
 																	<td class="product-price" data-title="Prix">
 																		<span class="woocommerce-Price-amount amount">35<span class="woocommerce-Price-currencySymbol">€</span></span>
@@ -104,15 +104,15 @@ Template Name: checkout
 																		<span class="woocommerce-Price-amount amount">35<span class="woocommerce-Price-currencySymbol">€</span></span>
 																	</td>
 																	<td class="product-remove">
-																		<a href="http://dev.jardindumont.local/cart/?remove_item=f340f1b1f65b6df5b5e3f94d95b11daf&amp;_wpnonce=4ac92c7c52" class="remove" aria-label="Enlever cet élément" data-product_id="241" data-product_sku="">×</a>
+																		<a href="/cart/?remove_item=f340f1b1f65b6df5b5e3f94d95b11daf&amp;_wpnonce=4ac92c7c52" class="remove" aria-label="Enlever cet élément" data-product_id="241" data-product_sku="">×</a>
 																	</td>
 																</tr>
 
 																<tr class="woocommerce-cart-form__cart-item cart_item">
 																	<td class="product-thumbnail">
-																		<a href="http://dev.jardindumont.local/shop/kit-petit-scientifique/"><img width="180" height="180" src="//dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-180x180.jpeg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="//dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-180x180.jpeg 180w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-150x150.jpeg 150w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-250x250.jpeg 250w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-768x768.jpeg 768w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-700x700.jpeg 700w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-120x120.jpeg 120w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpeg 300w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-600x600.jpeg 600w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto.jpeg 1600w" sizes="(max-width: 180px) 100vw, 180px"></a>						</td>
+																		<a href="/shop/kit-petit-scientifique/"><img width="180" height="180" src="//dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-180x180.jpeg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="//dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-180x180.jpeg 180w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-150x150.jpeg 150w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-250x250.jpeg 250w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-768x768.jpeg 768w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-700x700.jpeg 700w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-120x120.jpeg 120w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpeg 300w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-600x600.jpeg 600w, //dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto.jpeg 1600w" sizes="(max-width: 180px) 100vw, 180px"></a>						</td>
 																	<td class="product-name" data-title="Produit">
-																		<a href="http://dev.jardindumont.local/shop/kit-petit-scientifique/">Kit "Petit scientifique"</a>
+																		<a href="/shop/kit-petit-scientifique/">Kit "Petit scientifique"</a>
 																	</td>
 																	<td class="product-price" data-title="Prix">
 																		<span class="woocommerce-Price-amount amount">20<span class="woocommerce-Price-currencySymbol">€</span></span>
@@ -126,17 +126,17 @@ Template Name: checkout
 																		<span class="woocommerce-Price-amount amount">20<span class="woocommerce-Price-currencySymbol">€</span></span>
 																	</td>
 																	<td class="product-remove">
-																		<a href="http://dev.jardindumont.local/cart/?remove_item=3cec07e9ba5f5bb252d13f5f431e4bbb&amp;_wpnonce=4ac92c7c52" class="remove" aria-label="Enlever cet élément" data-product_id="247" data-product_sku="">×</a>
+																		<a href="/cart/?remove_item=3cec07e9ba5f5bb252d13f5f431e4bbb&amp;_wpnonce=4ac92c7c52" class="remove" aria-label="Enlever cet élément" data-product_id="247" data-product_sku="">×</a>
 																	</td>
 																</tr>
 
 																<tr class="woocommerce-cart-form__cart-item cart_item">
 																	<td class="product-thumbnail">
-																		<a href="http://dev.jardindumont.local/shop/kit-ca-pousse/"><img width="180" height="180" src="//dev.jardindumont.local/wp-content/uploads/2017/08/06-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="//dev.jardindumont.local/wp-content/uploads/2017/08/06-180x180.jpg 180w, //dev.jardindumont.local/wp-content/uploads/2017/08/06-150x150.jpg 150w, //dev.jardindumont.local/wp-content/uploads/2017/08/06-250x250.jpg 250w, //dev.jardindumont.local/wp-content/uploads/2017/08/06-120x120.jpg 120w, //dev.jardindumont.local/wp-content/uploads/2017/08/06-360x360.jpg 360w, //dev.jardindumont.local/wp-content/uploads/2017/08/06-300x300.jpg 300w, //dev.jardindumont.local/wp-content/uploads/2017/08/06.jpg 526w" sizes="(max-width: 180px) 100vw, 180px">
+																		<a href="/shop/kit-ca-pousse/"><img width="180" height="180" src="//dev.jardindumont.local/wp-content/uploads/2017/08/06-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="//dev.jardindumont.local/wp-content/uploads/2017/08/06-180x180.jpg 180w, //dev.jardindumont.local/wp-content/uploads/2017/08/06-150x150.jpg 150w, //dev.jardindumont.local/wp-content/uploads/2017/08/06-250x250.jpg 250w, //dev.jardindumont.local/wp-content/uploads/2017/08/06-120x120.jpg 120w, //dev.jardindumont.local/wp-content/uploads/2017/08/06-360x360.jpg 360w, //dev.jardindumont.local/wp-content/uploads/2017/08/06-300x300.jpg 300w, //dev.jardindumont.local/wp-content/uploads/2017/08/06.jpg 526w" sizes="(max-width: 180px) 100vw, 180px">
 																		</a>
 																	</td>
 																	<td class="product-name" data-title="Produit">
-																		<a href="http://dev.jardindumont.local/shop/kit-ca-pousse/">Kit "Ca pousse"</a>
+																		<a href="/shop/kit-ca-pousse/">Kit "Ca pousse"</a>
 																	</td>
 																	<td class="product-price" data-title="Prix">
 																		<span class="woocommerce-Price-amount amount">10<span class="woocommerce-Price-currencySymbol">€</span></span>
@@ -150,15 +150,15 @@ Template Name: checkout
 																		<span class="woocommerce-Price-amount amount">10<span class="woocommerce-Price-currencySymbol">€</span></span>
 																	</td>
 																	<td class="product-remove">
-																		<a href="http://dev.jardindumont.local/cart/?remove_item=0fcbc61acd0479dc77e3cccc0f5ffca7&amp;_wpnonce=4ac92c7c52" class="remove" aria-label="Enlever cet élément" data-product_id="531" data-product_sku="">×</a>
+																		<a href="/cart/?remove_item=0fcbc61acd0479dc77e3cccc0f5ffca7&amp;_wpnonce=4ac92c7c52" class="remove" aria-label="Enlever cet élément" data-product_id="531" data-product_sku="">×</a>
 																	</td>
 																</tr>
 																<tr class="woocommerce-cart-form__cart-item cart_item">
 																	<td class="product-thumbnail">
-																		<a href="http://dev.jardindumont.local/shop/kit-mon-jardin-secret/"><img width="180" height="180" src="//dev.jardindumont.local/wp-content/uploads/2017/08/07-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="//dev.jardindumont.local/wp-content/uploads/2017/08/07-180x180.jpg 180w, //dev.jardindumont.local/wp-content/uploads/2017/08/07-150x150.jpg 150w, //dev.jardindumont.local/wp-content/uploads/2017/08/07-250x250.jpg 250w, //dev.jardindumont.local/wp-content/uploads/2017/08/07-120x120.jpg 120w, //dev.jardindumont.local/wp-content/uploads/2017/08/07-360x360.jpg 360w, //dev.jardindumont.local/wp-content/uploads/2017/08/07-300x300.jpg 300w, //dev.jardindumont.local/wp-content/uploads/2017/08/07.jpg 526w" sizes="(max-width: 180px) 100vw, 180px"></a>
+																		<a href="/shop/kit-mon-jardin-secret/"><img width="180" height="180" src="//dev.jardindumont.local/wp-content/uploads/2017/08/07-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="//dev.jardindumont.local/wp-content/uploads/2017/08/07-180x180.jpg 180w, //dev.jardindumont.local/wp-content/uploads/2017/08/07-150x150.jpg 150w, //dev.jardindumont.local/wp-content/uploads/2017/08/07-250x250.jpg 250w, //dev.jardindumont.local/wp-content/uploads/2017/08/07-120x120.jpg 120w, //dev.jardindumont.local/wp-content/uploads/2017/08/07-360x360.jpg 360w, //dev.jardindumont.local/wp-content/uploads/2017/08/07-300x300.jpg 300w, //dev.jardindumont.local/wp-content/uploads/2017/08/07.jpg 526w" sizes="(max-width: 180px) 100vw, 180px"></a>
 																	</td>
 																	<td class="product-name" data-title="Produit">
-																		<a href="http://dev.jardindumont.local/shop/kit-mon-jardin-secret/">Kit "Mon jardin secret"</a>
+																		<a href="/shop/kit-mon-jardin-secret/">Kit "Mon jardin secret"</a>
 																	</td>
 																	<td class="product-price" data-title="Prix">
 																		<span class="woocommerce-Price-amount amount">15<span class="woocommerce-Price-currencySymbol">€</span></span>
@@ -172,7 +172,7 @@ Template Name: checkout
 																		<span class="woocommerce-Price-amount amount">15<span class="woocommerce-Price-currencySymbol">€</span></span>
 																	</td>
 																	<td class="product-remove">
-																		<a href="http://dev.jardindumont.local/cart/?remove_item=df877f3865752637daa540ea9cbc474f&amp;_wpnonce=4ac92c7c52" class="remove" aria-label="Enlever cet élément" data-product_id="533" data-product_sku="">×</a>
+																		<a href="/cart/?remove_item=df877f3865752637daa540ea9cbc474f&amp;_wpnonce=4ac92c7c52" class="remove" aria-label="Enlever cet élément" data-product_id="533" data-product_sku="">×</a>
 																	</td>
 																</tr>
 														</tbody>
@@ -212,7 +212,7 @@ Template Name: checkout
 													<input type="hidden" id="_wpnonce" name="_wpnonce" value="fb2c1c7c18"><input type="hidden" name="_wp_http_referer" value="/register/">
 													<div class="um-col-alt">
 														<div class="um-left um-half"><input type="submit" value="S'enregistrer" class="um-button" id="um-submit-btn"></div>
-														<div class="um-right um-half"><a href="http://dev.jardindumont.local/login/" class="um-button um-alt">se connecter</a></div>
+														<div class="um-right um-half"><a href="/login/" class="um-button um-alt">se connecter</a></div>
 														<div class="um-clear"></div>
 													</div>
 														</form>
@@ -282,7 +282,7 @@ Template Name: checkout
 											<h3>Voila notre proposition </h3>
 											<ul>
 											<li class=" center post-241 product type-product status-publish has-post-thumbnail product_cat-jardigeek product_tag-jardigeek last instock shipping-taxable purchasable product-type-simple">
-												<a href="http://dev.jardindumont.local/product/kit-plante-sensitive/" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="00_MainPhoto" title="00_MainPhoto" srcset="http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg 300w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-150x150.jpg 150w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-250x250.jpg 250w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-768x768.jpg 768w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-700x700.jpg 700w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-120x120.jpg 120w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-360x360.jpg 360w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-50x50.jpg 50w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto-900x900.jpg 900w, http://dev.jardindumont.local/wp-content/uploads/2017/07/00_MainPhoto.jpg 1600w" sizes="(max-width: 300px) 100vw, 300px"><h2 class="woocommerce-loop-product__title">Kit «&nbsp;Plante sensitive&nbsp;»</h2>
+												<a href="/product/kit-plante-sensitive/" class="woocommerce-LoopProduct-link"><img width="300" height="300" src="/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="00_MainPhoto" title="00_MainPhoto" srcset="/wp-content/uploads/2017/07/00_MainPhoto-300x300.jpg 300w, /wp-content/uploads/2017/07/00_MainPhoto-150x150.jpg 150w, /wp-content/uploads/2017/07/00_MainPhoto-250x250.jpg 250w, /wp-content/uploads/2017/07/00_MainPhoto-768x768.jpg 768w, /wp-content/uploads/2017/07/00_MainPhoto-700x700.jpg 700w, /wp-content/uploads/2017/07/00_MainPhoto-120x120.jpg 120w, /wp-content/uploads/2017/07/00_MainPhoto-360x360.jpg 360w, /wp-content/uploads/2017/07/00_MainPhoto-50x50.jpg 50w, /wp-content/uploads/2017/07/00_MainPhoto-900x900.jpg 900w, /wp-content/uploads/2017/07/00_MainPhoto.jpg 1600w" sizes="(max-width: 300px) 100vw, 300px"><h2 class="woocommerce-loop-product__title">Kit «&nbsp;Plante sensitive&nbsp;»</h2>
 												<span class="price"><span class="woocommerce-Price-amount amount">Prix à l'unité : 35<span class="woocommerce-Price-currencySymbol">€</span></span></span>
 											</a></li>
 										</ul>

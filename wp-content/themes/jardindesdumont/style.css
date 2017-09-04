@@ -2,6 +2,8 @@
 /*------------------------------------*\
 	TYPOGRAPHY
 \*------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('http://fonts.googleapis.com/css?family=Raleway:200,400,700,800');
 
 @font-face {
 	font-family:'Font-Name';
@@ -14,6 +16,59 @@
     font-style:normal;
 }
 
+@font-face {
+	font-family: "PT_Sans_bold"; /*a name to be used later*/
+	src: url('/wp-content/themes/jardindesdumont/fonts/pt-sans-bold.ttf'); /*URL to font*/
+}
+
+@font-face {
+	font-family: "Gotham_Bold"; /*a name to be used later*/
+	src: url('/wp-content/themes/jardindesdumont/fonts/Gotham_Bold_Regular.ttf'); /*URL to font*/
+}
+@font-face {
+	font-family: 'Gotham_Light';
+	src: url('/wp-content/themes/jardindesdumont/fonts/Gotham_Light.otf'); /*URL to font*/
+}
+
+@font-face {
+	font-family: 'beyond_the_mountains';
+	src: url('/wp-content/themes/jardindesdumont/fonts/beyond_the_mountains.otf'); /*URL to font*/
+}
+
+
+@font-face {
+	font-family: 'Gotham_Medium';
+	src: url('/wp-content/themes/jardindesdumont/fonts/Gotham-Medium.otf'); /*URL to font*/
+}
+
+
+.Gotham_Medium{
+	font-family: 'Gotham_Medium' !important;
+}
+.PT_Sans{
+	font-family: 'PT Sans', sans-serif; !important;
+}
+
+.PT_Sans_bold{
+	font-family: 'PT Sans', sans-serif; !important;
+	font-weight: 500;
+}
+
+. {
+	font-family: 'beyond_the_mountains' !important;
+}
+
+.Gotham_Light p{
+	font-family: 'Gotham_Light' !important;
+}
+
+.Gotham_Light{
+	font-family: 'Gotham_Light' !important;
+}
+
+.Gotham_Bold{
+	font-family: 'Gotham_Bold' !important;
+}
 
 /*------------------------------------*\
     MISC
@@ -39,67 +94,6 @@
 /*------------------------------------*\
     SIDE MENU
 \*------------------------------------*/
-
-@import url(http://fonts.googleapis.com/css?family=Raleway:200,400,700,800);
-
-@font-face {
-    font-family: "PT_Sans"; /*a name to be used later*/
-    src: url('https://fonts.googleapis.com/css?family=PT+Sans'); /*URL to font*/
-}
-
-@font-face {
-    font-family: "PT_Sans_bold"; /*a name to be used later*/
-    src: url('/wp-content/themes/jardindesdumont/fonts/pt-sans-bold.ttf'); /*URL to font*/
-}
-
-@font-face {
-    font-family: "Gotham_Bold"; /*a name to be used later*/
-    src: url('/wp-content/themes/jardindesdumont/fonts/Gotham_Bold_Regular.ttf'); /*URL to font*/
-}
-@font-face {
-    font-family: 'Gotham_Light';
-    src: url('/wp-content/themes/jardindesdumont/fonts/Gotham_Light.otf'); /*URL to font*/
-}
-
-@font-face {
-    font-family: 'beyond_the_mountains';
-    src: url('/wp-content/themes/jardindesdumont/fonts/beyond_the_mountains.otf'); /*URL to font*/
-}
-
-
-@font-face {
-    font-family: 'Gotham_Medium';
-    src: url('/wp-content/themes/jardindesdumont/fonts/Gotham-Medium.otf'); /*URL to font*/
-}
-
-
-.Gotham_Medium{
-	font-family: 'Gotham_Medium' !important;
-}
-.PT_Sans{
-	font-family: "PT_Sans" !important;
-	}
-
-.PT_Sans_bold{
-		font-family: "PT_Sans" !important;
-		font-weight: 500;
-		}
-
-.font-beyond-the-mountains{
-	font-family: 'beyond_the_mountains' !important;
-}
-
-.Gotham_Light p{
-	font-family: 'Gotham_Light' !important;
-}
-
-.Gotham_Light{
-	font-family: 'Gotham_Light' !important;
-}
-
-.Gotham_Bold{
-	font-family: 'Gotham_Bold' !important;
-}
 
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
@@ -887,10 +881,10 @@ margin-top: 50px;
 @import url("https://fonts.googleapis.com/css?family=PT+Serif");
 @font-face {
   font-family: "Gotham Bold";
-  src: url("font/Gotham-Bold.ttf"); }
+  src: url("fonts/Gotham_Bold_Regular.ttf"); }
 @font-face {
   font-family: "Gotham Light";
-  src: url("font/Gotham-Light.ttf"); }
+  src: url("fonts/Gotham_Light.ttf"); }
 .ui-button {
   padding: 1.1em 2em 0.9em 2em;
   background: #C6C6C5;
@@ -2305,7 +2299,7 @@ section.article img.avatar, section.category-page img.avatar {
 }
 
 section.article .elementor-widget-text-editor p{
-		font-family: "PT_Sans" !important;
+		font-family: 'PT Sans', sans-serif; !important;
     font-weight: 400;
 }
 
@@ -3424,36 +3418,36 @@ section.tab-famille .nav-pills>li>a img{
 }
 
 section.tab-famille .nav-pills>li.maman{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/maman.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/maman.png);
 }
 
 section.tab-famille .nav-pills>li.active.maman{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/maman-active.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/maman-active.png);
 }
 
 section.tab-famille .nav-pills>li.fils{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fils.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/fils.png);
 }
 
 section.tab-famille .nav-pills>li.active.fils{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fils-active.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/fils-active.png);
 }
 
 section.tab-famille .nav-pills>li.fille{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fille.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/fille.png);
 }
 
 section.tab-famille .nav-pills>li.active.fille{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/fille-active.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/fille-active.png);
 }
 
 section.tab-famille .nav-pills>li.papa{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/papa.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/papa.png);
 	    height: 456px;
 }
 
 section.tab-famille .nav-pills>li.active.papa{
-	background-image: url(http://dev.jardindumont.local/wp-content/themes/jardindesdumont/img/papa-active.png);
+	background-image: url(/wp-content/themes/jardindesdumont/img/papa-active.png);
 }
 
 
@@ -3713,21 +3707,31 @@ section.checkout-form .methode-paiement p span {
 	font-size: 20px;
 }
 
-#shipping_method li {
-	border: 2px solid #bdbbbb;
+#shipping_method li, .wc_payment_methods li {
+	border: 2px solid #bdbbbb!important;
 	padding: 20px!important;
 	text-align: center!important;
 	margin-right: 20px!important;
 	display: inline-block;
 	cursor: pointer;
-	  width: 270px;
+	width: 270px;
 }
 
-#shipping_method li.is-checked {
-	border: 2px solid #fec833;
-	background-color: #fec833;
+.wc_payment_methods li {
+	width: 230px!important;
+	float: left;
 }
-#shipping_method li.is-checked .strong::after {
+
+.wc_payment_methods label {
+	line-height: 30px!important;
+}
+
+#shipping_method li.is-checked, .wc_payment_methods li.is-checked {
+	border: 2px solid #fec833!important;
+	background-color: #fec833!important;
+}
+
+#shipping_method li.is-checked .strong::after, .wc_payment_methods li.is-checked .strong::after {
 	content: "";
 	width: 85px;
 	height: 1px;
@@ -3736,8 +3740,8 @@ section.checkout-form .methode-paiement p span {
 	margin: 20px auto;
 }
 
-#shipping_method li:hover {
-	border: 2px solid #fec833;
+#shipping_method li:hover, .wc_payment_methods li:hover {
+	border: 2px solid #fec833!important;
 }
 
 .woocommerce-checkout .woocommerce .argmc-wrapper #payment .payment_methods input[type="radio"].input-radio + label, .woocommerce-checkout .woocommerce .argmc-wrapper ul#shipping_method li input[type="radio"].shipping_method + label {
@@ -3752,7 +3756,7 @@ section.checkout-form .methode-paiement p span {
 	text-align: center;
 }
 
-#shipping_method label:before, #shipping_method label:after {
+#shipping_method label:before, #shipping_method label:after, .wc_payment_methods label:before, .wc_payment_methods label:after {
 	/* display: none!important; */
 	background: transparent!important;
 	border: none!important;
@@ -4597,6 +4601,34 @@ section.tab-famille .nav-pills>li.active>a{
 
 }
 
-/**********************
-CHECKOUT
-**********************/
+
+/*------------------------------------*\
+    ORDER CONFIRMATION
+\*------------------------------------*/
+.order-confirmation {
+	text-align:center;
+	font-size: 17px;
+	margin-bottom: 20px;
+}
+.order-confirmation h2 {
+	font-family: "beyond_the_mountains";
+	margin-bottom: 20px;
+}
+.order-confirmation a {
+	display: inline-block;
+}
+.woocommerce ul.order_details {
+	margin: 0px auto;
+	display: block;
+	width: fit-content;
+	padding: 0px;
+	font-size: 17px;
+}
+
+.woocommerce-order-details__title {
+	margin-bottom: 20px;
+}
+
+.woocommerce-order-overview__order.order, .woocommerce-order-received table.shop_table, .woocommerce-order-received address {
+	font-size: 17px;
+}

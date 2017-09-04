@@ -791,7 +791,7 @@ function argmcAddNewSteps($fields) {
 	$fields['steps'] = array_slice($fields['steps'] , 0, $position - 1, true) +
 	                   array(
 		                   'step_livraison' => array(
-			                   'text'  => __('MODE LIVRAISON', 'argMC'),     //"Tab Name" - Set First Tab Name
+			                   'text'  => __('MODE DE <br/>LIVRAISON', 'argMC'),     //"Tab Name" - Set First Tab Name
 			                   'class' => 'my-custom-step'             //'my-custom-step' - Set First Tab Class Name
 		                   ),
 	                   ) +

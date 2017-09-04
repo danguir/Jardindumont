@@ -213,12 +213,12 @@ jQuery('.nav-pills li').click(function(){
 
 
 //STIKY MENU CATEGORIE PAGE
-var topSticky = jQuery('.sticky-scroll-box').offset().top;
+var topSticky = jQuery('.sticky-scroll-box').offset.top;
 var stickyHeight = jQuery('.sticky-scroll-box').height();
 
 //if(jQuery(window).width() < 768){
 jQuery(window).scroll(function (event) {
-	var limit = jQuery('.networking ').offset().top - stickyHeight - 100;
+	var limit = jQuery('.networking ').offset.top - stickyHeight - 100;
 	var stickyScroll = jQuery(this).scrollTop();
 	var windowTop = jQuery(window).scrollTop();
 
