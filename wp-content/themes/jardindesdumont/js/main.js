@@ -147,28 +147,30 @@ function prevTab(elem) {
 				jQuery('#vertical-bar').css('background-color', 'rgba(0, 0, 0, 0.5)');
 				jQuery("#burger").attr('src', templateUrl + '/img/burger.png');
 
-				if(jQuery(window).width() < 768)
-				{
+				//if(jQuery(window).width() < 768)
+				//{
 					jQuery(".menu-button #burger").css('width', '40px');
 					jQuery(".menu-button #burger").css('height', '22px');
+					jQuery(".menu-button #burger").css('margin-top', '15px');
+					
 					jQuery("#vertical-bar").css('height', '60px');
 					jQuery("#logo a img").css('height', '43px');
 					jQuery("#logo a img").css('width', '188px');
 					jQuery("#vertical-bar .list-inline li a img").css('width', '44px');
 
-				}
+				//}
 			} else {
 				jQuery('#vertical-bar').css('background-color', 'transparent');
 				jQuery("#burger").attr('src', templateUrl + '/img/burger-vert.png');
 
-				if(jQuery(window).width() < 768)
-				{
+				//if(jQuery(window).width() < 768)
+				//{
 					jQuery("#logo a img").css('height', '70px');
 					jQuery("#logo a img").css('width', '300px');
 					jQuery("#vertical-bar .list-inline li a img").css('width', '60px');
 					jQuery(".menu-button #burger").css('width', '48px');
 					jQuery(".menu-button #burger").css('height', '27px');
-				}
+				//}
 			}
 		});
 

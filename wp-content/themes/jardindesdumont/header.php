@@ -90,13 +90,10 @@
 			</header>
 			<!-- /header -->
 
-
-
-
 			<!-- version mobile -->
 			<header class="visible-xs-12 header clear" role="banner">
 					<div class="vertical-bar-mobile">
-						<button class="menu-button" id="open-button-mobile">
+						<button class=" hidden-sm hidden-md hidden-lg menu-button" id="open-button-mobile">
 							<img src="<?php echo get_template_directory_uri();?>/img/burger-vert.png" id="burger-mobile" class="burger burger-vert"/>
 							<img src="<?php echo get_template_directory_uri();?>/img/burger.png" id="burger-mobile" class="burger burger-blanc"/>
 						</button>
@@ -106,12 +103,27 @@
 								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
 							</a>
 						</div>
+						<ul class="hidden-sm hidden-md hidden-lg list-inline" >
+							<li>
+								<a href="/cart/">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/cart.png" alt="cart" class="cart-icon">                    <p>
+								</a>
+							</li>
+						</ul>
     			</div>
 
 				<div class="container">
 				<div class="menu-wrap">
 				<!-- nav -->
 				<nav class="nav" role="navigation">
+					<ul class="hidden-sm hidden-md hidden-lg list-inline" >
+						<li>
+								<a href="/my-account/">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/user.png" alt="user" class="user-icon">                    <p>
+								</a>
+						</li>
+				</ul>
+
 					<?php html5blank_nav(); ?>
 					<div class="social">
 						<ul class="list-inline">
@@ -129,5 +141,5 @@
 			<div class="content-wrap">
 			</div><!-- /Menu wrap -->
 		</div><!-- /container -->
-			</header>
+	</header>
 			<!-- /header -->
