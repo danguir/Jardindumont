@@ -218,7 +218,7 @@
 					// amzn_assoc_linkid="949bfb847147d654e679d4876a8e2b77";</script>
 					continue;
 				}
-				
+
 				//<script type="text/javascript">document.write("<div data-role=\"amazonjs\" data-asin=\"4334035787\" data-locale=\"JP\" data-tmpl=\"\" data-img-size=\"\" class=\"asin_4334035787_JP_ amazonjs_item\"><div class=\"amazonjs_indicator\"><span class=\"amazonjs_indicator_img\"></span><a class=\"amazonjs_indicator_title\" href=\"https://www.amazon.co.jp/%E5%B8%8%E5%AF%BF/dp/4334035787?SubscriptionId=AKIAIQGSXT2U7QVCQGHA&tag=hiyokoweb06-22&linkCode=xm2&camp=2025&creative=165953&creativeASIN=4335787\">希望難民ご一行様　ピースボートと「承認の共同体」幻想 (光文社新書)</a><span class=\"amazonjs_indicator_footer\"></span></div></div>")</script>
 				if(preg_match("/^<script[^\>]*>\s*document.write\([\"\']\s*<div/i", $value["text"])){
 					if(preg_match("/\s*<\/div>[\"\']\)\s*<\/script>$/i", $value["text"])){
@@ -259,7 +259,7 @@
 				if(preg_match("/cdn\.playwire\.com\/bolt\/js\/zeus\/embed\.js/i", $value["text"])){
 					continue;
 				}
-				
+
 				//<script type= "text/javascript">var RecaptchaOptions = {custom_translations : { instructions_visual : "This is my text:" }};</script>
 				if(preg_match("/var\s+RecaptchaOptions\s*=\s*\{/i", $value["text"])){
 					continue;
