@@ -4222,6 +4222,10 @@ form.cart .button, .woocommerce div.product form.cart .button{
   width: 30px;
 }
 
+.title-underline a:hover {
+	border-bottom: 2px solid;
+	padding-bottom: 5px;
+}
 
 /*Mon compte*/
 section.edit-adress-form  input.button{
@@ -4288,6 +4292,24 @@ section.edit-adress-form form .form-row input.input-text{
 	.footer .footer-level-one img{
 		width: 35px;
 	}
+
+	.footer .footer-image {
+		min-height: 75px;
+		position: relative;
+		text-align: center;
+	}
+
+	.footer .footer-image img {
+		vertical-align: middle;
+		position: absolute;
+		display: inline-block;
+		top: 50%;
+		left: 0px;
+		right: 0px;
+		margin: 0px auto;
+		transform: translateY(-50%);
+	}
+
 	.footer .footer-level-one h4{
 		font-size: 10px;
 	  margin-top: 16px;

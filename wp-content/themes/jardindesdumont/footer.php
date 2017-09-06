@@ -17,22 +17,30 @@
 				<div class="footer-level-one" >
 						<div class="row center">
 						  <div class="col-md-3 col-xs-12 text-center">
-								<img src="<?php echo get_template_directory_uri();?>/img/footer/icon-payement.png" class=" center-block img-responsive" alt="Responsive image">
+                                <div class="footer-image">
+								    <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-payement.png" class=" center-block img-responsive" alt="Responsive image">
+                                </div>
 								<h4>payement sécurisé</h4>
 								<p>Des paiements<br>à votre convenance </p>
 							</div>
 						  <div class="col-md-3 col-xs-12 text-center">
-								<img src="<?php echo get_template_directory_uri();?>/img/footer/icon-transport.png" class="center-block img-responsive" alt="Responsive image">
-								<h4>Livrés chez vous</h4>
+                                <div class="footer-image">
+								    <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-transport.png" class="center-block img-responsive" alt="Responsive image">
+                                </div>
+                                <h4>Livrés chez vous</h4>
 								<p>Livraison garantie<br>dans le meilleur delay </p>
 							</div>
 						  <div class="col-md-3 col-xs-12 text-center">
-								<img src="<?php echo get_template_directory_uri();?>/img/footer/icon-sav.png" class=" center-block img-responsive" alt="Responsive image">
-								<h4>un doute ?</h4>
+                                <div class="footer-image">
+								    <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-sav.png" class=" center-block img-responsive" alt="Responsive image">
+                                </div>
+                                <h4>un doute ?</h4>
 								<p>Appellez-nous<br>ou visitez notre <a href="#" class="ui-button ui-button-link" title="SAV">SAV</a></p>
 							</div>
 							<div class="col-md-3 col-xs-12 text-center">
-							 <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-avis.png" class="center-block img-responsive" alt="Responsive image">
+                             <div class="footer-image">
+                                 <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-avis.png" class="center-block img-responsive" alt="Responsive image">
+                             </div>
 							 <h4>JArdiniérs passionnés</h4>
 							 <p>Découvrez ce que<br>nos clients disent </p>
 						 </div>

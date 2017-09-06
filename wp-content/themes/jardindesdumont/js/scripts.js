@@ -7,7 +7,6 @@
             $(this).addClass('is-checked');
         });
 
-
 	    $(document).on('click', '.wc_payment_method', function(e){
 	        e.preventDefault();
 
@@ -19,6 +18,12 @@
 	            $(e.target).closest('.wc_payment_method').addClass('is-checked');
             }
 
+        });
+
+	    $('.tab-famille .nav a').click(function(){
+	        var target = $(this).data('target');
+	        $('.tab-pane').removeClass('active');
+	        $("#"+target).addClass('active');
         });
 
         // $('ul.wc_payment_methods li.wc_payment_method').click(function(e){
