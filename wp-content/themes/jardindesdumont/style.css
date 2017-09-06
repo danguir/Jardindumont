@@ -54,7 +54,7 @@
 	font-weight: 500;
 }
 
-. {
+.beyond_the_mountains {
 	font-family: 'beyond_the_mountains' !important;
 }
 
@@ -1209,7 +1209,13 @@ body {
     height: 40px;
 		font-style: normal;
     font-family: 'Gotham_bold';
+	padding: 25px 10px;
 }
+.qty::-webkit-inner-spin-button, .qty::-webkit-outer-spin-button {
+	opacity: 1;
+}
+
+
 .woocommerce .quantity input[type="number"]{
 	    border: 1px solid #818181;
 			color: #818181;
@@ -1461,11 +1467,27 @@ a.laisser_avis{
 }
 
 .woocommerce #reviews #comments p, #reviews.all-reviews #comments p{
-			color: black;
-	    font-size: 15px;
-	    font-family: PT_Sans;
-	    text-align: center;
-	    margin-bottom: 30px;
+	color: black;
+	font-size: 15px;
+	font-family: PT_Sans;
+	text-align: center;
+	margin-bottom: 20px!important;
+}
+
+.commentlist {
+	padding-left: 0px;
+}
+
+.woocommerce-review__author {
+	color: black;
+}
+
+.woocommerce .star-rating::before, .woocommerce .star-rating span::before {
+	transform: scale(0.8);
+}
+
+.woocommerce .comment_container .star-rating {
+	margin-bottom: 20px;
 }
 
 .woocommerce #reviews #comments ol.commentlist li .comment-text{
@@ -1564,12 +1586,13 @@ a.laisser_avis{
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 15px;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	color: white;
 	margin-top: 30px;
 	font-weight: 900;
 }
+  .livraison-gratuite p {
+	  margin: 15px 0px;
+  }
   .nb-jour-livraison{
 	background: #f7f7f7;
 	font-family: 'Gotham_bold';
@@ -1624,6 +1647,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .woocommerce div.product div.images .flex-control-thumbs li{
 	width: 20%;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li:nth-child(4n+1) {
+	clear: none;
 }
 /***************************************
 RELATED products

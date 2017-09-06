@@ -15,7 +15,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.5.0
+ * @version     3.1.0
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -41,7 +41,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php elseif ( 1 === count( $available_methods ) ) :  ?>
 			<?php
 				$method = current( $available_methods );
-				
 				printf( '%3$s <input type="hidden" name="shipping_method[%1$d]" data-index="%1$d" id="shipping_method_%1$d" value="%2$s" class="shipping_method" />', $index, esc_attr( $method->id ), wc_cart_totals_shipping_method_label( $method ) );
 				do_action( 'woocommerce_after_shipping_rate', $method, $index );
 			?>
@@ -55,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php echo '<p class="woocommerce-shipping-contents"><small>' . esc_html( $package_details ) . '</small></p>'; ?>
 		<?php endif; ?>
 
-		<?php if ( is_cart() && ! $index ) : ?>
+		<?php if ( ! empty( $show_shipping_calculator ) ) : ?>
 			<?php woocommerce_shipping_calculator(); ?>
 		<?php endif; ?>
 	</td>
