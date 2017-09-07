@@ -3,18 +3,7 @@
 	TYPOGRAPHY
 \*------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
-@import url('http://fonts.googleapis.com/css?family=Raleway:200,400,700,800');
-
-@font-face {
-	font-family:'Font-Name';
-	src:url('fonts/font-name.eot');
-	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
-		url('fonts/font-name.woff') format('woff'),
-		url('fonts/font-name.ttf') format('truetype'),
-		url('fonts/font-name.svg#font-name') format('svg');
-    font-weight:normal;
-    font-style:normal;
-}
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
 
 @font-face {
 	font-family: "PT_Sans_bold"; /*a name to be used later*/
@@ -46,12 +35,16 @@
 	font-family: 'Gotham_Medium' !important;
 }
 .PT_Sans{
-	font-family: 'PT Sans', sans-serif; !important;
+	font-family: 'PT Serif', serif;!important;
+}
+
+.PT_Serif {
+	font-family: 'PT Serif', serif;
 }
 
 .PT_Sans_bold{
-	font-family: 'PT Sans', sans-serif; !important;
-	font-weight: 500;
+	font-family: 'PT Serif', serif;!important;
+	font-weight: bold;
 }
 
 .beyond_the_mountains {
@@ -103,7 +96,7 @@ body {
 	color: black;
 	font-weight: 400;
 	font-size: 1em;
-	font-family: 'Gotham_Light', Arial, sans-serif;
+	font-family: 'PT Serif', serif;
 }
 
 a {
@@ -120,6 +113,7 @@ a:hover, a:focus {
 button:focus {
 	outline: none;
 }
+
 
 
 
@@ -4680,4 +4674,142 @@ section.tab-famille .nav-pills>li.active>a{
 
 .woocommerce-order-overview__order.order, .woocommerce-order-received table.shop_table, .woocommerce-order-received address {
 	font-size: 17px;
+}
+
+/*------------------------------------*\
+    `Layout : Tabs Produits
+\*------------------------------------*/
+.l-product-info, .l-product-entretien {
+	font-size: 16px;
+	font-family: "PT Serif", serif;
+}
+
+/*** Kit en Détail ***/
+.l-product-info-image-univers {
+	margin-top: -70px;
+}
+
+.l-product-info-image-univers img {
+	width: 50%;
+	display: block;
+}
+
+.l-product-info-description {
+	padding: 40px 20px;
+	background: #f7f7f7;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.l-product-info-table {
+	width: 100%;
+	border-top: 1px solid #7f7f7f;
+}
+
+.l-product-info-table tr {
+	border-bottom: 1px solid #7f7f7f;
+}
+
+.l-product-info-table td {
+	padding: 20px 0px;
+	text-align: right;
+}
+
+.l-product-info-table .td-title {
+	font-family: "Gotham_Light", sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #bfd220;
+	background: #f8fae5;
+	padding: 20px;
+	text-align: left;
+}
+
+.l-product-info-table .td-bold {
+	font-family: "Gotham_bold", sans-serif;
+	font-weight: bold;
+	text-align: left;
+}
+
+/*** Guide d'entretien ***/
+.l-product-entretien-planning {
+	width: 100%;
+	border: 1px solid #7f7f7f;
+}
+
+.l-product-entretien-planning div {
+	width: 33.33%;
+	float: left;
+	display: inline-block;
+	border-right: 1px solid #7f7f7f;
+	border-bottom: 1px solid #7f7f7f;
+	padding: 20px 0px;
+	font-family: "Gotham_bold", sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.l-product-entretien-planning div:nth-child(3n) {
+	border-right: 0px;
+}
+.l-product-entretien-planning div:nth-child(10), .l-product-entretien-planning div:nth-child(11), .l-product-entretien-planning div:nth-child(12) {
+	border-bottom: 0px;
+}
+
+.l-product-entretien-planning div.planter {
+	background: #b9ce00;
+}
+
+.l-product-entretien-planning div.recolter {
+	background: #fdc832;
+}
+
+.l-product-entretien-planning-legend {
+	margin: 15px 0px;
+	text-align: center;
+}
+
+.ui-button-yellow {
+	background: #fdc832;
+}
+
+.l-product-entretien-planning-legend .ui-button-primary:hover {
+	cursor: inherit;
+	background: #b9ce00;
+}
+
+.l-product-entretien-planning-legend .ui-button {
+	font-family: "PT Serif", serif;
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+	width: 40%;
+	display: inline-block;
+	padding: 10px 0px;
+}
+
+.l-product-entretien-planning-legend .ui-button:first-child {
+	margin-right: 10px;
+}
+
+.l-product-entretien-planning-legend .ui-button-yellow:hover {
+	cursor: inherit;
+	background: #fdc832;
+}
+
+.l-product-entretien-info {
+	text-align: center;
+}
+
+.l-product-entretien-info-image {
+	height: 100px;
+	position: relative;
+}
+
+.l-product-entretien-info-image img {
+	height: 65px;
+	vertical-align: middle;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }

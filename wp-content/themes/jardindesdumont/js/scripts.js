@@ -7,6 +7,10 @@
             $(this).addClass('is-checked');
         });
 
+	    $(document).ready(function(){
+            $('#tab-title-kit_en_detail a').trigger('click');
+        });
+
 	    $(document).on('click', '.wc_payment_method', function(e){
 	        e.preventDefault();
 

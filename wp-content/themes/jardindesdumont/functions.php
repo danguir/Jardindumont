@@ -434,23 +434,31 @@ add_theme_support( 'wc-product-gallery-slider' );
 
 
 //Add a custom tab
-/*add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+
 function woo_new_product_tab( $tabs ) {
 	// Adds the new tab
-	$tabs['additional_information'] = array(
-		'title' 	=> __( 'guide d\'entretien', 'woocommerce' ),
-		'priority' 	=> 50,
-		'callback' 	=> 'woo_new_product_tab_content'
+	$tabs['kit_en_detail'] = array(
+		'title' 	=> __( 'Kit en détail', 'woocommerce' ),
+		'priority' 	=> 1,
+		'callback' 	=> 'tab_detail_content'
+	);
+
+	$tabs['guide_entretien'] = array(
+		'title' 	=> __( 'Guide d\'entretien', 'woocommerce' ),
+		'priority' 	=> 2,
+		'callback' 	=> 'tab_entretien_content'
 	);
 	return $tabs;
-}*/
+}
 
-/*function woo_new_product_tab_content()  {
-    // The new tab content
-    $prod_id = get_the_ID();
-echo "string";
-    echo'<p>'.get_post_meta($prod_id,'additional information',true).'</p>';
-}*/
+function tab_detail_content()  {
+	 require_once(__DIR__."/single-product/tabs/tabs-details.php");
+}
+
+function tab_entretien_content()  {
+	require_once(__DIR__."/single-product/tabs/tabs-entretien.php");
+}
+
 
 //Remove custom tab
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
@@ -600,7 +608,7 @@ add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
-
+add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 

@@ -40,7 +40,7 @@ if ( ! comments_open() ) {
 		<div class="col-md-12 center">
 			<h2 class="center">Avis des clients</h2>
 			<p>
-				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
+				qsdLe Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
 			</p>
 			<a id="review_show" class="ui-button ui-button-primary laisser_avis" href="#review_form_wrapper">Laisser un avis</a>
 		</div>
