@@ -76,7 +76,7 @@
             tags = formatTagsToAjax(tags);
             category_name = getCatName();
 
-            getProducts(tags, category_name);
+            getProducts(tags, category_name, true);
             $('.woocommerce-pagination').show();
 
         });
@@ -106,15 +106,16 @@
             return queryTags.toLowerCase();
         }
 
-        function getProducts(tags, category_name) {
+        function getProducts(tags, category_name, image) {
             $('ul.products:not(.not-filter)').hide();
             $('.loading').show();
             $('.loop-univers-image').hide();
             $.post(ajaxurl, {action: 'get_products', tags: tags, category_name: category_name}, function (data) {
                 $('.loading').hide();
-                $('.loop-univers-image').show();
                 $('ul.products:not(.not-filter)').html(data);
                 $('ul.products:not(.not-filter)').show();
+                if (image)
+                    $('.loop-univers-image').show();
             });
         }
 
