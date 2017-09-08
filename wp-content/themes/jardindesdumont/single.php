@@ -25,8 +25,41 @@
 
 			<!-- post details -->
 			<span class="date"><?php the_time('j F Y'); ?> <?php //the_time('g:i a'); ?></span>
-			<span class="avatar"><?php echo get_avatar(get_the_author_meta('user_email')); ?></span>
-			<span class="author"> <?php the_author_posts_link(); ?></span>
+			<?php
+			$auteur = get_field('auteur_de_larticle');
+			switch ($auteur) {
+				case "julien":
+					?>
+                    <span class="avatar"><img src="<?php echo get_template_directory_uri(); ?>/img/articles/auteur-julien.png" class="avatar" alt="Julien Dumont"></span>
+                    <span class="author">Julien Dumont</span>
+					<?php
+					break;
+				case "sophie":
+					?>
+                    <span class="avatar"><img src="<?php echo get_template_directory_uri(); ?>/img/articles/auteur-sophie.png" class="avatar" alt="Sophie Dumont"></span>
+                    <span class="author">Sophie Dumont</span>
+					<?php
+					break;
+				case "louise":
+					?>
+                    <span class="avatar"><img src="<?php echo get_template_directory_uri(); ?>/img/articles/auteur-louise.png" class="avatar" alt="Louise Dumont"></span>
+                    <span class="author">Louise Dumont</span>
+					<?php
+					break;
+				case "pierre":
+					?>
+                    <span class="avatar"><img src="<?php echo get_template_directory_uri(); ?>/img/articles/auteur-pierre.png" class="avatar" alt="Pierre Dumont"></span>
+                    <span class="author">Pierre Dumont</span>
+					<?php
+					break;
+				default:
+					?>
+                    <span class="avatar"><img src="<?php echo get_template_directory_uri(); ?>/img/articles/auteur-julien.png" class="avatar" alt="Julien Dumont"></span>
+                    <span class="author">Julien Dumont</span>
+					<?php
+					break;
+			}
+			?>
 			<!--span class="comments"><?php if (comments_open( get_the_ID() ) ) //comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span-->
 			<!-- /post details -->
 

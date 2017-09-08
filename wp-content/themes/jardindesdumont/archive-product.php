@@ -33,7 +33,6 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_before_main_content' );
 	?>
 
-
 <header class="woocommerce-products-header">
     <div class="page-categorie">
         <div class="">
@@ -96,7 +95,7 @@ get_header( 'shop' ); ?>
 			?>
 			<section class="up-sells upsells center products">
 				<?php wc_print_notices(); ?>
-				<div class="container">
+				<div class="container" style="position: relative">
 					<!--div class="col-sm-3">
 						<a href="#">
 							<img src="<?php echo get_template_directory_uri();?>/img/categorie/Banniere_1.png" class=""/>
@@ -118,10 +117,31 @@ get_header( 'shop' ); ?>
 					?>
 
 					<?php wc_get_template_part( 'content', 'product' ); ?>
-
 				<?php endwhile; // end of the loop. ?>
 
 			<?php woocommerce_product_loop_end(); ?>
+
+            <?php
+                echo "<div class='loop-univers-image' data-cat='".single_cat_title("", false)."'>";
+                switch (single_cat_title("", false)){
+                    case "Débutant":
+                        echo '<img class="hidden-xs hidden-sm" src="'.get_template_directory_uri().'/img/banners/banner-julien.jpg" alt="Julien Dumont - Jardin des Dumont">';
+                        break;
+                    case "Enfant":
+                        echo '<img class="hidden-xs hidden-sm" src="'.get_template_directory_uri().'/img/banners/banner-louise.jpg" alt="Louise Dumont - Jardin des Dumont">';
+                        break;
+                    case "Expérimenté":
+                        echo '<img class="hidden-xs hidden-sm" src="'.get_template_directory_uri().'/img/banners/banner-sophie.jpg" alt="Sophie Dumont - Jardin des Dumont">';
+                        break;
+                    case "Jardigeek":
+                        echo '<img class="hidden-xs hidden-sm" src="'.get_template_directory_uri().'/img/banners/banner-pierre.jpg" alt="Pierre Dumont - Jardin des Dumont">';
+                        break;
+                    default:
+                        echo '<img class="hidden-xs hidden-sm" src="'.get_template_directory_uri().'/img/banners/banner-julien.jpg" alt="Julien Dumont - Jardin des Dumont">';
+                        break;
+                }
+                echo "</div>";
+            ?>
 		</div>
 
 
@@ -242,7 +262,8 @@ get_header( 'shop' ); ?>
                     <h2 class="woocommerce-loop-product__title">Kit «&nbsp;Plante sensitive&nbsp;»</h2>
                     <span class="price"><span class="woocommerce-Price-amount amount">Prix à l'unité : 35<span
                                     class="woocommerce-Price-currencySymbol">€</span></span></span>
-                </a></li>
+                </a>
+            </li>
 
 
         </ul>

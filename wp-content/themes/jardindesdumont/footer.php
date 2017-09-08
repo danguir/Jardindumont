@@ -35,13 +35,13 @@
 								    <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-sav.png" class=" center-block img-responsive" alt="Responsive image">
                                 </div>
                                 <h4>un doute ?</h4>
-								<p>Appellez-nous<br>ou visitez notre <a href="#" class="ui-button ui-button-link" title="SAV">SAV</a></p>
+								<p>Appellez-nous<br>ou visitez notre <a href="/contactez-nous/" class="ui-button ui-button-link" title="SAV">SAV</a></p>
 							</div>
 							<div class="col-md-3 col-xs-12 text-center">
                              <div class="footer-image">
                                  <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-avis.png" class="center-block img-responsive" alt="Responsive image">
                              </div>
-							 <h4>JArdiniérs passionnés</h4>
+							 <h4>Jardiniers passionnés</h4>
 							 <p>Découvrez ce que<br>nos clients disent </p>
 						 </div>
 					 </div>

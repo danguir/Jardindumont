@@ -8,9 +8,7 @@
 				<!-- post thumbnail -->
 				<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php //the_post_thumbnail(array(420,420));  
-						the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']);
-						// Declare pixel size you need inside the array ?>
+						<?php the_post_thumbnail(array(430,426), ['title' => the_title('', '', false)]); ?>
 					</a>
 				<?php endif; ?>
 				<!-- /post thumbnail -->
@@ -24,25 +22,72 @@
 
 					</div>
 
-					<div class="col-md-12">
-						<span class="avatar"><?php echo get_avatar(get_the_author_meta('user_email')); ?></span>
-					</div>
-					<div class="col-md-12">
-						<span class="author"> <?php the_author_posts_link(); ?></span>
-					</div>
-
+                    <?php
+                    $auteur = get_field('auteur_de_larticle');
+                    switch ($auteur) {
+                        case "julien":
+                            ?>
+                            <div class="col-md-12">
+                                <span class="avatar">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/articles/auteur-julien.png" class="avatar" alt="Julien Dumont">
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <span class="author">Julien Dumont</span>
+                            </div>
+                            <?php
+                            break;
+                        case "sophie":
+	                        ?>
+                            <div class="col-md-12">
+                                <span class="avatar">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/articles/auteur-sophie.png" class="avatar" alt="Sophie Dumont">
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <span class="author">Sophie Dumont</span>
+                            </div>
+	                        <?php
+                            break;
+                        case "louise":
+	                        ?>
+                            <div class="col-md-12">
+                                <span class="avatar">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/articles/auteur-louise.png" class="avatar" alt="Louise Dumont">
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <span class="author">Louise Dumont</span>
+                            </div>
+	                        <?php
+                            break;
+                        case "pierre":
+	                        ?>
+                            <div class="col-md-12">
+                                <span class="avatar">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/articles/auteur-pierre.png" class="avatar" alt="Pierre Dumont">
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <span class="author">Pierre Dumont</span>
+                            </div>
+	                        <?php
+                            break;
+                        default:
+	                        ?>
+                            <div class="col-md-12">
+                                <span class="avatar">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/articles/auteur-julien.png" class="avatar" alt="Julien Dumont">
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <span class="author">Julien Dumont</span>
+                            </div>
+	                        <?php
+                            break;
+                    }
+                    ?>
 				</div>
-
-				<!-- /post title -->
-
-				<!-- post details >
-				<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-				<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-				< /post details -->
-
-				<?php //html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
-
-		<?php //edit_post_link(); ?>
 
 	</article>
 	<!-- /article -->
