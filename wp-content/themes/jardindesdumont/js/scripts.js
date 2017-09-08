@@ -109,8 +109,10 @@
         function getProducts(tags, category_name) {
             $('ul.products:not(.not-filter)').hide();
             $('.loading').show();
+            $('.loop-univers-image').hide();
             $.post(ajaxurl, {action: 'get_products', tags: tags, category_name: category_name}, function (data) {
                 $('.loading').hide();
+                $('.loop-univers-image').show();
                 $('ul.products:not(.not-filter)').html(data);
                 $('ul.products:not(.not-filter)').show();
             });

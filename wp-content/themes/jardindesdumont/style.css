@@ -2885,6 +2885,13 @@ filter-area : Zone de filtre dans les pages catégories
 \*------------------------------------*/
 .filter-area {
 	text-align: center;
+	z-index:200;
+	position: relative;
+}
+
+.link-clear {
+	position: relative;
+	z-index: 200;
 }
 
 .filter-area h3 {
