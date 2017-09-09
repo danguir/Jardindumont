@@ -166,3 +166,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
+
+<?php
+if(is_user_logged_in()):
+	do_action( 'woocommerce_account_navigation' );
+endif;
+?>

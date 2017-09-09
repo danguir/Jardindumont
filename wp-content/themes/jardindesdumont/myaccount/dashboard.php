@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="dashboard-compte">
 		<div class="row">
-				<div class="col-md-6 col-xs-12">
+				<div class="col-xs-12">
 					<h1><?php
 						/* translators: 1: user display name 2: logout url
 						__( 'Bonjour %1$s (not %1$s? <a href="%2$s">Log out</a>)', 'woocommerce' ),

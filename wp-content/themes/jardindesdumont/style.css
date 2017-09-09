@@ -1110,13 +1110,14 @@ margin-top: 50px;
   align-items: center;
   text-align: center; }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /*align-items: center;*/
-  text-align: center;
-}
+/*.row {*/
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*justify-content: center;*/
+  /*!*align-items: center;*!*/
+  /*text-align: center;*/
+/*}*/
+
 
 .block-full {
   flex: 1; }
@@ -1860,7 +1861,6 @@ background-color: transparent;
  	text-decoration: underline;
 
 }
-
 .txt-under-price{
 	color: #818181;
 	font-family: 'PT_Sans';
@@ -2209,13 +2209,13 @@ section.networking .img-responsive{
 }
 
 section.cart{
-	margin-top: 100px;
+	/* margin-top: 100px; */
 	color: black;
 }
+
 section.cart a:hover {
 	color: #b9ce00;
 }
-
 
 .woocommerce section.cart h2{
     color: #b9ce00;
@@ -2325,7 +2325,7 @@ section.cart a:hover {
 ARTICLE SINGLE
 **********************************/
 section.article{
-	margin-top: 250px;
+	/*margin-top: 250px;*/
 	color: #000000;
 }
 
@@ -2338,27 +2338,29 @@ section.article .hesperiden.tparrows {
 section.article .hesperiden.tparrows:hover {
 background: #c6c6c5;
 }
-section.article span.date, section.article span.author, section.article span.avatar{
-		text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    font-family: 'Gotham_Light';
-    font-size: 14px;
+/*section.article span.date, section.article span.author, section.article span.avatar{*/
+		/*text-align: center;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*font-family: 'Gotham_Light';*/
+    /*font-size: 14px;*/
+/*}*/
+
+section.article span.date, section.article span.author, section.article span.avatar {
+	display: block;
+	margin: 0px auto;
+	text-align: center;
 }
+
 section.article span.date{
-	top: 434px;
 	font-size: 20px;
 	font-weight: 600;
 }
 section.article span.author{
-		top: 215px;
     text-transform: capitalize;
     font-size: 20px;
 }
-section.article span.avatar{
-	 top: 140px;
- }
 
 section.article img.avatar, section.category-page img.avatar {
 	border-radius: 50%;
@@ -2374,8 +2376,33 @@ section.article img.avatar, section.category-page img.avatar {
 }
 
 section.article .elementor-widget-text-editor p{
-		font-family: 'PT Sans', sans-serif; !important;
+	font-family: 'PT Serif', sans-serif; !important;
     font-weight: 400;
+}
+
+.single h3 {
+	font-size: 20px;
+}
+section.article .elementor-icon-list-icon {
+	padding-bottom: 2px;
+	margin-right: 10px;
+}
+
+.single .block-rs h2, .single .block-rs h3 {
+	font-weight: bold;
+}
+
+.single .block-rs h3 {
+	margin-bottom: 20px;
+}
+
+.single .block-rs h2, .single .block-rs .fb_iframe_widget {
+	transform: scale(1.3);
+	margin-right: 33px;
+}
+
+.single .block-rs h2, .single .block-rs #twitter-widget-0 {
+	transform: scale(1.3);
 }
 
 .login-woo{
@@ -2524,13 +2551,35 @@ section.login-formulaire{
     right: 0;
 }
 
+.product_title, .livraison-gratuite {
+	text-align: center;
+}
+
+.box-price {
+	display: flex;
+	text-align: center;
+}
+
+.nb-jour-livraison .row, .l-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/* align-items: center; */
+	text-align: center;
+}
+
 .woocommerce .navigation-compte .border-compte{
 	border: 2px solid #8b8b8b;
-  margin-bottom: 70px;
+  	margin-bottom: 70px;
 	width:270px;
  	max-width:270px;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
+}
+
+.woocommerce-MyAccount-content {
+	text-align: center;
 }
 
 .woocommerce .navigation-compte .border-compte.tall{
@@ -2590,7 +2639,7 @@ Page commande
 
 section.commande, section.details-commande, section.info-compte, section.mon-adress, section.edit-adress,
 section.lost-pass, section.checkout-client,  section.methode-paiement {
-    margin-top: 100px;
+    /*margin-top: 100px;*/
     color: black;
 }
 
@@ -4050,7 +4099,18 @@ section.edit-adress-form  input.button:hover{
 
 
 .post-28 .woocommerce{
-	margin-top: 100px;
+	margin-top: 30px;
+}
+
+.l-call-me-back a {
+	display: block;
+	text-align: center;
+	margin: 0px auto;
+	color: #000;
+	font-size: 13px;
+	font-family: Gotham_Light;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 
@@ -4392,6 +4452,24 @@ section.edit-adress-form form .form-row input.input-text{
 		border: 1px solid rgba(255, 255, 255, 1);
 	}
 	/*PAGE CATEGORIE IDEE JARDIN*/
+	.category-idee {
+		min-height: 568px!important;
+	}
+	.tags {
+		padding: 0px;
+		margin: 0px;
+		text-align: center;
+	}
+	.tags a {
+		font-size: 24px;
+		font-family: 'Gotham_Light', sans-serif;
+		color: #e5a666;
+		text-transform: uppercase;
+	}
+	.tags li {
+		display: inline;
+		margin-right: 5px;
+	}
 	section.category-page .avatar::after{
 		  margin: 0 0 4px 6px;
 			width: 60px;

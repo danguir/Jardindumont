@@ -2,6 +2,9 @@
 
 	<main role="main">
 		<!-- section -->
+
+		<?php woocommerce_breadcrumb(); ?>
+
 		<section>
 
 			<!--h1><?php //the_title(); ?></h1-->

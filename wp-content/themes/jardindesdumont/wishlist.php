@@ -14,3 +14,9 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 <div id="yith-wcwl-messages"></div>
 
 <?php yith_wcwl_get_template( 'wishlist-' . $template_part . '.php', $atts ) ?>
+
+<?php
+ if(is_user_logged_in()):
+    do_action( 'woocommerce_account_navigation' );
+ endif;
+?>

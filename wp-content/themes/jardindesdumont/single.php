@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
 	<main role="main">
+
+    <?php woocommerce_breadcrumb(); ?>
+
 	<!-- section -->
 	<section class="article">
 
@@ -9,22 +12,6 @@
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<!-- post thumbnail -->
-			<?php //if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<!--a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php //the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a-->
-			<?php// endif; ?>
-			<!-- /post thumbnail -->
-
-			<!-- post title -->
-			<!--h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1-->
-			<!-- /post title -->
-
-			<!-- post details -->
-			<span class="date"><?php the_time('j F Y'); ?> <?php //the_time('g:i a'); ?></span>
 			<?php
 			$auteur = get_field('auteur_de_larticle');
 			switch ($auteur) {
@@ -60,19 +47,46 @@
 					break;
 			}
 			?>
+            <span class="date"><?php the_time('j F Y'); ?> <?php //the_time('g:i a'); ?></span>
+
+			<!-- post thumbnail -->
+			<?php //if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+				<!--a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+					<?php //the_post_thumbnail(); // Fullsize image for the single post ?>
+				</a-->
+			<?php// endif; ?>
+			<!-- /post thumbnail -->
+
+			<!-- post title -->
+			<!--h1>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+			</h1-->
+			<!-- /post title -->
+
+			<!-- post details -->
 			<!--span class="comments"><?php if (comments_open( get_the_ID() ) ) //comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span-->
 			<!-- /post details -->
 
 			<?php the_content(); // Dynamic Content ?>
 
+			<?php
+			$posttags = get_the_tags();
+			if ($posttags) {
+			    echo "<ul class='tags'>";
+				foreach($posttags as $tag) {
+					echo '<li><a href="/tag/'.$tag->slug.'">#'.$tag->name . '</a></li>';
+				}
+				echo "</ul>";
+			}
+			?>
+
             <div class="block-rs" style="margin-top: 30px;">
-                <h2>VOUS AVEZ TROUVEZ CET ARTICLE UTILE ?</h2>
+                <h2 style="font-size: 20px;">VOUS AVEZ TROUVEZ CET ARTICLE UTILE ?</h2>
                 <h3>PARTAGEZ-LE</h3>
                 <div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                 <a href="https://twitter.com/share" class="twitter-share-button">Partager</a>
             </div>
 
-			<?php //the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
 			<p><?php //_e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
 

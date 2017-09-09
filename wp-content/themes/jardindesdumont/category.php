@@ -14,36 +14,32 @@
 					do_action( 'woocommerce_before_main_content' );
 				?>
 				<div class="row center">
-					<div class="col-md-9 description">
+                    <div class="col-md-1 hidden-xs hidden-sm"></div>
+					<div class="col-md-10 col-xs-12 description">
 						<h1><?php /*_e( 'Categories for ', 'html5blank' ); */ single_cat_title(); ?></h1>
 						<?php echo category_description( $category_id ); ?>
 					</div>
+                    <div class="col-md-1 hidden-xs hidden-sm"></div>
 
 					</div>
 						<div class="col-md-2 col-xs-12 nopadding nopadding">
 							<div class="side-menu-article center sticky-scroll-box">
-									<img src="<?php echo get_template_directory_uri();?>/img/Icon-menu-article.png" id="" class=""/>
-									<ul>
-										<li class="title">Catégories</li>
-										<li><a href="">Show room</a></li>
-										<li><a href="">Comment faire</a></li>
-										<li><a href="">cuisine</a></li>
-										<li><a href="">interieur</a></li>
-										<li><a href="">exterieur</a></li>
-										<li><a href="">evenements</a></li>
-										<li><a href="">fleurs</a></li>
-										<li><a href="">arbustes</a></li>
-										<li><a href="">fruitiers</a></li>
-										<li><a href="">bulbes</a></li>
-										<li><a href="">Légumes</a></li>
-										<li><a href="">Conseils</a></li>
-										<li><a href="">Idées de Sophie</a></li>
-										<li><a href="">DIY</a></li>
-										<li><a href="">Show room</a></li>
+                                <img src="<?php echo get_template_directory_uri();?>/img/Icon-menu-article.png" id="" class=""/>
+                                <?php
+                                $terms = get_terms( 'post_tag', array(
+	                                'hide_empty' => false,
+                                ) );
+                                ?>
+                                <ul>
+                                    <li class="title">Catégories</li>
+                                    <?php
+                                        foreach ($terms as $term) {
+                                            echo "<li><a href='".get_term_link($term)."'>".$term->name."</a></li>";
+                                        }
+                                    ?>
 								</ul>
 								</div>
 							</div>
-
 
 							<div class="col-md-10">
 								<?php get_template_part('loop'); ?>

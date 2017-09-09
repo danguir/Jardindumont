@@ -50,20 +50,19 @@
 					<div class="footer-level-two" >
 
 						<div class="row hidden-xs f-milieu center">
-							<div class="col-md-3 col-xs-12 text-center">
+							<div class="col-md-3 col-xs-12 text-center l-call-me-back">
 								<h4>0 892 700 205</h4>
 								<button class="ui-button ui-button-secondary-red">Call me back</button>
-									<a href="/mention-legale/" class="mention-legal" title="WordPress">
-										<h5>Pour vous, les curieux</h5>
-										<p>Mentions légales<br>Conditions de vente</p>
-								</a>
+                                <h5>Pour vous, les curieux</h5>
+                                <a href="/mentions-legales">Mentions Légales</a>
+                                <a href="/conditions-de-vente">Conditions de vente</a>
 							</div>
 							<div class="col-md-6 col-xs-12 text-center">
 
 								<div class="row center">
 									<div class="col-md-4 hidden-xs text-center style='background:red;' ">
 										<h4 class="app">Application<br>What's this<br>plante</h4>
-										<div class="row">
+										<div class="row l-flex">
 											<div class="col-md-12 col-xs-12 nopadding" style="text-align: right;">
 										<span class="badges">Développée par<br>famille Dumont</span>
 									</div>
