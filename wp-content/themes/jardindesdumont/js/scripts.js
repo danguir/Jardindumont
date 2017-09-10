@@ -26,6 +26,8 @@
 
 	    $('.tab-famille .nav a').click(function(){
 	        var target = $(this).data('target');
+	        var href = $(this).data('href');
+	        $('#btn-decouvrir').find('a').attr('href', href);
 	        $('.tab-pane').removeClass('active');
 	        $("#"+target).addClass('active');
         });

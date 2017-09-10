@@ -331,12 +331,12 @@
 
 			<?php if ( isset($args['secondary_btn']) && $args['secondary_btn'] != 0 ) { ?>
 
-			<div class="um-left um-half"><input type="submit"  value="<?php echo __( $primary_btn_word,'ultimate-member'); ?>" class="um-button" id="um-submit-btn" /></div>
-			<div class="um-right um-half"><a href="<?php echo $secondary_btn_url; ?>" class="um-button um-alt"><?php echo __( $secondary_btn_word,'ultimate-member'); ?></a></div>
+			<div class="um-left um-half"><input type="submit"  value="<?php echo __( $primary_btn_word,'ultimate-member'); ?>" class="ui-button ui-button-primary" id="um-submit-btn" /></div>
+			<div class="um-right um-half"><a href="<?php echo $secondary_btn_url; ?>" class="ui-button um-alt"><?php echo __( $secondary_btn_word,'ultimate-member'); ?></a></div>
 
 			<?php } else { ?>
 
-			<div class="um-center"><input type="submit" value="<?php echo __( $primary_btn_word,'ultimate-member'); ?>" class="um-button" id="um-submit-btn" /></div>
+			<div class="um-center"><input type="submit" value="<?php echo __( $primary_btn_word,'ultimate-member'); ?>" class="ui-button" id="um-submit-btn" /></div>
 
 			<?php } ?>
 

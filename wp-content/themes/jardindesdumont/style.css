@@ -734,7 +734,7 @@ margin: 0;
     margin-right: 2%;
 }
 
-button, input[type="button"], input[type="reset"], input[type="submit"] {
+/*button, input[type="button"], input[type="reset"], input[type="submit"] {
 	appearance: none;
 	background-color: #b9ce02;
 	border: 1px solid;
@@ -755,30 +755,30 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 	white-space: nowrap;
 	text-transform: uppercase;
 	height: 42px;
-}
+}*/
 
 
-input[type="color"], input[type="date"], input[type="datetime"],
-input[type="datetime-local"], input[type="email"], input[type="month"],
-input[type="number"], input[type="password"], input[type="search"],
-input[type="tel"], input[type="text"], input[type="time"], input[type="url"],
-input[type="week"], input:not([type]), textarea, select[multiple=multiple]{
-		background-color: #fff !important;
-		/*border: 1px solid #b9ce02;
-		border-radius: 0px;*/
-		box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-		box-sizing: border-box;
-		font-family: "Gotham_Light", sans-serif;
-		font-size: 1.35em;
-		/* margin-bottom: 0.75em; */
-		padding: 1.5em;
-		transition: border-color 150ms ease;
-		 width: 350px;
-		 height: 30px;
-		 color: black;
-		 font-style: italic;
-		 margin-right: -3px;
-}
+/*input[type="color"], input[type="date"], input[type="datetime"],*/
+/*input[type="datetime-local"], input[type="email"], input[type="month"],*/
+/*input[type="number"], input[type="password"], input[type="search"],*/
+/*input[type="tel"], input[type="text"], input[type="time"], input[type="url"],*/
+/*input[type="week"], input:not([type]), textarea, select[multiple=multiple]{*/
+		/*background-color: #fff !important;*/
+		/*!*border: 1px solid #b9ce02;*/
+		/*border-radius: 0px;*!*/
+		/*box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);*/
+		/*box-sizing: border-box;*/
+		/*font-family: "Gotham_Light", sans-serif;*/
+		/*font-size: 1.35em;*/
+		/*!* margin-bottom: 0.75em; *!*/
+		/*padding: 1.5em;*/
+		/*transition: border-color 150ms ease;*/
+		 /*width: 350px;*/
+		 /*height: 30px;*/
+		 /*color: black;*/
+		 /*font-style: italic;*/
+		 /*margin-right: -3px;*/
+/*}*/
 
 
 .footer-level-one{
@@ -934,7 +934,7 @@ margin-top: 50px;
   font-family: "Gotham Light";
   src: url("fonts/Gotham_Light.ttf"); }
 .ui-button {
-  padding: 1.1em 2em 0.9em 2em;
+  padding: 1.1em 2em 0.9em 2em!important;
   background: #C6C6C5;
   color: #FFFFFF;
   font-family: "Gotham Bold", sans-serif;
@@ -954,10 +954,6 @@ margin-top: 50px;
 		text-decoration: none;
 		color: #fff;
 	 }
-  .ui-button-primary:active {
-    background: #E6332A; }
-
-
 		.ui-button-secondary-red {
 		  background: transparent;
 		  border: 1px solid #e6332a;
@@ -1931,31 +1927,29 @@ section .hashtag-dumont .carousel{
 	    margin-bottom: 20px;
 }
 
-
 /* Previous button  */
 .media-carousel .carousel-control.left
 {
-  left: -50px;
+  left: 5%;
   background-image: none;
   background: none repeat scroll 0 0 #fff;
   /*border: 4px solid #b9ce00;*/
   border-radius: 23px 23px 23px 23px;
   height: 40px;
   width : 40px;
-  margin-top: 100px;
-	    padding-top: 0px;
+  padding-top: 0px;
 }
+
 /* Next button  */
 .media-carousel .carousel-control.right
 {
-  right: -50px ;
+  right: 5% ;
   background-image: none;
   background: none repeat scroll 0 0 #fff;
   /*border: 4px solid #b9ce00;*/
   border-radius: 23px 23px 23px 23px;
   height: 40px;
   width : 40px;
-  margin-top: 100px;
   padding-top: 0px;
 }
 /* Changes the position of the indicators */
@@ -2494,7 +2488,6 @@ section.login-formulaire{
 	margin-top: 20px;
 }
  .woocommerce .dashboard-compte {
-	margin-top: 100px;
 	color: black;
 }
 .woocommerce .navigation-compte{
@@ -2765,32 +2758,32 @@ section.woocommerce-customer-details h3.adresse{
 }
 
 
-.woocommerce section.info-compte input[type="submit"],.woocommerce section.lost-pass input[type="submit"] {
-		float: none;
-    color: #fff;
-    background: #fec833;
-    font-weight: 600;
-    vertical-align: middle;
-    padding: 16px 2em 30px 2em;
-    font-family: "Gotham Bold", sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 0.5em;
-    outline: none;
-    box-sizing: border-box;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-		width: 355px;
-}
-.woocommerce section.info-compte input[type="submit"]:hover{
-	  background: #fed35c;
-}
-.woocommerce section.lost-pass input[type="submit"] {
-		padding: 16px 13em 30px 2em;
-    width: 40%;
-}
+/*.woocommerce section.info-compte input[type="submit"],.woocommerce section.lost-pass input[type="submit"] {*/
+		/*float: none;*/
+    /*color: #fff;*/
+    /*background: #fec833;*/
+    /*font-weight: 600;*/
+    /*vertical-align: middle;*/
+    /*padding: 16px 2em 30px 2em;*/
+    /*font-family: "Gotham Bold", sans-serif;*/
+    /*font-size: 14px;*/
+    /*text-transform: uppercase;*/
+    /*border: none;*/
+    /*border-radius: 0.5em;*/
+    /*outline: none;*/
+    /*box-sizing: border-box;*/
+    /*letter-spacing: 2px;*/
+    /*margin-bottom: 50px;*/
+    /*margin-top: 50px;*/
+		/*width: 355px;*/
+/*}*/
+/*.woocommerce section.info-compte input[type="submit"]:hover{*/
+	  /*background: #fed35c;*/
+/*}*/
+/*.woocommerce section.lost-pass input[type="submit"] {*/
+		/*padding: 16px 13em 30px 2em;*/
+    /*width: 40%;*/
+/*}*/
 
 .woocommerce section.lost-pass p{
 	color: #000000;
@@ -4322,19 +4315,40 @@ form.cart .button, .woocommerce div.product form.cart .button{
 .woocommerce-tabs ul.tabs{
 	font-size: 12px;
 }
-.media-carousel .carousel-control.left, .media-carousel .carousel-control.right{
-	  margin-top: 20px;
+
+.col-carousel {
+	width: 228px;
+	height: 208px;
+	margin: 0px auto;
+	text-align: center;
+	margin: 0px 10px;
+	overflow: hidden;
+}
+
+.col-carousel img, .col-carousel a {
+	display: block;
+	margin-bottom: 0px;
+}
+
+.col-carousel img {
+
+}
+
+.media-carousel {
+	position: relative;
 }
 
 .media-carousel .carousel-control.right{
-	right: -28px ;
 	height: 30px;
-  width: 30px;
+  	width: 30px;
 }
 .media-carousel .carousel-control.left{
-	left: -28px;
 	height: 30px;
-  width: 30px;
+  	width: 30px;
+}
+
+.media-carousel img {
+	width: 100%;
 }
 
 .title-underline a:hover {
@@ -4346,12 +4360,12 @@ form.cart .button, .woocommerce div.product form.cart .button{
 section.edit-adress-form  input.button{
 	font-size: 12px;
 }
-input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"],
-input[type="email"], input[type="month"], input[type="number"], input[type="password"],
-input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"],
-input[type="week"], input:not([type]), textarea, select[multiple=multiple]{
-	  width: 100%;
-}
+/*input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"],*/
+/*input[type="email"], input[type="month"], input[type="number"], input[type="password"],*/
+/*input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"],*/
+/*input[type="week"], input:not([type]), textarea, select[multiple=multiple]{*/
+	  /*width: 100%;*/
+/*}*/
 .woocommerce section.info-compte input, .woocommerce section.edit-adress input, .woocommerce section.lost-pass input{
 	width: 100%;
 }
@@ -4397,10 +4411,10 @@ section.edit-adress-form form .form-row input.input-text{
 	input[type="email"]{
 		  width: 160px;
 	}
-	input[type="submit"]{
+	/*input[type="submit"]{
 		height: 34px;
 	  width: 148px;
-	}
+	}*/
 	.social-newsletter input.button{
 		font-size: 11px;
 	}
@@ -4532,8 +4546,19 @@ section.edit-adress-form form .form-row input.input-text{
 	.woocommerce section.lost-pass input{
 		width: 75%;
 	}
+
+	.media-carousel .carousel-control.left {
+		left: -10%;
+	}
+
+	.media-carousel .carousel-control.right {
+		right: -10%;
+	}
+
 	.media-carousel .carousel-control.left, .media-carousel .carousel-control.right{
-		  margin-top: 50px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 	/*HEADER*/
 	/*.logo a img{
@@ -4584,10 +4609,10 @@ section.edit-adress-form form .form-row input.input-text{
 	input[type="email"]{
 		  width: 350px;
 	}
-	input[type="submit"]{
+	/*input[type="submit"]{
 		height: 42px;
 	  width: 182px;
-	}
+	}*/
 	.social-newsletter input.button{
 		font-size: 13px;
 	}
@@ -4671,16 +4696,11 @@ section.tab-famille .nav-pills>li.active>a{
 		font-size: 18px;
 	}
 
-	.media-carousel .carousel-control.left, .media-carousel .carousel-control.right{
-		  margin-top: 50px;
-	}
 	.media-carousel .carousel-control.right{
-		right: -50px ;
 		height: 40px;
 		width: 40px;
 	}
 	.media-carousel .carousel-control.left{
-		left: -50px;
 		height: 40px;
 		width: 40px;
 	}
@@ -4924,7 +4944,7 @@ section.tab-famille .nav-pills>li.active>a{
 	text-transform: uppercase;
 	width: 40%;
 	display: inline-block;
-	padding: 10px 0px;
+	padding: 10px 0px!important;
 }
 
 .l-product-entretien-planning-legend .ui-button:first-child {
@@ -4958,4 +4978,98 @@ section.tab-famille .nav-pills>li.active>a{
 	bottom: 50px;
 	right: 0px;
 	width: 360px;
+}
+
+.ui-button-red {
+	background: #E6332A;
+}
+.ui-button:active {
+	background: #E6332A;
+}
+
+.ui-button-red:hover {
+	background: #FF4D44;
+}
+
+.ui-button-big-text {
+	letter-spacing: 2px;
+	padding: 0px 20px;
+	border-radius: 0.2em;
+}
+
+.newsletter-submit {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	height: 44px;
+	margin-left: -4px;
+	position: relative;
+	top: 1px;
+}
+
+.newsletter-email {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	height: 44px!important;
+}
+
+a.ui-button {
+	display: inline-block;
+}
+
+a.ui-button:focus {
+	color: white;
+	text-decoration: none;
+}
+a.ui-button:hover {
+	color: white;
+	text-decoration: none;
+}
+
+a.ui-button-secondary:focus {
+	background-color: transparent;
+	color: #B9CE00;
+}
+a.ui-button-secondary:hover {
+	color: #B9CE00;
+}
+a.ui-button-secondary:active {
+	color: #B9CE00;
+}
+.um-right {
+	text-align: right;
+}
+
+.ui-button:disabled {
+	opacity: 0.5;
+}
+.ui-button:disabled:hover {
+	opacity: 0.5;
+	background-color: #C6C6C5;
+}
+.ui-input {
+	font-size: 12px;
+}
+
+.login-formulaire .ui-input {
+	width: 100%;
+}
+
+.ui-button-link-add-photo {
+	color: #fec833;
+	font-family: "Gotham Bold", sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.ui-button-link-add-photo:hover, .ui-button-link-add-photo:focus{
+	color: #fec833;
+	text-decoration: none;
+}
+
+.ui-button-link-add-photo:hover, .ui-button-link-add-photo:focus {
+	border-bottom: 2px solid #fec833;
+	padding-bottom: 5px;
 }

@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="form-group">
 		<label class="col-sm-3 control-label" for="user_login"><?php _e( 'Username or email', 'woocommerce' ); ?></label>
 		<div class="col-sm-9">
-			<input class=" form-control" type="text" name="user_login" id="user_login" />
+			<input class="form-control" type="text" name="user_login" id="user_login" />
 		</div>
 	</div>
 	<div class="clear"></div>
@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_lostpassword_form' ); ?>
 
 		<input type="hidden" name="wc_reset_password" value="true" />
-		<input type="submit" class="ui-button ui-button-primary button" value="<?php esc_attr_e( 'Reset password', 'woocommerce' ); ?>" />
+		<input type="submit" class="ui-button ui-button-primary" value="<?php esc_attr_e( 'Reset password', 'woocommerce' ); ?>" />
 
 	<?php wp_nonce_field( 'lost_password' ); ?>
 

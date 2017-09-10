@@ -35,16 +35,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="username"><?php //_e( 'Username or email address', 'woocommerce' ); ?> Email<span class="required">*</span></label>
-				<input type="text" class="ui-input woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
+				<input type="text" class="ui-input" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
 			</p>
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="password"><?php// _e( 'Password', 'woocommerce' ); ?> Mot de pass<span class="required">*</span></label>
-				<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
+				<input class="ui-input" type="password" name="password" id="password" />
 			</p>
 			<?php do_action( 'woocommerce_login_form' ); ?>
 			<p class="form-row center">
 				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-				<input type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Connexion', 'woocommerce' ); ?>" />
+				<input type="submit" class="ui-button ui-button-primary" name="login" value="<?php esc_attr_e( 'Connexion', 'woocommerce' ); ?>" />
 				<!--label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline"
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php _e( 'Se souvenir de moi', 'woocommerce' ); ?></span>
 				</label-->

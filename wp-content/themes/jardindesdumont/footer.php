@@ -4,8 +4,8 @@
 			<div class="col-md-12 col-xs-12">
 				<div class="social-newsletter center-block ">
 						<form method="post" action="" onsubmit="">
-									<input class="newsletter-email" type="email" name="ne" size="30" placeholder="Restez connectés à l'inspiration de jardinage ..." required="">
-									<input class="button newsletter-submit" type="submit" value="abonnez-vous">
+									<input class="newsletter-email ui-input" type="email" name="ne" size="30" placeholder="Restez connectés à l'inspiration de jardinage ..." required="">
+									<input class="newsletter-submit ui-button ui-button-primary" type="submit" value="abonnez-vous">
 						</form>
 					</div>
 				</div>

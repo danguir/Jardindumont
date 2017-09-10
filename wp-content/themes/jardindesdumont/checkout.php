@@ -212,7 +212,7 @@ Template Name: checkout
 													<input type="hidden" id="_wpnonce" name="_wpnonce" value="fb2c1c7c18"><input type="hidden" name="_wp_http_referer" value="/register/">
 													<div class="um-col-alt">
 														<div class="um-left um-half"><input type="submit" value="S'enregistrer" class="um-button" id="um-submit-btn"></div>
-														<div class="um-right um-half"><a href="/login/" class="um-button um-alt">se connecter</a></div>
+														<div class="um-right um-half"><a href="/my-account/" class="um-button um-alt">se connecter</a></div>
 														<div class="um-clear"></div>
 													</div>
 														</form>
