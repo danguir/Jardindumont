@@ -1,0 +1,130 @@
+
+.block-rs h2 {
+    font-size: 20px;
+}
+.l-header-logo-mobile {
+    display: none;
+    padding: 5px 0px;
+    background:rgba(255,255,255,0.5);
+}
+
+@media (max-width: 769px) {
+    .l-header-logo-mobile {
+        display: block;
+    }
+    main {
+        padding-top: 35px;
+    }
+}
+
+@media (max-width:639px) {
+    .img-crop {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        overflow: hidden;
+        margin: 0px auto;
+        height: 300px;
+    }
+
+    .block-rs h2 {
+        font-size: 16px;
+    }
+    section.category-page #article-loop {
+        margin-bottom: 20px;
+    }
+    section.category-page .side-menu-article {
+        margin-bottom: 20px;
+    }
+
+    .category-idee {
+        min-height: inherit!important;
+    }
+
+    .l-header {
+        padding: 10px;
+    }
+
+    .social-newsletter {
+       margin-top: 0px;
+    }
+
+    .newsletter-submit {
+        width: 90%;
+    }
+
+    .newsletter-email {
+        width: 90%!important;
+        border-radius: 0px;
+        margin-left: 0px;
+    }
+    .footer-image img {
+        width: 85px!important;
+    }
+    .tagcloud a {
+        width: calc(50% - 20px);
+        margin: 5px;!important;
+        float: left;
+        display: inline-block;
+    }
+
+    .footer .footer-level-one .col-xs-12 {
+        margin-bottom: 55px;
+    }
+    .footer .footer-level-one {
+        margin-bottom: 0px;
+    }
+    .app {
+        text-align: center;
+    }
+    .footer-level-two .app-down, .footer-level-two h4.app {
+        margin-top: 0px;
+        float: none;
+    }
+
+    .link-clear {
+        margin: 10px 0px;
+    }
+}
+@media (max-width:990px) {
+
+    .block-rs h2 {
+        font-size: 18px;
+    }
+
+    .footer .footer-level-one .row.center div {
+        border-right: 0px!important;
+    }
+
+    .footer-image img {
+        width: 85px!important;
+    }
+    .footer .footer-level-one .col-xs-12 {
+        margin-bottom: 55px;
+    }
+    .footer .footer-level-one {
+        margin-bottom: 0px;
+    }
+    .app {
+        margin-top: 20px!important;
+        text-align: center!important;
+    }
+
+    .footer-level-two .app-down, .footer-level-two h4.app {
+        margin-top: 0px;
+        float: none;
+    }
+
+    .Iphone {
+        position: inherit;
+    }
+
+    .app-down {
+        margin-top: 20px!important;
+    }
+
+    .link-clear {
+        margin: 10px 0px;
+    }
+
+}

@@ -30,7 +30,7 @@ echo wc_get_stock_html( $product );
 if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-	<div class="row">
+	<div class="row l-flex">
         <div class="col-md-6">
                 <?php
                     /**

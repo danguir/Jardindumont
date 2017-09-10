@@ -62,6 +62,11 @@
 <!--    </div>-->
 
 <div class="l-header-fixed">
+    <div class="l-header-logo-mobile" style="text-align: center;">
+        <a href="<?php echo home_url(); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" width="300" alt="Logo">
+        </a>
+    </div>
     <header class="l-header">
         <div class="l-header-burger">
             <a href="#" class="menu-button" id="open-button">
@@ -69,7 +74,7 @@
             </a>
         </div>
 
-        <div class="l-header-logo">
+        <div class="hidden-xs l-header-logo">
             <a href="<?php echo home_url(); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" width="368" alt="Logo">
             </a>
@@ -120,74 +125,5 @@
         </nav>
         <button class="close-button" id="close-button"></button>
     </div>
-
-<!--    <div class="content-wrap">-->
-<!---->
-<!--    </div>-->
     <!-- /Menu wrap -->
 </div><!-- /container -->
-
-<!-- version mobile -->
-<header class="visible-xs-12 header clear" role="banner">
-    <div class="vertical-bar-mobile">
-        <button class=" hidden-sm hidden-md hidden-lg menu-button" id="open-button-mobile">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/burger-vert.png" id="burger-mobile"
-                 class="burger burger-vert"/>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/burger.png" id="burger-mobile"
-                 class="burger burger-blanc"/>
-        </button>
-
-        <div class="logo center hidden-sm hidden-md hidden-lg">
-            <a href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
-            </a>
-        </div>
-        <ul class="hidden-sm hidden-md hidden-lg list-inline">
-            <li>
-                <a href="/cart/">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/cart.png" alt="cart" class="cart-icon">
-                    <p>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="container">
-        <div class="menu-wrap">
-            <!-- nav -->
-            <nav class="nav" role="navigation">
-                <ul class="hidden-sm hidden-md hidden-lg list-inline">
-                    <li>
-                        <a href="/my-account/">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/user.png" alt="user"
-                                 class="user-icon">
-                            <p>
-                        </a>
-                    </li>
-                </ul>
-
-				<?php html5blank_nav(); ?>
-                <div class="social">
-                    <ul class="list-inline">
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/insta.png"
-                                             alt="Instagram"/></a></li>
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png"
-                                             alt="Facebook"/></a></li>
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png"
-                                             alt="Twitter"></a></li>
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/pint.png"
-                                             alt="Pintrest"></a></li>
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/youtube.png"
-                                             alt="Youtube"></a></li>
-                    </ul>
-                </div>
-            </nav>
-            <button class="close-button" id="close-button-mobile"></button>
-        </div>
-
-<!--        <div class="content-wrap">-->
-<!--        </div>-->
-        <!-- /Menu wrap -->
-    </div><!-- /container -->
-</header>
-<!-- /header -->

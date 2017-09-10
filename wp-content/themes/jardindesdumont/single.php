@@ -81,7 +81,7 @@
 			?>
 
             <div class="block-rs" style="margin-top: 30px;">
-                <h2 style="font-size: 20px;">VOUS AVEZ TROUVEZ CET ARTICLE UTILE ?</h2>
+                <h2>VOUS AVEZ TROUVEZ CET ARTICLE UTILE ?</h2>
                 <h3>PARTAGEZ-LE</h3>
                 <div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                 <a href="https://twitter.com/share" class="twitter-share-button">Partager</a>

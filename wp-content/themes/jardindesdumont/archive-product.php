@@ -71,7 +71,7 @@ get_header( 'shop' ); ?>
                            title="terrasse">
                     <input class="filter-button" data-filter="jardin" type="checkbox" name="jardin" title="jardin">
                 </div>-->
-                <div class="filter-area" data-category-name="<?php echo slugify(single_cat_title('', false)); ?>">
+                <div class="filter-area clearfix" data-category-name="<?php echo slugify(single_cat_title('', false)); ?>">
 		            <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
                 </div>
 
@@ -270,7 +270,7 @@ get_header( 'shop' ); ?>
     </div>
 </section>
 
-	<section class="networking center">
+	<section class="hidden-xs networking center">
 		<h2>Suivez-nous</h2>
 		<div class="elementor-image">
 				<img class="img-responsive" src="/wp-content/uploads/elementor/thumbs/network-nanlykb10ak10mvebkcyinqog9pz2hde2y78jtl0gy.png" title="network" alt="network">		</div>

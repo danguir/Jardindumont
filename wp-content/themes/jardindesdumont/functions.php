@@ -166,7 +166,10 @@ function html5blank_styles()
     wp_enqueue_style('bootstrap'); // Enqueue it!
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-    wp_enqueue_style('html5blank'); // Enqueue it!
+	wp_enqueue_style('html5blank'); // Enqueue it!
+
+	wp_register_style('responsive', get_template_directory_uri() . '/responsive.css', array(), '1.0', 'all');
+	wp_enqueue_style('responsive');
 
     wp_register_style('html5blank', get_template_directory_uri() . '/animate.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!

@@ -1,43 +1,42 @@
 
 <div class="social-block">
-		<div class="row center">
-			<div class="col-md-12 col-xs-12">
-				<div class="social-newsletter center-block ">
-						<form method="post" action="" onsubmit="">
-									<input class="newsletter-email ui-input" type="email" name="ne" size="30" placeholder="Restez connectés à l'inspiration de jardinage ..." required="">
-									<input class="newsletter-submit ui-button ui-button-primary" type="submit" value="abonnez-vous">
-						</form>
-					</div>
-				</div>
-		  </div>
+
+    <div class="social-newsletter center-block">
+            <form method="post" action="" onsubmit="">
+                        <input class="newsletter-email ui-input" type="email" name="ne" size="30" placeholder="Restez connectés à l'inspiration de jardinage ..." required="">
+                        <input class="newsletter-submit ui-button ui-button-primary" type="submit" value="abonnez-vous">
+            </form>
+        </div>
+    </div>
+
  </div>
 
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 				<div class="footer-level-one" >
 						<div class="row center">
-						  <div class="col-md-3 col-xs-12 text-center">
+						  <div class="col-md-3 col-sm-6 col-xs-12 text-center">
                                 <div class="footer-image">
 								    <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-payement.png" class=" center-block img-responsive" alt="Responsive image">
                                 </div>
 								<h4>payement sécurisé</h4>
 								<p>Des paiements<br>à votre convenance </p>
 							</div>
-						  <div class="col-md-3 col-xs-12 text-center">
+						  <div class="col-md-3 col-sm-6 col-xs-12 text-center">
                                 <div class="footer-image">
 								    <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-transport.png" class="center-block img-responsive" alt="Responsive image">
                                 </div>
-                                <h4>Livrés chez vous</h4>
+                                <h4>Livrez chez vous</h4>
 								<p>Livraison garantie<br>dans le meilleur delay </p>
 							</div>
-						  <div class="col-md-3 col-xs-12 text-center">
+						  <div class="col-md-3 col-sm-6 col-xs-12 text-center">
                                 <div class="footer-image">
 								    <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-sav.png" class=" center-block img-responsive" alt="Responsive image">
                                 </div>
                                 <h4>un doute ?</h4>
 								<p>Appellez-nous<br>ou visitez notre <a href="/contactez-nous/" class="ui-button-link" title="SAV">SAV</a></p>
 							</div>
-							<div class="col-md-3 col-xs-12 text-center">
+							<div class="col-md-3 col-sm-6 col-xs-12 text-center">
                              <div class="footer-image">
                                  <img src="<?php echo get_template_directory_uri();?>/img/footer/icon-avis.png" class="center-block img-responsive" alt="Responsive image">
                              </div>
@@ -62,7 +61,7 @@
 								<div class="row center">
 									<div class="col-md-4 hidden-xs text-center style='background:red;' ">
 										<h4 class="app">Application<br>What's this<br>plante</h4>
-										<div class="row l-flex">
+										<div class="row l-flex hidden-xs hidden-sm">
 											<div class="col-md-12 col-xs-12 nopadding" style="text-align: right;">
 										<span class="badges">Développée par<br>famille Dumont</span>
 									</div>
