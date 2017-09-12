@@ -13,7 +13,7 @@ get_header(); ?>
 	<div id="comments">
 		<!--h2 class="woocommerce-Reviews-title">6 avis pour <span>Kit &#8220;Petit scientifique&#8221;</span></h2-->
 
-		<div class="container">
+		<!--<div class="container">
 			<div class="col-md-12 center">
 				<h2 class="center wow bounceIn">Avis des clients</h2>
 				<p>
@@ -29,7 +29,7 @@ get_header(); ?>
 		<div class="col-md-12 images-review center">
 			<img src="/wp-content/themes/jardindesdumont/img/product/avis-client.png" alt="Logo" class="logo-img">
 			<img src="/wp-content/themes/jardindesdumont/img/product/avis-client-1.png" alt="Logo" class="avis-img">
-		</div>
+		</div>-->
 
 		<div class="col-md-12">
 				<ol class="commentlist">
@@ -43,7 +43,7 @@ get_header(); ?>
 								<p class="meta">
 									<strong class="woocommerce-review__author" itemprop="author">admin</strong> <span class="woocommerce-review__dash">–</span> <time class="woocommerce-review__published-date" itemprop="datePublished" datetime="2017-08-28T14:28:46+00:00">28 août 2017</time>
 								</p>
-								<div class="description"><p>dssdgfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+								<div class="description"><p></p>
 								</div>
 							</div>
 						</div>

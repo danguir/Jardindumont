@@ -71,7 +71,7 @@ get_header( 'shop' ); ?>
                            title="terrasse">
                     <input class="filter-button" data-filter="jardin" type="checkbox" name="jardin" title="jardin">
                 </div>-->
-                <div class="filter-area clearfix" data-category-name="<?php echo slugify(single_cat_title('', false)); ?>">
+                <div class="filter-area clearfixa" data-category-name="<?php echo slugify(single_cat_title('', false)); ?>">
 		            <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
                 </div>
 
@@ -241,9 +241,7 @@ get_header( 'shop' ); ?>
 
             <li class="post-245 product type-product status-publish  instock shipping-taxable purchasable product-type-simple">
                 <a href="/product/kit-paradis-tropical/"
-                   class="woocommerce-LoopProduct-link"><img
-                            src="/wp-content/plugins/woocommerce/assets/images/placeholder.png"
-                            alt="Placeholder" width="300" class="woocommerce-placeholder wp-post-image" height="300">
+                   class="woocommerce-LoopProduct-link"><img width="300" height="300" src="//dev.jardindumont.local/wp-content/uploads/2017/08/01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//dev.jardindumont.local/wp-content/uploads/2017/08/01-300x300.jpg 300w, //dev.jardindumont.local/wp-content/uploads/2017/08/01-150x150.jpg 150w, //dev.jardindumont.local/wp-content/uploads/2017/08/01-250x250.jpg 250w, //dev.jardindumont.local/wp-content/uploads/2017/08/01-120x120.jpg 120w, //dev.jardindumont.local/wp-content/uploads/2017/08/01-360x360.jpg 360w, //dev.jardindumont.local/wp-content/uploads/2017/08/01-180x180.jpg 180w, //dev.jardindumont.local/wp-content/uploads/2017/08/01-600x600.jpg 600w, //dev.jardindumont.local/wp-content/uploads/2017/08/01.jpg 683w" sizes="(max-width: 300px) 100vw, 300px">
                     <h2 class="woocommerce-loop-product__title">Kit «&nbsp;Paradis Tropical&nbsp;»</h2>
                     <span class="price"><span class="woocommerce-Price-amount amount">Prix à l'unité : 40<span
                                     class="woocommerce-Price-currencySymbol">€</span></span></span>

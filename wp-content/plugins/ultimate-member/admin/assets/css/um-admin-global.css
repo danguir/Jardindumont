@@ -2,7 +2,7 @@
 	border-color: #3ba1da !important;
 	color: #555;
 }
-
+.error, .updated { display:none; }
 .um-admin-notice a.button-primary {
 	background-color: #3ba1da !important;
 	border-color: #3ba1da !important;

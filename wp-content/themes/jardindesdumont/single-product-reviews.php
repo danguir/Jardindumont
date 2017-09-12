@@ -37,7 +37,7 @@ if ( ! comments_open() ) {
 			}
 		?></h2-->
 
-		<div class="col-md-12 center">
+		<!--<div class="col-md-12 center">
 			<h2 class="center">Avis des clients</h2>
 			<p>
 				qsdLe Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
@@ -46,10 +46,10 @@ if ( ! comments_open() ) {
 		</div>
 
 		<div class="col-md-12 images-review center">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/product/avis-client.png" alt="Logo" class="logo-img">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/product/avis-client-1.png" alt="Logo" class="avis-img">
+			<img src="<?php /*echo get_template_directory_uri(); */?>/img/product/avis-client.png" alt="Logo" class="logo-img">
+			<img src="<?php /*echo get_template_directory_uri(); */?>/img/product/avis-client-1.png" alt="Logo" class="avis-img">
 		</div>
-
+-->
 		<div class="col-md-12">
 			<?php if ( have_comments() ) : ?>
 

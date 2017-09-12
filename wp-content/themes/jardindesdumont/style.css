@@ -646,6 +646,7 @@ margin: 0;
 	margin-right: 10px;
 }
 
+
 .l-header-cart-number {
 	width: 15px;
 	height: 15px;
@@ -4266,7 +4267,7 @@ ol{
 
 	/*homepage*/
 	section.tab-famille .nav-pills>li.papa{
-		height: 279px;
+		height: 335px;
 	}
 	section.tab-famille .nav-pills>li>a{
 		font-size: 10px;
