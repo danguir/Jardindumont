@@ -387,7 +387,9 @@ function html5blankcomments($comment, $args, $depth)
 	</div>
 	<?php endif; ?>
 <?php }
-
+add_action ('init', function(){
+	header("Access-Control-Allow-Origin: *");
+});
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
